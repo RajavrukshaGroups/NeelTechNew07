@@ -19,8 +19,8 @@ const AboutDropdown = ({ theme, isOpen, onMouseEnter, onMouseLeave }) => {
     { label: "Our Vision", path: "/about/vision" },
     { label: "Our Mission", path: "/about/mission" },
     { label: "Our Achievements", path: "/about/achievements" },
-    { label: "Our Infrastructure", path: "/about/infrastructure" },
-    { label: "Student Feedback", path: "/about/feedback" },
+    // { label: "Our Infrastructure", path: "/about/infrastructure" },
+    // { label: "Student Feedback", path: "/about/feedback" },
     { label: "Testimonials", path: "/about/testimonials" },
   ];
 
@@ -506,7 +506,8 @@ const Navbar = () => {
               onMouseEnter={(e) => (e.target.style.color = theme.primaryBlue)}
               onMouseLeave={(e) => (e.target.style.color = theme.darkBlueBg)}
             >
-              Learning Options <ChevronDown className="h-4 w-4" />
+              Training Options
+              {/* <ChevronDown className="h-4 w-4" /> */}
             </a>
             <a
               href="#"
@@ -521,7 +522,8 @@ const Navbar = () => {
               onMouseEnter={(e) => (e.target.style.color = theme.primaryBlue)}
               onMouseLeave={(e) => (e.target.style.color = theme.darkBlueBg)}
             >
-              Contact Us <ChevronDown className="h-4 w-4" />
+              Blogs
+              {/* <ChevronDown className="h-4 w-4" /> */}
             </a>
           </div>
 
@@ -536,11 +538,12 @@ const Navbar = () => {
                 fontSize: "0.85rem",
               }}
             >
-              What do you want to learn?{" "}
-              <ChevronDown
+              {/* What do you want to learn?{" "} */}
+              Success Stories
+              {/* <ChevronDown
                 className="inline h-4 w-4 ml-1"
                 style={{ color: theme.primaryBlue }}
-              />
+              /> */}
             </span>
 
             {/* Login Button */}
@@ -563,7 +566,7 @@ const Navbar = () => {
                 e.target.style.color = theme.primaryBlue;
               }}
             >
-              Login
+              Contact
             </button>
           </div>
         </div>
@@ -673,7 +676,7 @@ const Navbar = () => {
                 "Leadership",
                 "Explore our V",
                 "Happiness Guarantee",
-                "Student Feedback",
+                // "Student Feedback",
                 "Testimonials",
                 "Our Awards",
               ].map((item, idx) => (
@@ -704,7 +707,8 @@ const Navbar = () => {
               letterSpacing: "0.3px",
             }}
           >
-            Learning Options <ChevronDown className="h-4 w-4" />
+            Training Options
+            <ChevronDown className="h-4 w-4" />
           </a>
           <a
             href="#"
@@ -716,7 +720,7 @@ const Navbar = () => {
               letterSpacing: "0.3px",
             }}
           >
-            Contact Us <ChevronDown className="h-4 w-4" />
+            Blogs {/* <ChevronDown className="h-4 w-4" /> */}
           </a>
 
           {/* Mobile What to learn */}
@@ -728,11 +732,12 @@ const Navbar = () => {
                 fontFamily: "'Montserrat', 'Inter', sans-serif",
               }}
             >
-              What do you want to learn?{" "}
-              <ChevronDown
+              {/* What do you want to learn?{" "} */}
+              Success Stories
+              {/* <ChevronDown
                 className="inline h-4 w-4 ml-1"
                 style={{ color: theme.primaryBlue }}
-              />
+              /> */}
             </span>
           </div>
 
@@ -755,7 +760,7 @@ const Navbar = () => {
               e.target.style.color = theme.primaryBlue;
             }}
           >
-            Login
+            Contact
           </button>
 
           {/* Mobile Contact Info */}

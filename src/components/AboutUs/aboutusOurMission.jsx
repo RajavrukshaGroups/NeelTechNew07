@@ -1,6 +1,6 @@
 const OurMission = () => {
   return (
-    <div className="mt-20 px-6">
+    <div className="px-6">
       {/* Heading Section */}
       {/* <div className="text-center mb-14">
         <h2 className="text-4xl md:text-5xl font-bold text-[#0F3E57]">

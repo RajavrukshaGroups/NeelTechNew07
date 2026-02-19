@@ -2,7 +2,7 @@ import story from "../../../public/assets/overview.jpeg";
 
 const AboutUsOverview = () => {
   return (
-    <div className="mt-16 space-y-20">
+    <div className="mt-16 space-y-20 py-5">
       {/* ===== TOP SECTION ===== */}
       <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
         {/* LEFT IMAGE CARD */}

@@ -83,14 +83,14 @@ const OurStory = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
       {/* Header */}
-      <div className="text-center mb-16 md:mb-20">
+      {/* <div className="text-center mb-16 md:mb-20">
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-[#0F3E57] mb-4">
           Our Journey
         </h2>
         <div className="w-20 h-1 bg-[#f28c28] mx-auto"></div>
-      </div>
+      </div> */}
 
       {/* Hero Section */}
       <div className="relative mb-24 md:mb-28">

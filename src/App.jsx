@@ -1,3 +1,4 @@
+import BackToTop from "./components/BackToTop/backToTop";
 import Navbar from "./components/Navbar/navbar";
 import AppRoutes from "./routes/AppRoutes";
 
@@ -6,6 +7,7 @@ function App() {
     <>
       <Navbar />
       <AppRoutes />
+      <BackToTop />
     </>
   );
 }

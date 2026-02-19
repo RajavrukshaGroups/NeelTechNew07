@@ -4,10 +4,10 @@ const OurAchievements = () => {
 
       {/* Heading */}
       <div className="text-center mb-14">
-        <h2 className="text-4xl md:text-5xl font-bold text-[#0F3E57]">
+        {/* <h2 className="text-4xl md:text-5xl font-bold text-[#0F3E57]">
           Our Achievements
-        </h2>
-        <div className="w-24 h-1 mx-auto mt-4 bg-[#f28c28] rounded-full"></div>
+        </h2> */}
+        {/* <div className="w-24 h-1 mx-auto mt-4 bg-[#f28c28] rounded-full"></div> */}
       </div>
 
       {/* Intro Content */}

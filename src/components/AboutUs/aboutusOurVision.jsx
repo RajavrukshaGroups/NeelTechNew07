@@ -1,6 +1,6 @@
 const OurVision = () => {
   return (
-    <div className="mt-20 relative">
+    <div className="relative">
 
       {/* Background Soft Accent */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-[#EAF2F7] to-white rounded-3xl"></div>
