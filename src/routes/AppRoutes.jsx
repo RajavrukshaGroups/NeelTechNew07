@@ -7,6 +7,11 @@ import CCNATraining from "../components/CourseComponents/SystemAdministrator/CCN
 import IntuneTraining from "../components/CourseComponents/SystemAdministrator/Intune/intune";
 import O365Training from "../components/CourseComponents/SystemAdministrator/O365/0365Training";
 import TrainingOption from "../components/TrainingOption/TrainingOption";
+import WindowsPowershellTrianing from "../components/CourseComponents/Automation/WindowsPowershell/windowsPowershell";
+import PythonTraining from "../components/CourseComponents/Automation/Python/python";
+import MicrosoftAzureTraining from "../components/CourseComponents/CloudTechnology/MicrosoftAzure/microsoftAzure";
+import MicrosoftEntraIdTraining from "../components/CourseComponents/CloudTechnology/EntraID/entraID";
+import AWSTraining from "../components/CourseComponents/CloudTechnology/AWS/AWS";
 
 const AppRoutes = () => {
   return (
@@ -33,6 +38,26 @@ const AppRoutes = () => {
       <Route
         path="/O365-training-certification-course"
         element={<O365Training />}
+      />
+      <Route
+        path="/powershell-training-certification-course"
+        element={<WindowsPowershellTrianing />}
+      />
+      <Route
+        path="/python-training-certification-course"
+        element={<PythonTraining />}
+      />
+      <Route
+        path="/microsoft-azure-training-certification-course"
+        element={<MicrosoftAzureTraining />}
+      />
+      <Route
+        path="/microsoft-entra-id-training-certification-course"
+        element={<MicrosoftEntraIdTraining />}
+      />
+      <Route
+        path="/aws-training-certification-course"
+        element={<AWSTraining />}
       />
       <Route path="/training-option" element={<TrainingOption />} />
     </Routes>
