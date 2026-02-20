@@ -17,6 +17,11 @@ import AzureSentinelTraining from "../components/CourseComponents/CloudTechnolog
 import AWSDevOpsTraining from "../components/CourseComponents/DevOps/AWSDevOps/AWSDevOps";
 import AzureDevOpsTraining from "../components/CourseComponents/DevOps/AzureDevOps/azureDevOps";
 import CyberSecurityTraining from "../components/CourseComponents/CyberSecurity/cyberSecurity";
+import { Contact } from "lucide-react";
+import ContactUsPage from "../components/contact/contact";
+import ContactMainPage from "../components/contact/contactMain";
+import Blogs from "../components/Blogs/blogs";
+import SuccessStories from "../components/successStories/successStories";
 
 const AppRoutes = () => {
   return (
@@ -85,6 +90,9 @@ const AppRoutes = () => {
         element={<CyberSecurityTraining />}
       />
       <Route path="/training-option" element={<TrainingOption />} />
+      <Route path="/contact" element={<ContactMainPage />} />
+      <Route path="/blogs" element={<Blogs />} />
+      <Route path="/success-stories" element={<SuccessStories />} />
     </Routes>
   );
 };

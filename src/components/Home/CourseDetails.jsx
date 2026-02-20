@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Clock, Users, BookOpen, ChevronDown, ChevronUp } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const CourseDetails = () => {
   const [activeTab, setActiveTab] = useState("top");
@@ -18,7 +19,7 @@ const CourseDetails = () => {
     lightBg: "#f0faff",
   };
 
-  // Updated courses based on your list
+  // Updated courses with proper paths based on your routes
   const allCourses = [
     // System Administrator
     {
@@ -26,30 +27,35 @@ const CourseDetails = () => {
       duration: "40 Hrs",
       category: "System Administrator",
       enrolled: "12,345 enrolled",
+      path: "/mcse-training-certification-course",
     },
     {
       title: "LINUX Training Certification Course",
       duration: "40 Hrs",
       category: "System Administrator",
       enrolled: "10,234 enrolled",
+      path: "/linux-training-certification-course",
     },
     {
       title: "The CCNA Training Certification Course",
       duration: "40 Hrs",
       category: "System Administrator",
       enrolled: "15,678 enrolled",
+      path: "/ccna-training-certification-course",
     },
     {
       title: "Intune Training Certification Course",
       duration: "24 Hrs",
       category: "System Administrator",
       enrolled: "5,432 enrolled",
+      path: "/intune-training-certification-course",
     },
     {
       title: "0365 Training Certification Course",
       duration: "24 Hrs",
       category: "System Administrator",
       enrolled: "7,891 enrolled",
+      path: "/O365-training-certification-course",
     },
 
     // Automation/Program
@@ -58,66 +64,76 @@ const CourseDetails = () => {
       duration: "24 Hrs",
       category: "Automation/Program",
       enrolled: "6,543 enrolled",
+      path: "/powershell-training-certification-course",
     },
     {
       title: "Python Training Certification Course",
       duration: "40 Hrs",
       category: "Automation/Program",
       enrolled: "18,765 enrolled",
+      path: "/python-training-certification-course",
     },
 
     // Cloud Technology
     {
-      title: "AZURE Training Certification Course",
+      title: "Microsoft Azure Training Certification Course",
       duration: "40 Hrs",
       category: "Cloud Technology",
       enrolled: "22,345 enrolled",
+      path: "/microsoft-azure-training-certification-course",
     },
     {
-      title: "Entra ID Training Certification Course",
+      title: "Microsoft Entra ID Training Certification Course",
       duration: "24 Hrs",
       category: "Cloud Technology",
       enrolled: "4,321 enrolled",
+      path: "/microsoft-entra-id-training-certification-course",
     },
     {
       title: "AWS Training Certification Course",
       duration: "40 Hrs",
       category: "Cloud Technology",
       enrolled: "25,678 enrolled",
+      path: "/aws-training-certification-course",
     },
     {
-      title: "GCP Training Certification Course",
+      title: "Google Cloud (GCP) Training Certification Course",
       duration: "40 Hrs",
       category: "Cloud Technology",
       enrolled: "8,901 enrolled",
+      path: "/google-cloud-gcp-training-certification-course",
     },
     {
       title: "Azure Sentinel Training Certification Course",
       duration: "24 Hrs",
       category: "Cloud Technology",
       enrolled: "3,456 enrolled",
+      path: "/azure-sentinel-training-certification-course",
     },
 
     // DevOps
     {
-      title: "AWS-DEVOPS Training Certification Course",
+      title: "AWS DevOps Training Certification Course",
       duration: "40 Hrs",
       category: "DevOps",
       enrolled: "9,876 enrolled",
+      path: "/aws-devops-training-certification-course",
     },
     {
-      title: "AZURE-DEVOPS Training Certification Course",
+      title: "Azure DevOps Training Certification Course",
       duration: "40 Hrs",
       category: "DevOps",
       enrolled: "8,765 enrolled",
+      path: "/azure-devops-training-certification-course",
     },
 
     // Cyber Security
     {
-      title: "CYBER SECURITY Training Certification Course",
+      title: "Cyber Security Training Certification Course",
       duration: "40 Hrs",
       category: "Cyber Security",
       enrolled: "14,567 enrolled",
+      path: "/cyber-security-training-certification-course",
     },
   ];
 
@@ -205,9 +221,10 @@ const CourseDetails = () => {
         {/* Course Cards - Reduced width with smaller gaps */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-5">
           {filteredCourses.map((course, index) => (
-            <div
+            <Link
+              to={course.path}
               key={index}
-              className="group relative rounded-lg hover:shadow-md transition-all duration-300"
+              className="group relative rounded-lg hover:shadow-md transition-all duration-300 cursor-pointer"
               style={{
                 backgroundColor: theme.lightBg,
                 border: `1px solid ${theme.primaryBlue}`,
@@ -229,7 +246,7 @@ const CourseDetails = () => {
                     fontFamily: "'Montserrat', sans-serif",
                     color: theme.darkBlueBg,
                     lineHeight: "1.4",
-                    minHeight: "42px", // 👈 guarantees 2 lines height
+                    minHeight: "42px",
                   }}
                   title={course.title}
                 >
@@ -260,7 +277,7 @@ const CourseDetails = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 

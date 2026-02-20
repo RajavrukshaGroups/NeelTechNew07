@@ -40,7 +40,7 @@ const BackToTop = () => {
 
   return (
     <div
-      className={`fixed right-6 bottom-24 z-50 transition-all duration-300 ${
+      className={`fixed right-6 bottom-5 z-50 transition-all duration-300 ${
         visible
           ? "opacity-100 translate-y-0"
           : "opacity-0 translate-y-5 pointer-events-none"

@@ -167,7 +167,10 @@ const OurStory = () => {
       </div>
 
       {/* Main Content Grid */}
-      <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+      <div
+        className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start"
+        style={{ fontFamily: "cursive" }}
+      >
         {/* Image Section */}
         <div className="relative">
           <div className="relative rounded-2xl overflow-hidden shadow-xl">
@@ -264,20 +267,39 @@ const OurStory = () => {
       </div>
 
       {/* Stats Section */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 md:mt-24">
-        {stats.map((stat, idx) => (
-          <div
-            key={idx}
-            className="bg-white rounded-xl p-6 text-center border border-gray-100 hover:border-[#f28c28]/20 transition-all duration-300 hover:shadow-md"
-          >
-            <div className="text-3xl mb-3">{stat.icon}</div>
-            <div className="text-2xl font-semibold text-[#0F3E57]">
-              {stat.value}
-            </div>
-            <div className="text-sm text-gray-500 mt-2">{stat.label}</div>
-          </div>
-        ))}
+      <div className="relative mt-16 md:mt-20">
+
+  {/* Soft Background Highlight */}
+  <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#EAF2F7] to-[#f9fbfd] rounded-3xl"></div>
+
+  <div
+    className="grid grid-cols-2 md:grid-cols-4 gap-6 p-6 md:p-10"
+    style={{ fontFamily: "Poppins" }}
+  >
+    {stats.map((stat, idx) => (
+      <div
+        key={idx}
+        className="bg-white rounded-2xl p-6 text-center border border-gray-100 
+                   transition-all duration-300 
+                   hover:shadow-xl hover:-translate-y-2 hover:border-[#f28c28]/40"
+      >
+        {/* Top Accent Line */}
+        <div className="w-10 h-1 bg-[#f28c28] mx-auto mb-4 rounded-full"></div>
+
+        <div className="text-3xl mb-3">{stat.icon}</div>
+
+        <div className="text-3xl font-bold text-[#0F3E57]">
+          {stat.value}
+        </div>
+
+        <div className="text-sm text-gray-500 mt-2 tracking-wide">
+          {stat.label}
+        </div>
       </div>
+    ))}
+  </div>
+</div>
+
 
       <style jsx>{`
         @keyframes fadeIn {

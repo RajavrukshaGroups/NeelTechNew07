@@ -200,7 +200,7 @@ const Hero = () => {
                 )}
 
                 {/* Buttons */}
-                <div className="flex flex-wrap gap-6 mt-8">
+                {/* <div className="flex flex-wrap gap-6 mt-8">
                   {slide.button1 && (
                     <button
                       className="px-10 py-4 rounded-xl text-lg font-semibold transition-all duration-300 shadow-2xl hover:scale-105"
@@ -224,7 +224,7 @@ const Hero = () => {
                       {slide.button2}
                     </button>
                   )}
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

@@ -8,14 +8,91 @@ import {
   MapPin,
 } from "lucide-react";
 import NeelLogo from "../../../public/assets/head-logo.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
+  // Social media links
+  const socialLinks = [
+    {
+      icon: Youtube,
+      href: "http://www.youtube.com/@NeelTechnologies",
+      label: "YouTube",
+    },
+    {
+      icon: Facebook,
+      href: "https://facebook.com/neeltechno",
+      label: "Facebook",
+    },
+    {
+      icon: Instagram,
+      href: "https://instagram.com/neeltechnologies",
+      label: "Instagram",
+    },
+    {
+      icon: Linkedin,
+      href: "https://linkedin.com/in/neel-technologies-1225a2239",
+      label: "LinkedIn",
+    },
+  ];
+
+  // Course links based on your routes
+  const courseLinks = [
+    { name: "AWS Cloud", path: "/aws-training-certification-course" },
+    {
+      name: "Azure Cloud",
+      path: "/microsoft-azure-training-certification-course",
+    },
+    { name: "MCSE", path: "/mcse-training-certification-course" },
+    { name: "Linux", path: "/linux-training-certification-course" },
+    {
+      name: "Windows Powershell",
+      path: "/powershell-training-certification-course",
+    },
+    { name: "Python", path: "/python-training-certification-course" },
+    {
+      name: "Google Cloud GCP",
+      path: "/google-cloud-gcp-training-certification-course",
+    },
+    { name: "AWS-Devops", path: "/aws-devops-training-certification-course" },
+    {
+      name: "AZURE-Devops",
+      path: "/azure-devops-training-certification-course",
+    },
+    {
+      name: "Ethical Hacking",
+      path: "/cyber-security-training-certification-course",
+    },
+    {
+      name: "Azure Sentinel",
+      path: "/azure-sentinel-training-certification-course",
+    },
+    { name: "CCNA", path: "/ccna-training-certification-course" },
+    { name: "Intune & O365", path: "/intune-training-certification-course" },
+    {
+      name: "Entra ID",
+      path: "/microsoft-entra-id-training-certification-course",
+    },
+  ];
+
+  // Quick links
+  const quickLinks = [
+    { name: "Our Services", path: "/services" },
+    { name: "Training", path: "/training-option" },
+    { name: "Batch Schedule", path: "/batch-schedule" },
+    { name: "About Us", path: "/about" },
+    { name: "Success Stories", path: "/success-stories" },
+    { name: "Blog", path: "/blogs" },
+    { name: "Contact Us", path: "/contact" },
+    { name: "Placement", path: "/success-stories" }, // Placement also goes to success stories
+    { name: "Student Review", path: "/about/testimonials" },
+  ];
+
   return (
     <footer className="w-full bg-[#0F3E57] text-white pt-16 pb-10">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
         {/* ================= TOP NEWSLETTER SECTION ================= */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 pb-12 border-b border-blue-800">
-          <div>
+          <div className="w-full md:w-auto">
             <h3 className="text-3xl font-semibold mb-4">
               Subscribe to our Newsletter
             </h3>
@@ -32,16 +109,26 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Social Icons */}
+          {/* Social Icons with Links */}
           <div className="flex gap-5">
-            {[Youtube, Facebook, Instagram, Linkedin].map((Icon, index) => (
-              <div
-                key={index}
-                className="w-12 h-12 rounded-full bg-blue-700 flex items-center justify-center hover:bg-[#F28C28] transition cursor-pointer"
-              >
-                <Icon size={22} />
-              </div>
-            ))}
+            {socialLinks.map((social, index) => {
+              const Icon = social.icon;
+              return (
+                <a
+                  key={index}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 rounded-full bg-blue-700 flex items-center justify-center hover:bg-[#F28C28] transition cursor-pointer group"
+                  aria-label={social.label}
+                >
+                  <Icon
+                    size={22}
+                    className="group-hover:scale-110 transition-transform"
+                  />
+                </a>
+              );
+            })}
           </div>
         </div>
 
@@ -49,7 +136,13 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 py-14">
           {/* About Section */}
           <div>
-            <img src={NeelLogo} alt="Neel Technologies" className="h-16 mb-6" />
+            <Link to="/">
+              <img
+                src={NeelLogo}
+                alt="Neel Technologies"
+                className="h-16 mb-6"
+              />
+            </Link>
 
             <p className="text-lg leading-relaxed text-gray-300">
               Neel Technologies boasts a team of highly experienced and
@@ -65,17 +158,16 @@ const Footer = () => {
               Courses
             </h4>
             <ul className="space-y-3 text-gray-300 text-lg">
-              <li>AWS Cloud</li>
-              <li>Azure Cloud</li>
-              <li>MCSE</li>
-              <li>Linux</li>
-              <li>Windows Powershell</li>
-              <li>Python</li>
-              <li>Google-Cloud GCP</li>
-              <li>AWS-Devops</li>
-              <li>AZURE-Devops</li>
-              <li>Ethical-Hacking</li>
-              <li>Azure Sentinel</li>
+              {courseLinks.map((course, index) => (
+                <li key={index}>
+                  <Link
+                    to={course.path}
+                    className="hover:text-[#F28C28] transition-colors"
+                  >
+                    {course.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -85,15 +177,16 @@ const Footer = () => {
               Quick Links
             </h4>
             <ul className="space-y-3 text-gray-300 text-lg">
-              <li>Our Services</li>
-              <li>Training</li>
-              <li>Batch Schedule</li>
-              <li>About Us</li>
-              <li>Success Stories</li>
-              <li>Blog</li>
-              <li>Contact Us</li>
-              <li>Placement</li>
-              <li>Student Review</li>
+              {quickLinks.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    to={link.path}
+                    className="hover:text-[#F28C28] transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -105,18 +198,31 @@ const Footer = () => {
 
             <div className="space-y-5 text-lg text-gray-300">
               <div className="flex items-start gap-4">
-                <MapPin size={20} className="mt-1 text-[#F28C28]" />
+                <MapPin
+                  size={20}
+                  className="mt-1 text-[#F28C28] flex-shrink-0"
+                />
                 <span>Doddabele Kengeri, Bangalore - 560040</span>
               </div>
 
               <div className="flex items-center gap-4">
-                <Phone size={20} className="text-[#F28C28]" />
-                <span>+91 6361866299</span>
+                <Phone size={20} className="text-[#F28C28] flex-shrink-0" />
+                <a
+                  href="tel:+916361866299"
+                  className="hover:text-[#F28C28] transition-colors"
+                >
+                  +91 6361866299
+                </a>
               </div>
 
               <div className="flex items-center gap-4">
-                <Mail size={20} className="text-[#F28C28]" />
-                <span>info@neeltechnologies.net</span>
+                <Mail size={20} className="text-[#F28C28] flex-shrink-0" />
+                <a
+                  href="mailto:info@neeltechnologies.net"
+                  className="hover:text-[#F28C28] transition-colors break-all"
+                >
+                  info@neeltechnologies.net
+                </a>
               </div>
             </div>
           </div>
@@ -125,9 +231,9 @@ const Footer = () => {
         {/* ================= BOTTOM COPYRIGHT ================= */}
         <div className="border-t border-blue-800 pt-8 text-center text-lg text-gray-400">
           © 2026 All Rights Reserved by{" "}
-          <span className="text-[#F28C28] font-semibold">
+          <Link to="/" className="text-[#F28C28] font-semibold hover:underline">
             Neel Technologies
-          </span>
+          </Link>
         </div>
       </div>
     </footer>
