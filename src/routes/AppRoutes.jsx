@@ -12,6 +12,11 @@ import PythonTraining from "../components/CourseComponents/Automation/Python/pyt
 import MicrosoftAzureTraining from "../components/CourseComponents/CloudTechnology/MicrosoftAzure/microsoftAzure";
 import MicrosoftEntraIdTraining from "../components/CourseComponents/CloudTechnology/EntraID/entraID";
 import AWSTraining from "../components/CourseComponents/CloudTechnology/AWS/AWS";
+import GoogleCloudGCPTraining from "../components/CourseComponents/CloudTechnology/GoogleCloudGCP/googleCloudGCP";
+import AzureSentinelTraining from "../components/CourseComponents/CloudTechnology/AzureSentinel/azureSentinel";
+import AWSDevOpsTraining from "../components/CourseComponents/DevOps/AWSDevOps/AWSDevOps";
+import AzureDevOpsTraining from "../components/CourseComponents/DevOps/AzureDevOps/azureDevOps";
+import CyberSecurityTraining from "../components/CourseComponents/CyberSecurity/cyberSecurity";
 
 const AppRoutes = () => {
   return (
@@ -58,6 +63,26 @@ const AppRoutes = () => {
       <Route
         path="/aws-training-certification-course"
         element={<AWSTraining />}
+      />
+      <Route
+        path="/google-cloud-gcp-training-certification-course"
+        element={<GoogleCloudGCPTraining />}
+      />
+      <Route
+        path="/azure-sentinel-training-certification-course"
+        element={<AzureSentinelTraining />}
+      />
+      <Route
+        path="/aws-devops-training-certification-course"
+        element={<AWSDevOpsTraining />}
+      />
+      <Route
+        path="/azure-devops-training-certification-course"
+        element={<AzureDevOpsTraining />}
+      />
+      <Route
+        path="/cyber-security-training-certification-course"
+        element={<CyberSecurityTraining />}
       />
       <Route path="/training-option" element={<TrainingOption />} />
     </Routes>
