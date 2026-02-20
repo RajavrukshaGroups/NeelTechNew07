@@ -1,0 +1,132 @@
+import {
+  Cloud,
+  TrendingUp,
+  Globe,
+  Briefcase,
+  Server,
+  ShieldCheck
+} from "lucide-react";
+
+const WhyAzureDevOps = () => {
+  return (
+    <section className="w-full py-24 bg-white">
+      <div className="max-w-[1200px] mx-auto px-6">
+        
+        {/* SECTION TITLE */}
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+            Why Choose{" "}
+            <span className="text-blue-600">
+              Azure DevOps Certification?
+            </span>
+          </h2>
+          <p className="text-gray-600 text-xl mt-6 max-w-3xl mx-auto">
+            Master CI/CD pipelines, automation, and cloud deployment
+            using Microsoft Azure DevOps tools.
+          </p>
+        </div>
+
+        {/* BENEFITS GRID */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+          {/* DevOps Automation */}
+          <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300">
+            <Cloud size={40} className="text-blue-600 mb-6" />
+            <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
+              End-to-End DevOps Automation
+            </h3>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Automate build, test, and deployment processes using
+              Azure Pipelines and Infrastructure as Code.
+            </p>
+          </div>
+
+          {/* Career Growth */}
+          <div className="bg-gradient-to-br from-green-50 to-green-100 p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300">
+            <TrendingUp size={40} className="text-green-600 mb-6" />
+            <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
+              High-Paying DevOps Careers
+            </h3>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Qualify for roles like{" "}
+              <strong>
+                Azure DevOps Engineer, Cloud Engineer, SRE, Release Manager
+              </strong>{" "}
+              with globally recognized certification.
+            </p>
+          </div>
+
+          {/* Global Cloud Integration */}
+          <div className="bg-gradient-to-br from-indigo-50 to-indigo-100 p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300">
+            <Globe size={40} className="text-indigo-600 mb-6" />
+            <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
+              Seamless Azure Integration
+            </h3>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Integrate applications with Azure services across
+              regions for scalable and reliable deployments.
+            </p>
+          </div>
+
+          {/* Tools & Services */}
+          <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300">
+            <Server size={40} className="text-purple-600 mb-6" />
+            <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
+              Powerful DevOps Tools
+            </h3>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Gain hands-on experience with{" "}
+              <strong>
+                Azure Repos, Azure Pipelines, Azure Boards,
+                Azure Artifacts, and ARM Templates
+              </strong>.
+            </p>
+          </div>
+
+          {/* Security & Compliance */}
+          <div className="bg-gradient-to-br from-red-50 to-red-100 p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300">
+            <ShieldCheck size={40} className="text-red-600 mb-6" />
+            <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
+              Secure DevOps Practices
+            </h3>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Implement DevSecOps practices with built-in
+              security scanning, monitoring, and compliance tools.
+            </p>
+          </div>
+
+          {/* Job Market */}
+          <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300">
+            <Briefcase size={40} className="text-yellow-600 mb-6" />
+            <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
+              Expanding DevOps Job Market
+            </h3>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Organizations worldwide are adopting DevOps culture,
+              making Azure DevOps professionals highly valuable.
+            </p>
+          </div>
+
+        </div>
+
+        {/* CTA SECTION */}
+        <div className="mt-24 text-center bg-gradient-to-r from-[#0F3E57] to-blue-600 text-white p-14 rounded-3xl shadow-2xl">
+          <h3 className="text-3xl md:text-4xl font-bold mb-6">
+            Become an Azure DevOps Expert 🚀
+          </h3>
+          <p className="text-xl mb-8 opacity-90">
+            Enrol in Azure DevOps training and master automation,
+            CI/CD pipelines, and cloud deployment strategies.
+          </p>
+
+          <button className="bg-white text-[#0F3E57] px-10 py-4 text-xl font-semibold rounded-2xl hover:scale-105 transition-all duration-300 shadow-lg">
+            Enrol Now
+          </button>
+        </div>
+
+      </div>
+    </section>
+  );
+};
+
+export default WhyAzureDevOps;
