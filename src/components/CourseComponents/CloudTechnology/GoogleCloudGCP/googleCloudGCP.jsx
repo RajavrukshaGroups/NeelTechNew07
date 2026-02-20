@@ -61,8 +61,8 @@ const GoogleCloudTraining = () => {
         batchDetails={batches}
         corporateDetails={corporate}
       />
-      <CommonFAQ courseName="Microsoft Azure" />
-      <ContactUsPage courseName="Microsoft Azure Training Certification" />
+      <CommonFAQ courseName="Google Cloud GCP" />
+      <ContactUsPage courseName="Google Cloud GCP Training Certification" />
       <Footer />
     </>
   );

@@ -61,7 +61,7 @@ const AWSTraining = () => {
         batchDetails={batches}
         corporateDetails={corporate}
       />
-      <CommonFAQ courseName="AWS" />
+      <CommonFAQ courseName="AWS Training" />
       <ContactUsPage courseName="AWS Training Certification" />
       <Footer />
     </>

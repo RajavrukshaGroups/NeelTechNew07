@@ -9,7 +9,7 @@ import WhyWindowsPowershell from "./whypowershell";
 import WindowsPowershellHero from "./windowsPowershellHero";
 
 const WindowsPowershellTraining = () => {
-      const selfPaced = [
+  const selfPaced = [
     "2 Month e-learning Access",
     "Live Recorded Lectures",
     "Free Lifetime Updates",
@@ -47,26 +47,25 @@ const WindowsPowershellTraining = () => {
     "On-site & Online Delivery",
   ];
 
-    return(
-        <>
-        <CommonCourseToggle/>
-        <WindowsPowershellHero/>
-        <CommonKeyFeature/>
-        <WhyWindowsPowershell/>
-        <WindowsPowershellCurriculum/>
-        <CommonBatchSchedule
-         title="Windows Powershell Training Certification"
+  return (
+    <>
+      <CommonCourseToggle />
+      <WindowsPowershellHero />
+      <CommonKeyFeature />
+      <WhyWindowsPowershell />
+      <WindowsPowershellCurriculum />
+      <CommonBatchSchedule
+        title="Windows Powershell Training Certification"
         selfPacedFeatures={selfPaced}
         onlineFeatures={onlineClass}
         batchDetails={batches}
         corporateDetails={corporate}
-        />
-        <CommonFAQ courseName="Windows Powershell" />
+      />
+      <CommonFAQ courseName="Windows Powershell" />
       <ContactUsPage courseName="Windows Powershell Training Certification" />
       <Footer />
-        
-        </>
-    )
-}
+    </>
+  );
+};
 
 export default WindowsPowershellTraining;

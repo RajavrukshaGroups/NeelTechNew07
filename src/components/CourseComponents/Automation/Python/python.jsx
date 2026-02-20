@@ -9,7 +9,7 @@ import WhyPython from "./whypython";
 import PythonHero from "./pythonHero";
 
 const PythonTraining = () => {
-      const selfPaced = [
+  const selfPaced = [
     "2 Month e-learning Access",
     "Live Recorded Lectures",
     "Free Lifetime Updates",
@@ -47,26 +47,25 @@ const PythonTraining = () => {
     "On-site & Online Delivery",
   ];
 
-    return(
-        <>
-        <CommonCourseToggle/>
-        <PythonHero/>
-        <CommonKeyFeature/>
-        <WhyPython/>
-        <PythonCurriculum/>
-        <CommonBatchSchedule
-         title="Python Training Certification"
+  return (
+    <>
+      <CommonCourseToggle />
+      <PythonHero />
+      <CommonKeyFeature />
+      <WhyPython />
+      <PythonCurriculum />
+      <CommonBatchSchedule
+        title="Python Training Certification"
         selfPacedFeatures={selfPaced}
         onlineFeatures={onlineClass}
         batchDetails={batches}
         corporateDetails={corporate}
-        />
-        <CommonFAQ courseName="Python" />
+      />
+      <CommonFAQ courseName="Python" />
       <ContactUsPage courseName="Python Training Certification" />
       <Footer />
-        
-        </>
-    )
-}
+    </>
+  );
+};
 
 export default PythonTraining;

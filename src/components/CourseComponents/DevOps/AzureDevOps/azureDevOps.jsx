@@ -55,14 +55,14 @@ const AzureDevOpsTraining = () => {
       <WhyAzureDevOps />
       <AzureDevOpsCurriculum />
       <CommonBatchSchedule
-        title="Azure Sentinel Training Certification"
+        title="Azure DevOps Training Certification"
         selfPacedFeatures={selfPaced}
         onlineFeatures={onlineClass}
         batchDetails={batches}
         corporateDetails={corporate}
       />
-      <CommonFAQ courseName="Microsoft Azure" />
-      <ContactUsPage courseName="Microsoft Azure Training Certification" />
+      <CommonFAQ courseName="Azure DevOps" />
+      <ContactUsPage courseName="Azure DevOps Training Certification" />
       <Footer />
     </>
   );

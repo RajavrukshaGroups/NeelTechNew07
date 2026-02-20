@@ -55,14 +55,14 @@ const CyberSecurityTraining = () => {
       <WhyCyberSecurity />
       <CyberSecurityCurriculum />
       <CommonBatchSchedule
-        title="Azure Sentinel Training Certification"
+        title="Cyber Security Training Certification"
         selfPacedFeatures={selfPaced}
         onlineFeatures={onlineClass}
         batchDetails={batches}
         corporateDetails={corporate}
       />
-      <CommonFAQ courseName="Microsoft Azure" />
-      <ContactUsPage courseName="Microsoft Azure Training Certification" />
+      <CommonFAQ courseName="Cyber Security" />
+      <ContactUsPage courseName="Cyber Security Training Certification" />
       <Footer />
     </>
   );

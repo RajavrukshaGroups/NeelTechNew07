@@ -61,8 +61,8 @@ const AzureSentinelTraining = () => {
         batchDetails={batches}
         corporateDetails={corporate}
       />
-      <CommonFAQ courseName="Microsoft Azure" />
-      <ContactUsPage courseName="Microsoft Azure Training Certification" />
+      <CommonFAQ courseName="Azure Sentinel" />
+      <ContactUsPage courseName="Azure Sentinel Training Certification" />
       <Footer />
     </>
   );
