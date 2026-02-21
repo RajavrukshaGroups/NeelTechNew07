@@ -374,7 +374,7 @@ const Navbar = () => {
         </Link>
 
         {/* All Courses Button - Now separate from logo */}
-        <div className="flex items-center ml-2 lg:ml-4">
+        <div className="flex items-center ml-2 lg:ml-4" style={{marginLeft:"4rem"}}>
           <div
             className="relative hidden lg:block"
             onMouseEnter={() => handleDropdownEnter("allCourses")}
