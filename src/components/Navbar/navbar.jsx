@@ -15,7 +15,7 @@ const AboutDropdown = ({ theme, isOpen, onMouseEnter, onMouseLeave }) => {
 
   return (
     <div
-      className={`absolute top-full left-0 mt-1 w-64 rounded-md shadow-xl transition-all duration-300 ease-in-out ${
+      className={`absolute top-full left-0 mt-1 w-48 sm:w-56 md:w-64 rounded-md shadow-xl transition-all duration-300 ease-in-out ${
         isOpen
           ? "opacity-100 visible translate-y-0"
           : "opacity-0 invisible -translate-y-2"
@@ -33,7 +33,7 @@ const AboutDropdown = ({ theme, isOpen, onMouseEnter, onMouseLeave }) => {
           <Link
             key={idx}
             to={item.path}
-            className="block px-4 py-2 transition-all duration-200 text-base font-medium"
+            className="block px-3 sm:px-4 py-1.5 sm:py-2 transition-all duration-200 text-xs sm:text-sm md:text-base font-medium"
             style={{
               color: theme.darkBlueBg,
               fontFamily: "'Inter', sans-serif",
@@ -45,13 +45,13 @@ const AboutDropdown = ({ theme, isOpen, onMouseEnter, onMouseLeave }) => {
             onMouseEnter={(e) => {
               e.target.style.backgroundColor = theme.lightGray;
               e.target.style.color = theme.primaryBlue;
-              e.target.style.paddingLeft = "24px";
+              e.target.style.paddingLeft = "20px";
               e.target.style.fontWeight = "700";
             }}
             onMouseLeave={(e) => {
               e.target.style.backgroundColor = "transparent";
               e.target.style.color = theme.darkBlueBg;
-              e.target.style.paddingLeft = "16px";
+              e.target.style.paddingLeft = "12px";
               e.target.style.fontWeight = "500";
             }}
           >
@@ -208,7 +208,7 @@ const AllCoursesMegaMenu = ({ theme, isOpen, onMouseEnter, onMouseLeave }) => {
 
   return (
     <div
-      className={`absolute top-full left-0 mt-1 w-[95vw] max-w-[900px] rounded-md shadow-xl transition-all duration-300 ease-in-out ${
+      className={`absolute top-full left-0 mt-1 w-[90vw] sm:w-[600px] md:w-[700px] lg:w-[800px] xl:w-[900px] rounded-md shadow-xl transition-all duration-300 ease-in-out ${
         isOpen
           ? "opacity-100 visible translate-y-0"
           : "opacity-0 invisible -translate-y-2"
@@ -221,17 +221,17 @@ const AllCoursesMegaMenu = ({ theme, isOpen, onMouseEnter, onMouseLeave }) => {
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
-      <div className="flex">
+      <div className="flex flex-col sm:flex-row">
         {/* Categories Column */}
         <div
-          className="w-1/4 border-r"
+          className="w-full sm:w-1/4 border-b sm:border-b-0 sm:border-r"
           style={{ borderColor: theme.lightGray, backgroundColor: "#FAFAFA" }}
         >
-          <div className="py-2">
+          <div className="py-2 flex sm:block">
             {categories.map((category, idx) => (
               <div
                 key={idx}
-                className="px-3 py-2.5 transition-all duration-200 cursor-pointer text-sm xl:text-base font-semibold"
+                className="px-2 sm:px-3 py-2 sm:py-2.5 transition-all duration-200 cursor-pointer text-xs sm:text-sm xl:text-base font-semibold whitespace-nowrap sm:whitespace-normal"
                 style={{
                   color:
                     hoveredCategory === category.name
@@ -256,9 +256,9 @@ const AllCoursesMegaMenu = ({ theme, isOpen, onMouseEnter, onMouseLeave }) => {
         </div>
 
         {/* Courses Display */}
-        <div className="w-3/4 p-5">
+        <div className="w-full sm:w-3/4 p-3 sm:p-4 md:p-5">
           <h3
-            className="text-base font-bold mb-4 pb-2 border-b"
+            className="text-sm sm:text-base font-bold mb-3 sm:mb-4 pb-2 border-b"
             style={{
               color: theme.primaryBlue,
               borderColor: theme.lightGray,
@@ -267,14 +267,14 @@ const AllCoursesMegaMenu = ({ theme, isOpen, onMouseEnter, onMouseLeave }) => {
             {hoveredCategory}
           </h3>
 
-          <div className="overflow-y-auto max-h-[400px] pr-2">
+          <div className=" max-h-[300px] sm:max-h-[400px] pr-2">
             {courseChunks.map((chunk, chunkIndex) => (
-              <div key={chunkIndex} className="grid grid-cols-3 gap-4 mb-4">
+              <div key={chunkIndex} className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3 md:gap-4 mb-3 sm:mb-4">
                 {chunk.map((item, itemIndex) => (
                   <Link
                     key={`${chunkIndex}-${itemIndex}`}
                     to={item.path}
-                    className="text-base font-medium hover:text-blue-600 hover:font-semibold transition-all"
+                    className="text-xs sm:text-sm md:text-base font-medium hover:text-blue-600 hover:font-semibold transition-all"
                     style={{
                       color: theme.darkBlueBg,
                       textDecoration: "none",
@@ -325,19 +325,19 @@ const Navbar = () => {
     <div className="w-full" style={{ backgroundColor: theme.white }}>
       {/* Top Bar */}
       <div
-        className="px-4 md:px-[5%] py-3 flex justify-center items-center border-b"
+        className="px-2 sm:px-4 md:px-[5%] py-2 sm:py-3 flex justify-center items-center border-b"
         style={{
           backgroundColor: theme.rgbBg,
           fontFamily: "Poppins",
         }}
       >
-        <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm md:text-base whitespace-nowrap">
+        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 lg:gap-10 text-xs sm:text-sm md:text-base whitespace-nowrap">
           <span className="text-white font-medium">
-            <span className="text-blue-200 mr-2 font-semibold">Chat Only:</span>
-            <span className="font-bold">+91-636-186-6299</span>
+            <span className="text-blue-200 mr-1 sm:mr-2 font-semibold">Chat Only:</span>
+            <span className="font-bold">+91-984-072-2417</span>
           </span>
           <span className="text-white font-medium">
-            <span className="text-blue-200 mr-2 font-semibold">Email:</span>
+            <span className="text-blue-200 mr-1 sm:mr-2 font-semibold">Email:</span>
             <span className="font-bold">info@neeltechnologies.com</span>
           </span>
         </div>
@@ -345,27 +345,26 @@ const Navbar = () => {
 
       {/* Main Navigation */}
       <div
-        className="pl-2 pr-4 md:pl-6 md:pr-6 py-4 flex justify-between items-center border-b relative"
+        className="px-2 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 flex justify-between items-center border-b relative"
         style={{ backgroundColor: theme.white }}
       >
-        {/* Logo - Moved to extreme left */}
-        <Link to="/" className="flex items-center flex-shrink-0 ml-0">
-          {" "}
+        {/* Logo */}
+        <Link to="/" className="flex items-center flex-shrink-0">
           <img
             src={NeelLogo}
             alt="Neel Technologies"
-            className="h-10 md:h-12 w-auto"
-            style={{ height: "3.5rem", marginRight: "0.5rem" }}
+            className="h-8 sm:h-9 md:h-10 lg:h-12 w-auto"
+            style={{ marginRight: "0.25rem" }}
           />
           <div className="flex items-center">
             <span
-              className="text-xl md:text-2xl lg:text-3xl font-extrabold tracking-tight"
+              className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-extrabold tracking-tight"
               style={{ color: theme.neelBlue }}
             >
-              NEEL&nbsp;
+              NEEL
             </span>
             <span
-              className="text-xl md:text-2xl lg:text-3xl font-extrabold tracking-tight whitespace-nowrap"
+              className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-extrabold tracking-tight whitespace-nowrap ml-1"
               style={{ color: theme.technologiesOrange }}
             >
               TECHNOLOGIES
@@ -373,15 +372,15 @@ const Navbar = () => {
           </div>
         </Link>
 
-        {/* All Courses Button - Now separate from logo */}
-        <div className="flex items-center ml-2 lg:ml-4" style={{marginLeft:"4rem"}}>
+        {/* All Courses Button - Desktop */}
+        <div className="hidden lg:flex items-center ml-2 xl:ml-4">
           <div
-            className="relative hidden lg:block"
+            className="relative"
             onMouseEnter={() => handleDropdownEnter("allCourses")}
             onMouseLeave={handleDropdownLeave}
           >
             <button
-              className="flex items-center gap-1 px-4 py-2 rounded-full text-sm font-bold whitespace-nowrap"
+              className="flex items-center gap-1 px-3 xl:px-4 py-1.5 xl:py-2 rounded-full text-xs xl:text-sm font-bold whitespace-nowrap"
               style={{
                 backgroundColor: theme.allCourse,
                 color: theme.allCourseTxtClr,
@@ -389,7 +388,7 @@ const Navbar = () => {
             >
               All Courses
               <ChevronDown
-                className={`h-4 w-4 transition-transform duration-300 ${
+                className={`h-3 w-3 transition-transform duration-300 ${
                   openDropdown === "allCourses" ? "rotate-180" : ""
                 }`}
               />
@@ -406,7 +405,7 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div
-          className="hidden lg:flex items-center gap-3 xl:gap-6 ml-auto"
+          className="hidden lg:flex items-center gap-2 xl:gap-4 ml-auto"
           style={{ fontFamily: "Montserrat", zIndex: "100" }}
         >
           {/* About Us */}
@@ -416,7 +415,7 @@ const Navbar = () => {
             onMouseLeave={handleDropdownLeave}
           >
             <button
-              className="flex items-center gap-1 text-xs xl:text-sm font-bold uppercase tracking-wide whitespace-nowrap"
+              className="flex items-center gap-1 text-xs xl:text-sm font-bold uppercase tracking-wide whitespace-nowrap px-1 xl:px-2"
               style={{
                 color:
                   openDropdown === "about"
@@ -442,7 +441,7 @@ const Navbar = () => {
 
           <Link
             to="/training-option"
-            className="text-xs xl:text-sm font-bold uppercase tracking-wide whitespace-nowrap"
+            className="text-xs xl:text-sm font-bold uppercase tracking-wide whitespace-nowrap px-1 xl:px-2"
             style={{ color: theme.darkBlueBg }}
           >
             Training Options
@@ -450,7 +449,7 @@ const Navbar = () => {
 
           <Link
             to="/blogs"
-            className="text-xs xl:text-sm font-bold uppercase tracking-wide whitespace-nowrap"
+            className="text-xs xl:text-sm font-bold uppercase tracking-wide whitespace-nowrap px-1 xl:px-2"
             style={{ color: theme.darkBlueBg }}
           >
             Blogs
@@ -458,7 +457,7 @@ const Navbar = () => {
 
           <Link
             to="/success-stories"
-            className="text-xs xl:text-sm font-bold uppercase tracking-wide whitespace-nowrap"
+            className="text-xs xl:text-sm font-bold uppercase tracking-wide whitespace-nowrap px-1 xl:px-2"
             style={{ color: theme.darkBlueBg }}
           >
             Success Stories
@@ -466,7 +465,7 @@ const Navbar = () => {
 
           <Link
             to="/contact"
-            className="px-4 py-1.5 rounded text-xs xl:text-sm font-bold border-2 transition-colors whitespace-nowrap"
+            className="px-2 xl:px-3 py-1 rounded text-xs xl:text-sm font-bold border-2 transition-colors whitespace-nowrap"
             style={{
               color: theme.primaryBlue,
               borderColor: theme.primaryBlue,
@@ -484,71 +483,84 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Menu Button - Visible on tablet and below */}
         <button
           onClick={toggleMobileMenu}
-          className="lg:hidden p-2 ml-auto"
+          className="lg:hidden p-1.5 sm:p-2 ml-auto"
           aria-label="Toggle menu"
         >
           {isMobileMenuOpen ? (
-            <X className="h-6 w-6" style={{ color: theme.darkBlueBg }} />
+            <X className="h-5 w-5 sm:h-6 sm:w-6" style={{ color: theme.darkBlueBg }} />
           ) : (
-            <Menu className="h-6 w-6" style={{ color: theme.darkBlueBg }} />
+            <Menu className="h-5 w-5 sm:h-6 sm:w-6" style={{ color: theme.darkBlueBg }} />
           )}
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu - Visible on tablet and below */}
       <div
         className={`lg:hidden overflow-hidden transition-all duration-300 ${
           isMobileMenuOpen ? "max-h-[800px] opacity-100" : "max-h-0 opacity-0"
         }`}
         style={{ backgroundColor: theme.white }}
       >
-        <div className="px-4 py-4 space-y-4">
-          {/* Mobile All Courses */}
-          <div
-            className="border-b pb-3"
-            style={{ borderColor: theme.lightGray }}
-          >
-            <div
-              className="font-bold text-base mb-3"
-              style={{ color: theme.primaryBlue }}
+        <div className="px-3 sm:px-4 py-3 sm:py-4 space-y-3 sm:space-y-4">
+          {/* Mobile All Courses Button */}
+          <div className="sm:hidden mb-2">
+            <button
+              className="w-full flex items-center justify-between px-3 py-2 rounded-lg text-sm font-bold"
+              style={{
+                backgroundColor: theme.allCourse,
+                color: theme.allCourseTxtClr,
+              }}
+              onClick={() => {
+                // Handle mobile all courses expand/collapse
+                setOpenDropdown(openDropdown === "mobileCourses" ? null : "mobileCourses");
+              }}
             >
               All Courses
-            </div>
-            <div className="grid grid-cols-2 gap-3">
-              {categories[0].subItems.map((course, idx) => (
-                <Link
-                  key={idx}
-                  to={course.path}
-                  className="text-sm font-medium py-1"
-                  style={{ color: theme.darkBlueBg }}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {course.label}
-                </Link>
-              ))}
-            </div>
+              <ChevronDown
+                className={`h-4 w-4 transition-transform duration-300 ${
+                  openDropdown === "mobileCourses" ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+            
+            {/* Mobile All Courses Grid */}
+            {openDropdown === "mobileCourses" && (
+              <div className="mt-3 grid grid-cols-2 gap-2">
+                {categories[0].subItems.map((course, idx) => (
+                  <Link
+                    key={idx}
+                    to={course.path}
+                    className="text-xs font-medium py-1.5 px-2 bg-gray-50 rounded"
+                    style={{ color: theme.darkBlueBg }}
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      setOpenDropdown(null);
+                    }}
+                  >
+                    {course.label}
+                  </Link>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Mobile About Links */}
-          <div
-            className="border-b pb-3"
-            style={{ borderColor: theme.lightGray }}
-          >
+          <div className="border-b pb-2 sm:pb-3" style={{ borderColor: theme.lightGray }}>
             <div
-              className="font-bold text-base mb-3"
+              className="font-bold text-sm sm:text-base mb-2 sm:mb-3"
               style={{ color: theme.primaryBlue }}
             >
               About Us
             </div>
-            <div className="space-y-2">
+            <div className="grid grid-cols-2 gap-2 sm:gap-3">
               {aboutMenuItems.map((item, idx) => (
                 <Link
                   key={idx}
                   to={item.path}
-                  className="block text-sm font-medium py-1"
+                  className="text-xs sm:text-sm font-medium py-1"
                   style={{ color: theme.darkBlueBg }}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
@@ -559,48 +571,50 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Other Links */}
-          <Link
-            to="/training-option"
-            className="block text-base font-bold py-2"
-            style={{ color: theme.darkBlueBg }}
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            Training Options
-          </Link>
+          <div className="space-y-2">
+            <Link
+              to="/training-option"
+              className="block text-sm sm:text-base font-bold py-1.5"
+              style={{ color: theme.darkBlueBg }}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Training Options
+            </Link>
 
-          <Link
-            to="/blogs"
-            className="block text-base font-bold py-2"
-            style={{ color: theme.darkBlueBg }}
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            Blogs
-          </Link>
+            <Link
+              to="/blogs"
+              className="block text-sm sm:text-base font-bold py-1.5"
+              style={{ color: theme.darkBlueBg }}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Blogs
+            </Link>
 
-          <Link
-            to="/success-stories"
-            className="block text-base font-bold py-2"
-            style={{ color: theme.darkBlueBg }}
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            Success Stories
-          </Link>
+            <Link
+              to="/success-stories"
+              className="block text-sm sm:text-base font-bold py-1.5"
+              style={{ color: theme.darkBlueBg }}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Success Stories
+            </Link>
 
-          <Link
-            to="/contact"
-            className="block text-base font-bold py-2"
-            style={{ color: theme.primaryBlue }}
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            Contact
-          </Link>
+            <Link
+              to="/contact"
+              className="block text-sm sm:text-base font-bold py-1.5"
+              style={{ color: theme.primaryBlue }}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Contact
+            </Link>
+          </div>
 
           {/* Mobile Contact Info */}
           <div
-            className="pt-4 mt-2 border-t text-sm"
+            className="pt-3 sm:pt-4 mt-2 sm:mt-3 border-t text-xs sm:text-sm"
             style={{ borderColor: theme.lightGray }}
           >
-            <div className="space-y-2">
+            <div className="space-y-1.5 sm:space-y-2">
               <div>
                 <span
                   className="font-bold"
