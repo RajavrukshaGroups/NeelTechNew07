@@ -1,7 +1,6 @@
 const OurAchievements = () => {
   return (
-    <div className="mt-20 px-6">
-
+    <div className="mt-20 mb-20 px-6">
       {/* Heading */}
       <div className="text-center mb-14">
         {/* <h2 className="text-4xl md:text-5xl font-bold text-[#0F3E57]">
@@ -13,30 +12,23 @@ const OurAchievements = () => {
       {/* Intro Content */}
       <div className="max-w-5xl mx-auto text-center mb-16">
         <p className="text-xl md:text-2xl leading-relaxed text-[#0F3E57] font-medium">
-          <span className="font-bold text-[#f28c28]">
-            Neel Technologies
-          </span>{" "}
+          <span className="font-bold text-[#f28c28]">Neel Technologies</span>{" "}
           has established itself as a trusted name in IT training in Bangalore.
           With a strong focus on{" "}
           <span className="font-bold text-[#f28c28]">
             practical, hands-on learning
-          </span>,
-          we have successfully trained{" "}
-          <span className="font-bold text-[#f28c28]">
-            200+ candidates
-          </span>{" "}
-          now working in top IT companies like Wipro, TCS, Infosys,
-          Accenture, and Capgemini.
+          </span>
+          , we have successfully trained{" "}
+          <span className="font-bold text-[#f28c28]">200+ candidates</span> now
+          working in top IT companies like Wipro, TCS, Infosys, Accenture, and
+          Capgemini.
         </p>
       </div>
 
       {/* Achievement Highlights Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
-
         <div className="bg-[#EAF2F7] rounded-3xl p-8 shadow-md hover:shadow-lg transition-all duration-300">
-          <h3 className="text-3xl font-bold text-[#1C5D8F] mb-4">
-            200+
-          </h3>
+          <h3 className="text-3xl font-bold text-[#1C5D8F] mb-4">200+</h3>
           <p className="text-lg text-[#0F3E57] font-medium">
             Professionals trained with successful career transitions.
           </p>
@@ -77,9 +69,7 @@ const OurAchievements = () => {
             Programs aligned with current industry requirements.
           </p>
         </div>
-
       </div>
-
     </div>
   );
 };

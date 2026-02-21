@@ -1,9 +1,15 @@
-const SuccessStories=()=>{
-    return(
-        <div>
+import Footer from "../Home/Footer";
+import SuccessStoriesHero from "./successstoriesHero";
+import SuccessStoriesTestimonials from "./successStoriesTestimonials";
 
-        </div>
-    )
-}
+const SuccessStories = () => {
+  return (
+    <div>
+      <SuccessStoriesHero />
+      <SuccessStoriesTestimonials />
+      <Footer />
+    </div>
+  );
+};
 
-export default SuccessStories
+export default SuccessStories;

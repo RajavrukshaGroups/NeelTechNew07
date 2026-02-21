@@ -1,4 +1,5 @@
 import Footer from "../Home/Footer";
+import Navbar from "../Navbar/navbar";
 import AboutUsHero from "./aboutushero";
 import AboutUsToggle from "./aboutustoggle";
 

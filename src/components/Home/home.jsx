@@ -1,3 +1,4 @@
+import Navbar from "../Navbar/navbar";
 import AdvancedTrainingLms from "./AdvancedTrainingLMS";
 import CourseDetails from "./CourseDetails";
 import Footer from "./Footer";
@@ -11,7 +12,7 @@ import BannerImg from "/assets/banner_slider.png";
 
 const Home = () => {
   return (
-    <>
+    <div>
       <Hero />
       <CourseDetails />
       <UniqueOfferings />
@@ -21,7 +22,7 @@ const Home = () => {
       <StudentPlacements />
       <Footer />
       {/* <AdvancedTrainingLms /> */}
-    </>
+    </div>
   );
 };
 

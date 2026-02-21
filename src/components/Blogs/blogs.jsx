@@ -1,7 +1,13 @@
-const Blogs=()=>{
-    return(
-        <></>
-    )
-}
+import Footer from "../Home/Footer";
+import BlogsHero from "./blogshero";
 
-export default Blogs
+const Blogs = () => {
+  return (
+    <>
+      <BlogsHero />
+      <Footer />
+    </>
+  );
+};
+
+export default Blogs;

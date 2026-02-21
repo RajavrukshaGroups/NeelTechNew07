@@ -208,7 +208,7 @@ const AllCoursesMegaMenu = ({ theme, isOpen, onMouseEnter, onMouseLeave }) => {
 
   return (
     <div
-      className={`absolute top-full left-0 mt-1 w-[800px] xl:w-[900px] rounded-md shadow-xl transition-all duration-300 ease-in-out ${
+      className={`absolute top-full left-0 mt-1 w-[95vw] max-w-[900px] rounded-md shadow-xl transition-all duration-300 ease-in-out ${
         isOpen
           ? "opacity-100 visible translate-y-0"
           : "opacity-0 invisible -translate-y-2"
@@ -317,6 +317,8 @@ const Navbar = () => {
     rgbBg: "rgb(14, 24, 89)",
     allCourse: "#0694d1",
     allCourseTxtClr: "#FFFFFF",
+    neelBlue: "#0F3E57",
+    technologiesOrange: "#f28c28",
   };
 
   return (
@@ -329,10 +331,10 @@ const Navbar = () => {
           fontFamily: "Poppins",
         }}
       >
-        <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm md:text-base">
+        <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm md:text-base whitespace-nowrap">
           <span className="text-white font-medium">
             <span className="text-blue-200 mr-2 font-semibold">Chat Only:</span>
-            <span className="font-bold">+91-984-072-2417</span>
+            <span className="font-bold">+91-636-186-6299</span>
           </span>
           <span className="text-white font-medium">
             <span className="text-blue-200 mr-2 font-semibold">Email:</span>
@@ -343,43 +345,43 @@ const Navbar = () => {
 
       {/* Main Navigation */}
       <div
-        className="px-4 md:px-[5%] py-4 flex justify-between items-center border-b relative"
+        className="pl-2 pr-4 md:pl-6 md:pr-6 py-4 flex justify-between items-center border-b relative"
         style={{ backgroundColor: theme.white }}
       >
-        {/* Logo and All Courses */}
-        <div className="flex items-center gap-4 lg:gap-8">
-          {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <img
-              src={NeelLogo}
-              alt="Neel Technologies"
-              className="h-10 md:h-12 w-auto mr-2"
-              style={{ height: "5rem" }}
-            />
-            <div className="flex flex-col">
-              <span
-                className="text-2xl md:text-3xl font-extrabold tracking-tight"
-                style={{ color: theme.darkBlueBg }}
-              >
-                NEEL
-              </span>
-              <span
-                className="text-[0.9rem] tracking-wider font-extrabold"
-                style={{ color: theme.darkBlueBg }}
-              >
-                TECHNOLOGIES
-              </span>
-            </div>
-          </Link>
+        {/* Logo - Moved to extreme left */}
+        <Link to="/" className="flex items-center flex-shrink-0 ml-0">
+          {" "}
+          <img
+            src={NeelLogo}
+            alt="Neel Technologies"
+            className="h-10 md:h-12 w-auto"
+            style={{ height: "3.5rem", marginRight: "0.5rem" }}
+          />
+          <div className="flex items-center">
+            <span
+              className="text-xl md:text-2xl lg:text-3xl font-extrabold tracking-tight"
+              style={{ color: theme.neelBlue }}
+            >
+              NEEL&nbsp;
+            </span>
+            <span
+              className="text-xl md:text-2xl lg:text-3xl font-extrabold tracking-tight whitespace-nowrap"
+              style={{ color: theme.technologiesOrange }}
+            >
+              TECHNOLOGIES
+            </span>
+          </div>
+        </Link>
 
-          {/* All Courses Button */}
+        {/* All Courses Button - Now separate from logo */}
+        <div className="flex items-center ml-2 lg:ml-4">
           <div
             className="relative hidden lg:block"
             onMouseEnter={() => handleDropdownEnter("allCourses")}
             onMouseLeave={handleDropdownLeave}
           >
             <button
-              className="flex items-center gap-2 px-6 py-2.5 rounded-full text-base font-bold"
+              className="flex items-center gap-1 px-4 py-2 rounded-full text-sm font-bold whitespace-nowrap"
               style={{
                 backgroundColor: theme.allCourse,
                 color: theme.allCourseTxtClr,
@@ -387,7 +389,7 @@ const Navbar = () => {
             >
               All Courses
               <ChevronDown
-                className={`h-5 w-5 transition-transform duration-300 ${
+                className={`h-4 w-4 transition-transform duration-300 ${
                   openDropdown === "allCourses" ? "rotate-180" : ""
                 }`}
               />
@@ -404,7 +406,7 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div
-          className="hidden lg:flex items-center gap-8"
+          className="hidden lg:flex items-center gap-3 xl:gap-6 ml-auto"
           style={{ fontFamily: "Montserrat", zIndex: "100" }}
         >
           {/* About Us */}
@@ -414,7 +416,7 @@ const Navbar = () => {
             onMouseLeave={handleDropdownLeave}
           >
             <button
-              className="flex items-center gap-1 text-sm xl:text-base font-bold uppercase tracking-wide"
+              className="flex items-center gap-1 text-xs xl:text-sm font-bold uppercase tracking-wide whitespace-nowrap"
               style={{
                 color:
                   openDropdown === "about"
@@ -424,7 +426,7 @@ const Navbar = () => {
             >
               About Us
               <ChevronDown
-                className={`h-4 w-4 transition-transform duration-300 ${
+                className={`h-3 w-3 transition-transform duration-300 ${
                   openDropdown === "about" ? "rotate-180" : ""
                 }`}
               />
@@ -440,7 +442,7 @@ const Navbar = () => {
 
           <Link
             to="/training-option"
-            className="text-sm xl:text-base font-bold uppercase tracking-wide"
+            className="text-xs xl:text-sm font-bold uppercase tracking-wide whitespace-nowrap"
             style={{ color: theme.darkBlueBg }}
           >
             Training Options
@@ -448,7 +450,7 @@ const Navbar = () => {
 
           <Link
             to="/blogs"
-            className="text-sm xl:text-base font-bold uppercase tracking-wide"
+            className="text-xs xl:text-sm font-bold uppercase tracking-wide whitespace-nowrap"
             style={{ color: theme.darkBlueBg }}
           >
             Blogs
@@ -456,7 +458,7 @@ const Navbar = () => {
 
           <Link
             to="/success-stories"
-            className="text-sm xl:text-base font-bold uppercase tracking-wide"
+            className="text-xs xl:text-sm font-bold uppercase tracking-wide whitespace-nowrap"
             style={{ color: theme.darkBlueBg }}
           >
             Success Stories
@@ -464,7 +466,7 @@ const Navbar = () => {
 
           <Link
             to="/contact"
-            className="px-5 py-2 rounded text-sm xl:text-base font-bold border-2 transition-colors"
+            className="px-4 py-1.5 rounded text-xs xl:text-sm font-bold border-2 transition-colors whitespace-nowrap"
             style={{
               color: theme.primaryBlue,
               borderColor: theme.primaryBlue,
@@ -485,13 +487,13 @@ const Navbar = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={toggleMobileMenu}
-          className="lg:hidden p-2"
+          className="lg:hidden p-2 ml-auto"
           aria-label="Toggle menu"
         >
           {isMobileMenuOpen ? (
-            <X className="h-7 w-7" style={{ color: theme.darkBlueBg }} />
+            <X className="h-6 w-6" style={{ color: theme.darkBlueBg }} />
           ) : (
-            <Menu className="h-7 w-7" style={{ color: theme.darkBlueBg }} />
+            <Menu className="h-6 w-6" style={{ color: theme.darkBlueBg }} />
           )}
         </button>
       </div>

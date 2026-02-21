@@ -7,14 +7,14 @@ import AppRoutes from "./routes/AppRoutes";
 
 function App() {
   return (
-    <>
+    <div>
       <PageLoader />
       <ScrollToTop />
       <Navbar />
       <SocialMediaIcons />
       <AppRoutes />
       <BackToTop />
-    </>
+    </div>
   );
 }
 

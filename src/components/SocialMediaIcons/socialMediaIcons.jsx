@@ -47,7 +47,7 @@ const SocialMediaIcons = () => {
   ];
 
   return (
-    <div className="fixed right-0 top-[20%] z-50">
+    <div className="fixed right-0 top-[25%] z-50">
       <div className="flex flex-col items-end">
         {/* Social Icons */}
         <div
