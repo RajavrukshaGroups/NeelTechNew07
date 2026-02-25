@@ -7,9 +7,13 @@ const ContactUsPage = ({ courseName }) => {
     email: "",
     phone: "",
     course: courseName,
-    hearAbout: "",
+    platform: "",
     message: "",
   });
+
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState("");
+  const [error, setError] = useState("");
 
   const handleChange = (e) => {
     setFormData({
@@ -18,10 +22,48 @@ const ContactUsPage = ({ courseName }) => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const submitHandler = async (e) => {
     e.preventDefault();
-    console.log(formData);
-    // Add API call here
+
+    setLoading(true);
+    setSuccess("");
+    setError("");
+
+    try {
+      const response = await fetch(
+        "http://localhost:5000/api/contact",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || "Something went wrong");
+      }
+
+      setSuccess("Your request has been submitted successfully!");
+
+      // Reset form
+      setFormData({
+        fullName: "",
+        email: "",
+        phone: "",
+        course: courseName,
+        platform: "",
+        message: "",
+      });
+
+    } catch (err) {
+      setError(err.message || "Failed to submit request.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -46,7 +88,8 @@ const ContactUsPage = ({ courseName }) => {
 
         {/* FORM CARD */}
         <div className="bg-white rounded-3xl shadow-xl p-10 border border-blue-200">
-          <form onSubmit={handleSubmit} className="space-y-8">
+          <form onSubmit={submitHandler} className="space-y-8">
+
             {/* ROW 1 */}
             <div className="grid md:grid-cols-2 gap-8">
               <div>
@@ -114,8 +157,8 @@ const ContactUsPage = ({ courseName }) => {
               </label>
 
               <select
-                name="hearAbout"
-                value={formData.hearAbout}
+                name="platform"
+                value={formData.platform}
                 onChange={handleChange}
                 className="w-full border-2 border-blue-200 rounded-xl px-4 py-3 focus:outline-none focus:border-blue-500"
               >
@@ -144,15 +187,30 @@ const ContactUsPage = ({ courseName }) => {
               ></textarea>
             </div>
 
+            {/* SUCCESS / ERROR MESSAGE */}
+            {success && (
+              <p className="text-green-600 font-medium text-center">
+                {success}
+              </p>
+            )}
+
+            {error && (
+              <p className="text-red-600 font-medium text-center">
+                {error}
+              </p>
+            )}
+
             {/* SUBMIT */}
             <div className="text-center">
               <button
                 type="submit"
-                className="bg-gradient-to-r from-[#0F3E57] to-blue-600 text-white px-12 py-4 rounded-2xl text-xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg"
+                disabled={loading}
+                className="bg-gradient-to-r from-[#0F3E57] to-blue-600 text-white px-12 py-4 rounded-2xl text-xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg disabled:opacity-50"
               >
-                Submit Request
+                {loading ? "Submitting..." : "Submit Request"}
               </button>
             </div>
+
           </form>
         </div>
       </div>
