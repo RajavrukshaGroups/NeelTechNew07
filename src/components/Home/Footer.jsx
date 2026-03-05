@@ -140,11 +140,13 @@ const Footer = () => {
               <img
                 src={NeelLogo}
                 alt="Neel Technologies"
-                className="h-16 mb-6"
+                className="h-28 mb-6"
               />
             </Link>
 
-            <p className="text-lg leading-relaxed text-gray-300">
+            <p className="text-lg font-medium leading-relaxed text-gray-100 "
+            
+              style={{ fontFamily: "'Poppins', sans-serif" }}>
               Neel Technologies boasts a team of highly experienced and
               qualified trainers who are deeply committed to student success.
               With a passion for teaching and real-world expertise, we empower
@@ -154,15 +156,16 @@ const Footer = () => {
 
           {/* Courses */}
           <div>
-            <h4 className="text-2xl font-semibold mb-5 text-[#F28C28]">
+            <h4 className="text-3xl font-semibold mb-5 text-[#F28C28]">
               Courses
             </h4>
-            <ul className="space-y-3 text-gray-300 text-lg">
+            <ul className="space-y-3 text-gray-100 text-base font-normal">
               {courseLinks.map((course, index) => (
                 <li key={index}>
                   <Link
                     to={course.path}
                     className="hover:text-[#F28C28] transition-colors"
+                    style={{ fontFamily: "'Poppins', sans-serif",}}
                   >
                     {course.name}
                   </Link>
@@ -173,15 +176,16 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-2xl font-semibold mb-5 text-[#F28C28]">
+            <h4 className="text-3xl font-semibold mb-5 text-[#F28C28]">
               Quick Links
             </h4>
-            <ul className="space-y-3 text-gray-300 text-lg">
+            <ul className="space-y-3 text-gray-100 text-base font-normal">
               {quickLinks.map((link, index) => (
                 <li key={index}>
                   <Link
                     to={link.path}
                     className="hover:text-[#F28C28] transition-colors"
+                    style={{ fontFamily: "'Poppins', sans-serif"}}
                   >
                     {link.name}
                   </Link>
@@ -192,7 +196,7 @@ const Footer = () => {
 
           {/* Contact Section */}
           <div>
-            <h4 className="text-2xl font-semibold mb-5 text-[#F28C28]">
+            <h4 className="text-3xl font-semibold mb-5 text-[#F28C28]">
               Contact Us
             </h4>
 
@@ -200,16 +204,17 @@ const Footer = () => {
               <div className="flex items-start gap-4">
                 <MapPin
                   size={20}
-                  className="mt-1 text-[#F28C28] flex-shrink-0"
+                  className="mt-1 text-[#F28C28] flex-shrink-0 "
                 />
-                <span>Doddabele Kengeri, Bangalore - 560040</span>
+                <span className=" text-sm" style={{ fontFamily: "'Poppins', sans-serif"}}>Doddabele Kengeri, Bangalore - 560040</span>
               </div>
 
               <div className="flex items-center gap-4">
                 <Phone size={20} className="text-[#F28C28] flex-shrink-0" />
                 <a
                   href="tel:+916361866299"
-                  className="hover:text-[#F28C28] transition-colors"
+                  className="hover:text-[#F28C28] transition-colors text-sm"
+                  style={{ fontFamily: "'Poppins', sans-serif"}}
                 >
                   +91 6361866299
                 </a>
@@ -219,7 +224,8 @@ const Footer = () => {
                 <Mail size={20} className="text-[#F28C28] flex-shrink-0" />
                 <a
                   href="mailto:info@neeltechnologies.net"
-                  className="hover:text-[#F28C28] transition-colors break-all"
+                  className="hover:text-[#F28C28] transition-colors break-all text-sm"
+                  style={{fontFamily: "'Poppins', sans-serif"}}
                 >
                   info@neeltechnologies.net
                 </a>

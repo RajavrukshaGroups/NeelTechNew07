@@ -18,7 +18,7 @@ const WhyCCNA = () => {
             <span className="text-[#0F3E57]">Why Choose</span>{" "}
             <span className="text-blue-500">CCNA Certification?</span>
           </h2>
-          <p className="text-gray-600 text-xl mt-6 max-w-3xl mx-auto">
+          <p className="text-gray-1000 font-medium text-xl mt-6 max-w-3xl mx-auto" Launch your networking career with globally recognized >
             Launch your networking career with globally recognized Cisco certification
             and hands-on enterprise networking expertise.
           </p>
@@ -33,7 +33,7 @@ const WhyCCNA = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Strong Salary Potential
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               CCNA-certified professionals often experience a{" "}
               <strong>25–45% salary increase</strong>. Networking engineers are
               in high demand across IT, telecom, banking, and cloud industries.
@@ -46,7 +46,7 @@ const WhyCCNA = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Rapid Career Growth
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Move from IT Support to{" "}
               <strong>
                 Network Administrator, Network Engineer, or NOC Engineer
@@ -61,7 +61,7 @@ const WhyCCNA = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Global Recognition
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Cisco certifications are recognized worldwide, opening doors to{" "}
               <strong>international networking opportunities</strong>.
             </p>
@@ -73,7 +73,7 @@ const WhyCCNA = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               In-Demand Networking Roles
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Become a{" "}
               <strong>
                 Network Engineer, Routing & Switching Specialist, Technical Support Engineer, or Infrastructure Analyst
@@ -87,7 +87,7 @@ const WhyCCNA = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Enterprise-Level Networking Skills
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Master{" "}
               <strong>
                 routing, switching, VLANs, IP addressing, subnetting, ACLs, network security, and automation
@@ -102,7 +102,7 @@ const WhyCCNA = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Freelancing & Remote Work
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Work independently as a{" "}
               <strong>Network Consultant or Remote Infrastructure Engineer</strong>{" "}
               supporting startups and enterprises globally.

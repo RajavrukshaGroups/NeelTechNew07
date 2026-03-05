@@ -26,10 +26,10 @@ const OurAchievements = () => {
       </div>
 
       {/* Achievement Highlights Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto" style={{ fontFamily: "ui-sans-serif" }}>
         <div className="bg-[#EAF2F7] rounded-3xl p-8 shadow-md hover:shadow-lg transition-all duration-300">
           <h3 className="text-3xl font-bold text-[#1C5D8F] mb-4">200+</h3>
-          <p className="text-lg text-[#0F3E57] font-medium">
+          <p className="text-lg text-[#000000] font-medium" style={{ fontFamily: "ui-sans-serif" }}>
             Professionals trained with successful career transitions.
           </p>
         </div>
@@ -38,7 +38,7 @@ const OurAchievements = () => {
           <h3 className="text-3xl font-bold text-[#1C5D8F] mb-4">
             Leading MNC Placements
           </h3>
-          <p className="text-lg text-[#0F3E57] font-medium">
+          <p className="text-lg text-[#04151e] font-medium">
             Alumni placed across India in reputed IT companies.
           </p>
         </div>
@@ -47,7 +47,7 @@ const OurAchievements = () => {
           <h3 className="text-3xl font-bold text-[#1C5D8F] mb-4">
             High-End Infrastructure
           </h3>
-          <p className="text-lg text-[#0F3E57] font-medium">
+          <p className="text-lg text-[#05161f] font-medium">
             Advanced lab facilities with real-time practical access.
           </p>
         </div>
@@ -56,7 +56,7 @@ const OurAchievements = () => {
           <h3 className="text-3xl font-bold text-[#1C5D8F] mb-4">
             Industry Experts
           </h3>
-          <p className="text-lg text-[#0F3E57] font-medium">
+          <p className="text-lg text-[#01070a] font-medium">
             Experienced trainers with hands-on project knowledge.
           </p>
         </div>
@@ -65,7 +65,7 @@ const OurAchievements = () => {
           <h3 className="text-3xl font-bold text-[#1C5D8F] mb-4">
             Updated Curriculum
           </h3>
-          <p className="text-lg text-[#0F3E57] font-medium">
+          <p className="text-lg text-[#041722] font-medium">
             Programs aligned with current industry requirements.
           </p>
         </div>

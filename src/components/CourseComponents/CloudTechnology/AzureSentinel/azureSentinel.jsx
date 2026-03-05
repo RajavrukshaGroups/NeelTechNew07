@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import ContactUsPage from "../../../contact/contact";
 import Footer from "../../../Home/Footer";
 import CommonBatchSchedule from "../../CommonBatchSchedule/commonBatchSchedule";
@@ -7,8 +8,93 @@ import CommonCourseToggle from "../../CommonToggle/commonToggle";
 import AzureSentinelHero from "./azureSentinelHero.jsx";
 import WhyAzureSentinel from "./whyAzureSentinel.jsx";
 import AzureSentinelCurriculum from "./azureSentinelCurriculum.jsx";
+import BannerImg from "/assets/banner_slider.png";
 
 const AzureSentinelTraining = () => {
+
+  useEffect(() => {
+
+    // Page Title
+    document.title =
+      "Azure Sentinel Training in Bangalore | Microsoft Sentinel Certification Course";
+
+    // Meta Description
+    const descriptionMeta = document.querySelector("meta[name='description']");
+    if (descriptionMeta) {
+      descriptionMeta.setAttribute(
+        "content",
+        "Join Azure Sentinel training in Bangalore with real-time SIEM & SOC projects. Get Microsoft Sentinel certification training with placement support and hands-on labs."
+      );
+    }
+
+    // Meta Keywords
+    const keywordsMeta = document.querySelector("meta[name='keywords']");
+    if (keywordsMeta) {
+      keywordsMeta.setAttribute(
+        "content",
+        "Microsoft Sentinel training, Azure Sentinel training, Azure Sentinel course, Azure Sentinel certification course, Microsoft Sentinel certification, Azure Sentinel certification training, Azure Sentinel online training, Microsoft Sentinel SIEM training, Azure Sentinel SOC training, Azure Sentinel security training, Azure Sentinel course fees, Azure Sentinel training institute"
+      );
+    }
+
+    // Open Graph Tags
+    const ogTitle = document.querySelector("meta[property='og:title']");
+    if (ogTitle) {
+      ogTitle.setAttribute(
+        "content",
+        "Azure Sentinel Training in Bangalore | Microsoft Sentinel Certification"
+      );
+    }
+
+    const ogDescription = document.querySelector(
+      "meta[property='og:description']"
+    );
+    if (ogDescription) {
+      ogDescription.setAttribute(
+        "content",
+        "Professional Microsoft Sentinel SIEM & SOC training with certification guidance, flexible batches, and career support."
+      );
+    }
+
+    const ogImage = document.querySelector("meta[property='og:image']");
+    if (ogImage) ogImage.setAttribute("content", BannerImg);
+
+    const ogType = document.querySelector("meta[property='og:type']");
+    if (ogType) ogType.setAttribute("content", "website");
+
+    // Canonical URL
+    const canonicalLink = document.querySelector("link[rel='canonical']");
+    if (canonicalLink) {
+      canonicalLink.setAttribute(
+        "href",
+        "https://www.neeltechnologies.com/azure-sentinel-training-bangalore"
+      );
+    }
+
+    // Structured Data (Schema)
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.innerHTML = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "Azure Sentinel Training in Bangalore",
+      "description":
+        "Microsoft Sentinel SIEM and SOC certification training with real-time projects and placement support in Bangalore.",
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Neel Technologies",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Bangalore",
+          "addressRegion": "Karnataka",
+          "addressCountry": "India"
+        }
+      }
+    });
+
+    document.head.appendChild(script);
+
+  }, []);
+
   const selfPaced = [
     "2 Month e-learning Access",
     "Live Recorded Lectures",

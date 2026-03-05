@@ -10,14 +10,14 @@ const BlogsHero = () => {
             Insights, Trends & Tech Knowledge
           </h1>
 
-          <p className="text-base md:text-lg text-[#334155] leading-relaxed max-w-lg mx-auto lg:mx-0 mb-4">
+          <p className="text-lg md:text-xl font-semibold text-[#051223] leading-relaxed max-w-lg mx-auto lg:mx-0 mb-4">
             Explore expert-written articles on cloud computing, DevOps,
             cybersecurity, system administration, certifications, career
             guidance, and the latest IT industry trends.
           </p>
 
           <div className="mt-4 bg-gradient-to-r from-[#E6F4FA] to-white border border-[#1C5D8F]/20 px-5 py-4 rounded-lg shadow-md">
-            <p className="text-sm md:text-base text-[#0F3E57] font-semibold">
+            <p className="text-base md:text-lg text-[#051f2c] font-semibold">
               🚀 Our blog section is currently being updated with valuable
               content. Stay tuned — new articles will be published shortly!
             </p>

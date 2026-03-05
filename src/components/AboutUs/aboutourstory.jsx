@@ -107,7 +107,7 @@ const OurStory = () => {
           <h3 className="text-3xl md:text-4xl lg:text-5xl font-medium">
             Neel Technologies
           </h3>
-          <p className="text-base md:text-lg lg:text-xl max-w-2xl mt-3 opacity-90">
+          <p className="text-base md:text-lg lg:text-xl max-w-2xl mt-3 opacity-90" style={{ fontFamily: "ui-sans-serif" }}>
             From a small initiative to a premier IT training institute
           </p>
         </div>
@@ -138,24 +138,24 @@ const OurStory = () => {
               </div>
 
               {/* Year Label */}
-              <span className="text-sm md:text-base font-medium text-gray-500 mb-2">
+              <span className="text-lg md:text-base font-medium text-gray-600 mb-2" style={{ fontFamily: "ui-sans-serif" }}>
                 {item.year}
               </span>
 
               {/* Title */}
-              <span className="text-base md:text-lg font-medium text-[#0F3E57]">
+              <span className="text-4xl md:text-lg font-medium text-[#072536]">
                 {item.title}
               </span>
 
               {/* Tooltip */}
               {activeYear === index && (
                 <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-64 bg-white rounded-lg shadow-xl p-4 z-30 text-left animate-fadeIn">
-                  <p className="text-sm text-gray-600 leading-relaxed">
+                  <p className="text-lg text-gray-900 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
                     {item.description}
                   </p>
                   <p
                     className="text-sm font-medium mt-3"
-                    style={{ color: item.color }}
+                    style={{ color: item.color, fontFamily: "Poppins" }}
                   >
                     {item.metrics}
                   </p>
@@ -207,12 +207,12 @@ const OurStory = () => {
         {/* Story Content */}
         <div className="space-y-8">
           <div className="inline-flex items-center gap-3 px-4 py-2 bg-[#f28c28]/10 rounded-full">
-            <span className="text-sm font-medium text-[#f28c28] uppercase tracking-wider">
+            <span className="text-sm font-medium text-[#f28c28] uppercase tracking-wider" style={{ fontFamily: "Poppins" }}>
               Our Story
             </span>
           </div>
 
-          <div className="space-y-6 text-gray-600 leading-relaxed">
+          <div className="space-y-6 text-gray-900 leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
             <p className="text-lg md:text-xl">
               <span className="font-semibold text-[#0F3E57]">
                 Neel Technologies
@@ -249,7 +249,7 @@ const OurStory = () => {
           </div>
 
           {/* Quick Timeline */}
-          <div className="grid grid-cols-2 gap-4 pt-6">
+          <div className="grid grid-cols-2 gap-4 pt-6" style={{ fontFamily: "Poppins" }}>
             {timelineData.slice(0, 6).map((item, idx) => (
               <div key={idx} className="flex items-center gap-3">
                 <div

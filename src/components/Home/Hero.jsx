@@ -135,7 +135,7 @@ const Hero = () => {
                       <span
                         className="relative inline-block mt-2"
                         style={{
-                          color: "#FFA500",
+                          color: "#f3993f",
                           fontWeight: 800,
                         }}
                       >
@@ -183,7 +183,7 @@ const Hero = () => {
                   <div className="space-y-4 mt-4">
                     {slide.bullets.map((item, i) => (
                       <div key={i} className="flex items-center gap-3">
-                        <CheckCircle className="text-[#FFA500]" size={22} />
+                        <CheckCircle className="text-[#f3993f]" size={22} />
                         <span
                           style={{
                             fontFamily: "'Inter', sans-serif",

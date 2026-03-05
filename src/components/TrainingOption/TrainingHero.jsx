@@ -15,7 +15,7 @@ const TrainingHero = () => {
           </h1>
 
           <p
-            className="mt-4 text-base md:text-lg text-[#4b5563] max-w-[480px] leading-relaxed"
+            className="mt-4 text-base md:text-lg text-[#091321] max-w-[480px] leading-relaxed"
             style={{ fontFamily: "'Montserrat', sans-serif" }}
           >
             Learn from expert instructors with our 5,000+ course catalogue.

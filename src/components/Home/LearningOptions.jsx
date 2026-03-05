@@ -33,7 +33,7 @@ const LearningOptions = () => {
     <section className="w-full bg-[#f4f9fd] py-12 md:py-14">
       <div className="max-w-[1200px] mx-auto px-6 md:px-10">
         {/* Section Title */}
-        <div className="text-center mb-8">
+        <div className="text-center flex flex-col items-center mb-8">
           <h2
             className="text-3xl md:text-4xl font-bold"
             style={{
@@ -43,9 +43,12 @@ const LearningOptions = () => {
           >
             Flexible Learning Options
           </h2>
-
+             <span 
+              className="  hidden md:block xl:block lg:block  left-1/2 transform -translate-x-1/2 w-24 h-1 mt-4 ml-[4rem] rounded-full"
+              style={{ backgroundColor: "#f28c28" , }}
+            ></span>
           <p
-            className="mt-2 text-gray-600 text-sm md:text-base"
+            className="mt-2 text-gray-600 mt-8 text-sm md:text-base"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
             Choose the learning format that best suits your schedule and goals.
@@ -91,13 +94,13 @@ const LearningOptions = () => {
                 </p>
 
                 {/* CTA */}
-                <div className="mt-auto flex justify-center items-center gap-2 text-[#0F3E57] text-sm font-semibold cursor-pointer group-hover:text-blue-600 transition">
+                {/* <div className="mt-auto flex justify-center items-center gap-2 text-[#0F3E57] text-sm font-semibold cursor-pointer group-hover:text-blue-600 transition">
                   Learn More
                   <ArrowRight
                     size={14}
                     className="transition-transform duration-300 group-hover:translate-x-1"
                   />
-                </div>
+                </div> */}
               </div>
             );
           })}

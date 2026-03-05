@@ -16,7 +16,7 @@ const WhyNeelTech = () => {
         <div className="max-w-[1300px] mx-auto px-6 md:px-10">
           
           {/* Title */}
-          <div className="text-center mb-10">
+          <div className="text-center flex flex-col items-center mb-10">
             <h2
               className="text-3xl md:text-4xl font-bold"
               style={{
@@ -26,6 +26,10 @@ const WhyNeelTech = () => {
             >
               Why Neel Technologies
             </h2>
+            <span 
+              className="  hidden md:block xl:block lg:block  left-1/2 transform -translate-x-1/2 w-24 h-1 mt-4 ml-[4rem] rounded-full"
+              style={{ backgroundColor: "#f28c28" , }}
+            ></span> 
           </div>
 
           {/* Stats Container */}

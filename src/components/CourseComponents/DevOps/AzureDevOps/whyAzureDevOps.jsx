@@ -20,7 +20,7 @@ const WhyAzureDevOps = () => {
               Azure DevOps Certification?
             </span>
           </h2>
-          <p className="text-gray-600 text-xl mt-6 max-w-3xl mx-auto">
+          <p className="text-gray-1000 text-xl font-medium mt-6 max-w-3xl mx-auto" style={{ fontFamily: "ui-sans-serif" }}>
             Master CI/CD pipelines, automation, and cloud deployment
             using Microsoft Azure DevOps tools.
           </p>
@@ -35,7 +35,7 @@ const WhyAzureDevOps = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               End-to-End DevOps Automation
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Automate build, test, and deployment processes using
               Azure Pipelines and Infrastructure as Code.
             </p>
@@ -47,7 +47,7 @@ const WhyAzureDevOps = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               High-Paying DevOps Careers
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Qualify for roles like{" "}
               <strong>
                 Azure DevOps Engineer, Cloud Engineer, SRE, Release Manager
@@ -62,7 +62,7 @@ const WhyAzureDevOps = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Seamless Azure Integration
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Integrate applications with Azure services across
               regions for scalable and reliable deployments.
             </p>
@@ -74,7 +74,7 @@ const WhyAzureDevOps = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Powerful DevOps Tools
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Gain hands-on experience with{" "}
               <strong>
                 Azure Repos, Azure Pipelines, Azure Boards,
@@ -89,7 +89,7 @@ const WhyAzureDevOps = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Secure DevOps Practices
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Implement DevSecOps practices with built-in
               security scanning, monitoring, and compliance tools.
             </p>
@@ -101,7 +101,7 @@ const WhyAzureDevOps = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Expanding DevOps Job Market
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Organizations worldwide are adopting DevOps culture,
               making Azure DevOps professionals highly valuable.
             </p>

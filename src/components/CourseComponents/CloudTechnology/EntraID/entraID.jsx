@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import ContactUsPage from "../../../contact/contact";
 import Footer from "../../../Home/Footer";
 import CommonBatchSchedule from "../../CommonBatchSchedule/commonBatchSchedule";
@@ -7,8 +8,95 @@ import CommonCourseToggle from "../../CommonToggle/commonToggle";
 import EntraIDCurriculum from "./entraIDCurriculum";
 import EntraIDHero from "./entraIDHero";
 import WhyEntraID from "./whyEntraID";
+import BannerImg from "/assets/banner_slider.png";
 
 const EntraIDTraining = () => {
+
+  useEffect(() => {
+
+    // Page Title
+    document.title =
+      "Microsoft Entra ID Training in Bangalore | Entra ID Certification Course";
+
+    // Meta Description
+    const descriptionMeta = document.querySelector("meta[name='description']");
+    if (descriptionMeta) {
+      descriptionMeta.setAttribute(
+        "content",
+        "Join Microsoft Entra ID training in Bangalore with hands-on identity management, Azure AD integration, security policies, and certification guidance. Learn Entra ID administration with placement support."
+      );
+    }
+
+    // Meta Keywords
+    const keywordsMeta = document.querySelector("meta[name='keywords']");
+    if (keywordsMeta) {
+      keywordsMeta.setAttribute(
+        "content",
+        "Microsoft Entra ID training, Entra ID course, Microsoft Entra ID certification, Entra ID certification course, Microsoft Entra ID online training, Entra ID administrator training, Azure Entra ID training, Entra ID identity management course, Entra ID classes, Entra ID course fees, Entra ID training institute, Entra ID course Bangalore"
+      );
+    }
+
+    // Open Graph Title
+    const ogTitle = document.querySelector("meta[property='og:title']");
+    if (ogTitle) {
+      ogTitle.setAttribute(
+        "content",
+        "Microsoft Entra ID Training in Bangalore | Entra ID Certification"
+      );
+    }
+
+    // Open Graph Description
+    const ogDescription = document.querySelector(
+      "meta[property='og:description']"
+    );
+    if (ogDescription) {
+      ogDescription.setAttribute(
+        "content",
+        "Professional Entra ID identity and access management training with real-time projects, flexible batches, and career support."
+      );
+    }
+
+    // Open Graph Image
+    const ogImage = document.querySelector("meta[property='og:image']");
+    if (ogImage) ogImage.setAttribute("content", BannerImg);
+
+    const ogType = document.querySelector("meta[property='og:type']");
+    if (ogType) ogType.setAttribute("content", "website");
+
+    // Canonical URL
+    const canonicalLink = document.querySelector("link[rel='canonical']");
+    if (canonicalLink) {
+      canonicalLink.setAttribute(
+        "href",
+        "https://www.neeltechnologies.com/microsoft-entra-id-training-bangalore"
+      );
+    }
+
+    // Structured Data Schema
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.innerHTML = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "Microsoft Entra ID Training in Bangalore",
+      "description":
+        "Microsoft Entra ID certification training covering identity management, Azure integration, and security policies with placement support in Bangalore.",
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Neel Technologies",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Bangalore",
+          "addressRegion": "Karnataka",
+          "addressCountry": "India"
+        }
+      }
+    });
+
+    document.head.appendChild(script);
+
+  }, []);
+
   const selfPaced = [
     "2 Month e-learning Access",
     "Live Recorded Lectures",

@@ -14,7 +14,7 @@ const SuccessStoriesTestimonials = () => {
             The Neel Experience
           </h2>
 
-          <p className="text-lg md:text-xl text-[#475569] mb-10">
+          <p className="text-lg md:text-xl font-medium text-[#180303] mb-10">
             Hear firsthand from students who’ve experienced the Neel
             Technologies difference.
           </p>

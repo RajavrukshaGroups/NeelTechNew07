@@ -159,7 +159,7 @@ const Testimonials = () => {
         <h2 className="text-4xl md:text-5xl font-bold text-[#0F3E57] mb-4">
           What Our Students Say
         </h2>
-        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+        <p className="text-lg text-gray-1000  max-w-3xl mx-auto" style={{ fontFamily: "ui-sans-serif" }}>
           Real experiences. Real transformations. Hear directly from our
           students who achieved success with Neel Technologies.
         </p>
@@ -188,7 +188,7 @@ const Testimonials = () => {
                   ) : (
                     <>
                       {/* Video Thumbnail Placeholder */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-[#0F3E57]/80 to-[#f28c28]/80 flex items-center justify-center">
+                      <div className="absolute inset-0 bg-gradient-to-br from-[#0F3E57]/90 to-[#f28c28]/80 flex items-center justify-center" style={{ fontFamily: "ui-sans-serif" }}>
                         <div className="text-white text-center p-4">
                           <p className="text-lg font-medium mb-2">
                             {item.name}
@@ -222,7 +222,7 @@ const Testimonials = () => {
                   <Quote className="w-8 h-8 text-[#f28c28]/20 mb-3" />
 
                   {/* Quote Text */}
-                  <p className="text-gray-700 italic mb-4 line-clamp-3">
+                  <p className="text-gray-1000 font-medium text-lg italic mb-4 line-clamp-3" >
                     “{item.quote}”
                   </p>
 
@@ -238,10 +238,10 @@ const Testimonials = () => {
 
                   {/* Student Info */}
                   <div className="border-t pt-4">
-                    <h4 className="font-semibold text-[#0F3E57] text-lg">
+                    <h4 className="font-semibold text-[#09334a] text-base" style={{ fontFamily: "ui-sans-serif" }}>
                       {item.name}
                     </h4>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-lg font-medium text-gray-900">
                       {item.role} at {item.company}
                     </p>
                   </div>
@@ -252,20 +252,20 @@ const Testimonials = () => {
 
           {/* Pagination */}
           {totalPages > 1 && (
-            <div className="flex justify-center items-center gap-4 mt-12">
+            <div className="flex justify-center font-medium text-base items-center gap-4 mt-12" style={{ fontFamily: "ui-sans-serif" }}>
               <button
                 onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
                 disabled={currentPage === 1}
                 className={`p-2 rounded-full transition-all duration-300 ${
                   currentPage === 1
-                    ? "bg-gray-100 text-gray-400 cursor-not-allowed"
+                    ? "bg-gray-100 text-gray-800 cursor-not-allowed"
                     : "bg-[#0F3E57] text-white hover:bg-[#f28c28] hover:scale-110"
                 }`}
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
 
-              <span className="text-gray-600">
+              <span className="text-gray-900">
                 Page {currentPage} of {totalPages}
               </span>
 
@@ -314,7 +314,7 @@ const Testimonials = () => {
                   <Quote className="w-10 h-10 text-[#f28c28]/20 mb-4" />
 
                   {/* Main Quote */}
-                  <p className="text-gray-700 italic text-lg mb-4">
+                  <p className="text-gray-1000 font-medium text-lg italic mb-4" style={{ fontFamily: "ui-sans-serif" }}>
                     “{item.quote}”
                   </p>
 

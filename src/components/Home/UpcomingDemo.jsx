@@ -37,13 +37,18 @@ const UpcomingDemo = () => {
     <section className="w-full bg-white py-10">
       <div className="max-w-[1200px] mx-auto px-6">
         {/* Title */}
-        <div className="text-center mb-6">
+        <div className="text-center flex flex-col items-center mb-6">
           <h2
             className="text-3xl md:text-4xl font-bold text-[#0F3E57]"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
             Upcoming Webinars
           </h2>
+
+           <span 
+              className="  hidden md:block xl:block lg:block  left-1/2 transform -translate-x-1/2 w-24 h-1 mt-4 ml-[4rem] rounded-full"
+              style={{ backgroundColor: "#f28c28" , }}
+            ></span>
         </div>
 
         {/* Cards */}
@@ -63,23 +68,23 @@ const UpcomingDemo = () => {
               </div>
 
               {/* Speaker */}
-              <h4 className="text-sm font-semibold text-gray-700 text-center mb-2">
+              <h4 className="text-base font-extrabold text-gray-700 text-center mb-2">
                 {demo.speaker}
               </h4>
 
               {/* Title */}
-              <p className="text-[#0F3E57] font-semibold text-sm leading-snug text-center mb-3 min-h-[40px]">
+              <p className="text-[#031119] font-black text-lg leading-snug text-center mb-3 min-h-[40px]">
                 {demo.title}
               </p>
 
               {/* Date */}
-              <div className="flex items-center justify-center gap-1 text-gray-600 text-xs mb-4">
+              <div className="flex items-center justify-center gap-1 text-gray-700 text-md font-black mb-4">
                 <Calendar size={14} className="text-blue-600" />
                 <span>{demo.date}</span>
               </div>
 
               {/* Button */}
-              <button className="mt-auto border border-blue-600 text-blue-600 py-1.5 text-sm rounded-full font-medium hover:bg-blue-600 hover:text-white transition">
+              <button className="mt-auto border border-blue-600 text-blue-600 py-1.5 text-base rounded-full font-bold hover:bg-blue-600 hover:text-white transition">
                 Register
               </button>
             </div>
@@ -92,7 +97,7 @@ const UpcomingDemo = () => {
             <ArrowLeft size={16} />
           </button>
 
-          <span className="text-sm font-medium text-gray-700">1 / 4</span>
+          <span className="text-xl  font-black text-gray-700">1 / 4</span>
 
           <button className="w-8 h-8 rounded-full border border-blue-600 text-blue-600 flex items-center justify-center hover:bg-blue-600 hover:text-white transition">
             <ArrowRight size={16} />
@@ -101,7 +106,7 @@ const UpcomingDemo = () => {
 
         {/* Show All */}
         <div className="text-center mt-6">
-          <button className="bg-blue-600 text-white px-6 py-2 text-sm rounded-full font-medium hover:bg-blue-700 transition">
+          <button className="bg-blue-600 text-white px-6 py-2 text-lg rounded-full font-bold hover:bg-blue-700 transition">
             Show All Webinars
           </button>
         </div>

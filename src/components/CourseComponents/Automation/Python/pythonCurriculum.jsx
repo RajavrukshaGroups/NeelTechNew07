@@ -233,7 +233,7 @@ const PythonCurriculum = () => {
                   <span
                     className="text-sm md:text-base font-semibold"
                     style={{
-                      color: theme.darkBlue,
+                      color: "black",
                       fontFamily: "Montserrat",
                     }}
                   >
@@ -246,7 +246,9 @@ const PythonCurriculum = () => {
                       backgroundColor: isOpen
                         ? theme.accentOrange
                         : theme.darkBlue,
+                        fontFamily: " system-ui",
                     }}
+                    
                   >
                     {isOpen ? (
                       <Minus size={16} className="text-white" />
@@ -259,7 +261,7 @@ const PythonCurriculum = () => {
                 {isOpen && (
                   <div
                     className="px-6 pb-6 pt-3"
-                    style={{ backgroundColor: theme.lightOrangeBg }}
+                    style={{ backgroundColor: theme.lightOrangeBg , fontFamily: " system-ui",}}
                   >
                     <p
                       className="font-semibold mb-2"
@@ -272,7 +274,7 @@ const PythonCurriculum = () => {
                       Learning Objective:
                     </p>
 
-                    <p className="mb-5 text-[15px] md:text-[17px] leading-relaxed">
+                    <p className="mb-5 text-[15px] md:text-[17px] leading-relaxed" style={{  fontFamily: " system-ui", }}>
                       {module.objective}
                     </p>
 

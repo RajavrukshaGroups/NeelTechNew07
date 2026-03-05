@@ -19,7 +19,7 @@ const WhyIntune = () => {
               Microsoft Intune Certification?
             </span>
           </h2>
-          <p className="text-gray-600 text-xl mt-6 max-w-3xl mx-auto">
+          <p className="text-gray-1000 font-medium text-xl mt-6 max-w-3xl mx-auto" style={{fontFamily:"ui-sans-serif"}}>
             Become a modern workplace expert by mastering cloud-based device
             management, security, and enterprise mobility solutions.
           </p>
@@ -33,7 +33,7 @@ const WhyIntune = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               High Salary Potential
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Intune and Endpoint Management professionals often receive a{" "}
               <strong>30–60% salary increase</strong> due to high demand in
               enterprise IT environments.
@@ -46,7 +46,7 @@ const WhyIntune = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Rapid Career Growth
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Move into roles like{" "}
               <strong>
                 Endpoint Administrator, MDM Specialist, or Modern Workplace
@@ -62,7 +62,7 @@ const WhyIntune = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Global Enterprise Demand
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Organizations worldwide rely on Microsoft Intune for managing
               devices securely — opening doors to{" "}
               <strong>international career opportunities</strong>.
@@ -75,7 +75,7 @@ const WhyIntune = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               In-Demand Job Roles
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Become an{" "}
               <strong>
                 Intune Consultant, Endpoint Security Engineer, or Mobility
@@ -91,7 +91,7 @@ const WhyIntune = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Modern Security Expertise
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Master conditional access, compliance policies, endpoint
               protection, and secure corporate data across multiple platforms.
             </p>
@@ -103,7 +103,7 @@ const WhyIntune = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Cloud & Mobility Leadership
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Lead digital transformation by managing{" "}
               <strong>
                 cloud-based devices, apps, and enterprise mobility

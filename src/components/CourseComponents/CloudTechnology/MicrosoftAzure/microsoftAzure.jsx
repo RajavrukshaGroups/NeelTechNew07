@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import ContactUsPage from "../../../contact/contact";
 import Footer from "../../../Home/Footer";
 import CommonBatchSchedule from "../../CommonBatchSchedule/commonBatchSchedule";
@@ -7,8 +8,95 @@ import CommonCourseToggle from "../../CommonToggle/commonToggle";
 import MicrosoftAzureHero from "./microsoftAzureHero";
 import WhyMicrosoftAzure from "./whyMicrosoftAzure";
 import MicrosoftAzureCurriculum from "./microsoftAzureCurriculum";
+import BannerImg from "/assets/banner_slider.png";
 
 const MicrosoftAzureTraining = () => {
+
+  useEffect(() => {
+
+    // Page Title
+    document.title =
+      "Microsoft Azure Training in Bangalore | Azure Cloud Certification Course";
+
+    // Meta Description
+    const descriptionMeta = document.querySelector("meta[name='description']");
+    if (descriptionMeta) {
+      descriptionMeta.setAttribute(
+        "content",
+        "Join Microsoft Azure training in Bangalore with hands-on cloud computing projects and certification guidance. Learn Azure cloud, DevOps, administration, and deployment with placement support."
+      );
+    }
+
+    // Meta Keywords
+    const keywordsMeta = document.querySelector("meta[name='keywords']");
+    if (keywordsMeta) {
+      keywordsMeta.setAttribute(
+        "content",
+        "Azure course, Azure cloud certification, certification in Azure cloud, Azure training, Windows Azure training, Microsoft Azure certification courses, Azure cloud computing training, Microsoft Azure cloud certification, Azure DevOps training, Azure course fees, Azure classes online, Azure course Bangalore"
+      );
+    }
+
+    // Open Graph Title
+    const ogTitle = document.querySelector("meta[property='og:title']");
+    if (ogTitle) {
+      ogTitle.setAttribute(
+        "content",
+        "Microsoft Azure Training in Bangalore | Azure Certification"
+      );
+    }
+
+    // Open Graph Description
+    const ogDescription = document.querySelector(
+      "meta[property='og:description']"
+    );
+    if (ogDescription) {
+      ogDescription.setAttribute(
+        "content",
+        "Professional Azure cloud computing training with real-time projects, flexible batches, affordable fees, and placement assistance."
+      );
+    }
+
+    // Open Graph Image
+    const ogImage = document.querySelector("meta[property='og:image']");
+    if (ogImage) ogImage.setAttribute("content", BannerImg);
+
+    const ogType = document.querySelector("meta[property='og:type']");
+    if (ogType) ogType.setAttribute("content", "website");
+
+    // Canonical URL
+    const canonicalLink = document.querySelector("link[rel='canonical']");
+    if (canonicalLink) {
+      canonicalLink.setAttribute(
+        "href",
+        "https://www.neeltechnologies.com/microsoft-azure-training-bangalore"
+      );
+    }
+
+    // Structured Data Schema
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.innerHTML = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "Microsoft Azure Training in Bangalore",
+      "description":
+        "Azure cloud computing certification training with DevOps, administration, deployment, and placement support in Bangalore.",
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Neel Technologies",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Bangalore",
+          "addressRegion": "Karnataka",
+          "addressCountry": "India"
+        }
+      }
+    });
+
+    document.head.appendChild(script);
+
+  }, []);
+
   const selfPaced = [
     "2 Month e-learning Access",
     "Live Recorded Lectures",

@@ -53,15 +53,20 @@ const companies = [
 const StudentPlacements = () => {
   return (
     <section className="w-full bg-white py-8">
-      <div className="max-w-[1200px] mx-auto px-6">
+      <div className="max-w-[1200px]  mx-auto px-6">
         {/* Title */}
-        <div className="text-center mb-6">
+        <div className="text-center flex flex-col items-center mb-6">
           <h2
             className="text-3xl md:text-4xl font-bold text-[#0F3E57]"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
             Our Students Are Placed In
           </h2>
+
+           <span 
+              className="  hidden md:block xl:block lg:block  left-1/2 transform -translate-x-1/2 w-24 h-1 mt-4 ml-[4rem] rounded-full"
+              style={{ backgroundColor: "#f28c28" , }}
+            ></span>
         </div>
 
         {/* Compact Grid */}
@@ -82,7 +87,7 @@ const StudentPlacements = () => {
 
               {/* Company Name */}
               <div className="bg-[#e8f3fa] py-2 text-center">
-                <p className="text-xs font-semibold text-[#0F3E57]">
+                <p className="text-md font-semibold text-[#04161f]" style={{ fontFamily: "poppins, sans-serif" }}>
                   {company.name}
                 </p>
               </div>

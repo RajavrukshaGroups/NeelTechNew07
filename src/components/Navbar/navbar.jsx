@@ -334,11 +334,11 @@ const Navbar = () => {
         <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 lg:gap-10 text-xs sm:text-sm md:text-base whitespace-nowrap">
           <span className="text-white font-medium">
             <span className="text-blue-200 mr-1 sm:mr-2 font-semibold">Chat Only:</span>
-            <span className="font-bold">+91-984-072-2417</span>
+            <span className="font-bold">+91-636-186-6299</span>
           </span>
           <span className="text-white font-medium">
             <span className="text-blue-200 mr-1 sm:mr-2 font-semibold">Email:</span>
-            <span className="font-bold">info@neeltechnologies.com</span>
+            <span className="font-bold">info@neeltechnologies.net</span>
           </span>
         </div>
       </div>
@@ -353,7 +353,7 @@ const Navbar = () => {
           <img
             src={NeelLogo}
             alt="Neel Technologies"
-            className="h-8 sm:h-9 md:h-10 lg:h-12 w-auto"
+            className="h-8 sm:h-9 md:h-12 lg:h-14 xl:h-20 w-auto"
             style={{ marginRight: "0.25rem" }}
           />
           <div className="flex items-center">
@@ -373,7 +373,7 @@ const Navbar = () => {
         </Link>
 
         {/* All Courses Button - Desktop */}
-        <div className="hidden lg:flex items-center ml-2 xl:ml-4">
+        {/* <div className="hidden lg:flex items-center ml-2 xl:ml-4">
           <div
             className="relative"
             onMouseEnter={() => handleDropdownEnter("allCourses")}
@@ -401,13 +401,125 @@ const Navbar = () => {
               onMouseLeave={handleDropdownLeave}
             />
           </div>
-        </div>
+        </div> */}
+
+       
+        
 
         {/* Desktop Navigation */}
         <div
           className="hidden lg:flex items-center gap-2 xl:gap-4 ml-auto"
           style={{ fontFamily: "Montserrat", zIndex: "100" }}
         >
+
+           {/* Courses */}
+        <div
+          className="relative"
+          onMouseEnter={() => setOpenDropdown("courses")}
+          onMouseLeave={() => setOpenDropdown(null)}
+        >
+          <button
+            className="flex items-center gap-1 text-xs xl:text-sm font-bold uppercase tracking-wide whitespace-nowrap px-1 xl:px-2"
+            style={{
+              color:
+                openDropdown === "courses"
+                  ? theme.primaryBlue
+                  : theme.darkBlueBg,
+            }}
+          >
+            Courses
+            <ChevronDown
+              className={`h-5 w-5 transition-transform duration-300 ${
+                openDropdown === "courses" ? "rotate-180" : ""
+              }`}
+            />
+          </button>
+
+         
+          <div
+            className={`absolute top-full left-0 mt-2 w-64 rounded-lg shadow-2xl transition-all duration-300 ${
+              openDropdown === "courses"
+                ? "opacity-100 visible translate-y-0"
+                : "opacity-0 invisible -translate-y-2"
+            }`}
+            style={{
+              backgroundColor: theme.white,
+              border: `1px solid ${theme.lightGray}`,
+              zIndex: 50,
+            }}
+          >
+            {[
+              {
+                name: "System Administrator",
+                subItems: [
+                  { label: "MCSE Training", path: "/mcse-training-certification-course" },
+                  { label: "Linux Administrator", path: "/linux-training-certification-course" },
+                  { label: "CCNA", path: "/ccna-training-certification-course" },
+                  { label: "Intune & O365", path: "/intune-training-certification-course" },
+                ],
+              },
+              {
+                name: "Automation",
+                subItems: [
+                  { label: "Windows Powershell", path: "/powershell-training-certification-course" },
+                  { label: "Python", path: "/python-training-certification-course" },
+                ],
+              },
+              {
+                name: "Cloud Technology",
+                subItems: [
+                  { label: "Microsoft Azure", path: "/microsoft-azure-training-certification-course" },
+                  { label: "AWS", path: "/aws-training-certification-course" },
+                  { label: "Google Cloud", path: "/google-cloud-gcp-training-certification-course" },
+                ],
+              },
+              {
+                name: "DevOps",
+                subItems: [
+                  { label: "AWS DevOps", path: "/aws-devops-training-certification-course" },
+                  { label: "Azure DevOps", path: "/azure-devops-training-certification-course" },
+                ],
+              },
+              {
+                name: "Cyber Security",
+                subItems: [
+                  { label: "Ethical Hacking", path: "/cyber-security-training-certification-course" },
+                ],
+              },
+            ].map((category, index) => (
+              <div key={index} className="relative group">
+               
+                <div
+                  className="px-5 py-3 text-xs xl:text-sm font-bold cursor-pointer hover:bg-gray-100"
+                  style={{ color: theme.darkBlueBg }}
+                >
+                  {category.name}
+                </div>
+
+              
+                <div
+                  className="absolute top-0 left-full w-64 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
+                  style={{
+                    backgroundColor: theme.white,
+                    border: `1px solid ${theme.lightGray}`,
+                  }}
+                >
+                  {category.subItems.map((item, i) => (
+                    <Link
+                      key={i}
+                      to={item.path}
+                      className="block px-5 py-3 text-xs xl:text-sm font-bold hover:bg-gray-100"
+                      style={{ color: theme.darkBlueBg }}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
           {/* About Us */}
           <div
             className="relative"
@@ -626,7 +738,7 @@ const Navbar = () => {
                   className="font-medium"
                   style={{ color: theme.darkBlueBg }}
                 >
-                  +91-984-072-2417
+                  +91-636-186-6299
                 </span>
               </div>
               <div>
@@ -640,7 +752,7 @@ const Navbar = () => {
                   className="font-medium"
                   style={{ color: theme.darkBlueBg }}
                 >
-                  info@neeltechnologies.com
+                  info@neeltechnologies.net
                 </span>
               </div>
             </div>
@@ -710,3 +822,4 @@ const categories = [
 ];
 
 export default Navbar;
+

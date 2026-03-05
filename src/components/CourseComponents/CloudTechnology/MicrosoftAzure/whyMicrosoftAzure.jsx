@@ -19,7 +19,7 @@ const WhyMicrosoftAzure = () => {
               Microsoft Azure Certification?
             </span>
           </h2>
-          <p className="text-gray-600 text-xl mt-6 max-w-3xl mx-auto">
+          <p className="text-gray-1000 font-medium text-xl mt-6 max-w-3xl mx-auto" style={{ fontFamily: "ui-sans-serif" }}>
             Build in-demand cloud skills and become a certified Azure
             professional in today’s rapidly growing cloud industry.
           </p>
@@ -33,7 +33,7 @@ const WhyMicrosoftAzure = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               High Salary Opportunities
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Azure-certified professionals often receive{" "}
               <strong>competitive global salaries</strong> due to the high
               demand for cloud expertise.
@@ -46,7 +46,7 @@ const WhyMicrosoftAzure = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Accelerated Career Growth
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Transition into roles like{" "}
               <strong>
                 Azure Administrator, Cloud Engineer, Solutions Architect,
@@ -62,7 +62,7 @@ const WhyMicrosoftAzure = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Global Cloud Demand
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Microsoft Azure is one of the{" "}
               <strong>top cloud platforms worldwide</strong>, adopted by
               enterprises and startups alike.
@@ -75,7 +75,7 @@ const WhyMicrosoftAzure = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Diverse Cloud Roles
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Become a{" "}
               <strong>
                 Cloud Administrator, Infrastructure Engineer, Cloud Consultant,
@@ -90,7 +90,7 @@ const WhyMicrosoftAzure = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Enterprise-Level Skills
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Master Virtual Machines, Networking, Security, Identity,
               Storage, and Resource Management in real-world cloud
               environments.
@@ -103,7 +103,7 @@ const WhyMicrosoftAzure = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Remote & Consulting Opportunities
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Work remotely or independently as an{" "}
               <strong>Azure Consultant or Cloud Specialist</strong>{" "}
               for global organizations.

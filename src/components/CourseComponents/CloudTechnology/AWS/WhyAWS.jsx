@@ -19,7 +19,7 @@ const WhyAWS = () => {
               AWS Certification?
             </span>
           </h2>
-          <p className="text-gray-600 text-xl mt-6 max-w-3xl mx-auto">
+          <p className="text-gray-1000 font-medium text-xl mt-6 max-w-3xl mx-auto" style={{ fontFamily: "ui-sans-serif" }}>
             Build globally recognized cloud expertise and unlock high-demand
             opportunities with the world’s leading cloud platform.
           </p>
@@ -33,7 +33,7 @@ const WhyAWS = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               High Salary Opportunities
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               AWS-certified professionals earn{" "}
               <strong>competitive global salaries</strong> due to the massive
               demand for cloud expertise.
@@ -46,7 +46,7 @@ const WhyAWS = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Accelerated Career Growth
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Transition into roles like{" "}
               <strong>
                 Solutions Architect, DevOps Engineer, Cloud Engineer
@@ -61,7 +61,7 @@ const WhyAWS = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Global Cloud Leadership
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               AWS is one of the{" "}
               <strong>most widely adopted cloud platforms worldwide</strong>,
               trusted by enterprises and startups alike.
@@ -74,7 +74,7 @@ const WhyAWS = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Diverse Cloud Roles
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Become a{" "}
               <strong>
                 Cloud Architect, Infrastructure Engineer, DevOps Specialist,
@@ -89,7 +89,7 @@ const WhyAWS = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Enterprise-Grade Security
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Master IAM, encryption, VPC security, monitoring, and compliance
               to build secure cloud architectures.
             </p>
@@ -101,7 +101,7 @@ const WhyAWS = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Powerful Cloud Services
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Gain hands-on expertise with{" "}
               <strong>
                 EC2, S3, RDS, Lambda, Auto Scaling, CloudFormation

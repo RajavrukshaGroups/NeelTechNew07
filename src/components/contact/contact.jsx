@@ -76,14 +76,28 @@ const ContactUsPage = ({ courseName }) => {
           </h2>
 
           <div className="flex justify-center gap-6 mt-6">
-            <button className="flex items-center gap-2 border-2 border-blue-500 text-blue-600 px-6 py-2 rounded-full hover:bg-blue-50 transition">
-              <Mail size={18} /> Email
-            </button>
 
-            <button className="flex items-center gap-2 border-2 border-green-500 text-green-600 px-6 py-2 rounded-full hover:bg-green-50 transition">
-              <MessageCircle size={18} /> WhatsApp
-            </button>
-          </div>
+          {/* Email Button */}
+          <a
+            href="mailto:admin@neeltechnologies.net"
+            className="flex items-center gap-2 border-2 border-blue-500 text-blue-600 px-6 py-2 rounded-full hover:bg-blue-50 transition"
+          >
+            <Mail size={18} />
+            Email
+          </a>
+
+          {/* WhatsApp Button */}
+          <a
+            href="https://wa.me/916361866299"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 border-2 border-green-500 text-green-600 px-6 py-2 rounded-full hover:bg-green-50 transition"
+          >
+            <MessageCircle size={18} />
+            WhatsApp
+          </a>
+
+        </div>
         </div>
 
         {/* FORM CARD */}

@@ -10,7 +10,7 @@ const SuccessStoriesHero = () => {
             Inspiring Journeys. Real Success.
           </h1>
 
-          <p className="text-base md:text-lg text-[#334155] leading-relaxed max-w-lg mx-auto lg:mx-0">
+          <p className="text-lg md:text-xl font-medium text-[#000000] leading-relaxed max-w-lg mx-auto lg:mx-0">
             Discover how our students transformed their careers with Neel
             Technologies — from beginners to industry-ready professionals.
           </p>

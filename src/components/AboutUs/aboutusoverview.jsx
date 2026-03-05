@@ -51,27 +51,27 @@ const AboutUsOverview = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 text-center">
           <div>
             <h3 className="text-4xl font-bold text-[#1C5D8F]">200+</h3>
-            <p className="mt-2 text-lg text-[#0F3E57]">Professionals Trained</p>
+            <p className="mt-2 text-xl text-[#041b27]">Professionals Trained</p>
           </div>
 
           <div>
             <h3 className="text-4xl font-bold text-[#1C5D8F]">Top MNCs</h3>
-            <p className="mt-2 text-lg text-[#0F3E57]">Alumni Placement</p>
+            <p className="mt-2 text-xl text-[#041b27]">Alumni Placement</p>
           </div>
 
           <div>
             <h3 className="text-4xl font-bold text-[#1C5D8F]">100%</h3>
-            <p className="mt-2 text-lg text-[#0F3E57]">Practical Lab Access</p>
+            <p className="mt-2 text-xl text-[#041b27]">Practical Lab Access</p>
           </div>
 
           <div>
             <h3 className="text-4xl font-bold text-[#1C5D8F]">Expert</h3>
-            <p className="mt-2 text-lg text-[#0F3E57]">Industry Trainers</p>
+            <p className="mt-2 text-xl font-medium text-[#041b27]">Industry Trainers</p>
           </div>
 
           <div>
             <h3 className="text-4xl font-bold text-[#1C5D8F]">Updated</h3>
-            <p className="mt-2 text-lg text-[#0F3E57]">Industry Curriculum</p>
+            <p className="mt-2 text-xl font-medium text-[#041b27]">Industry Curriculum</p>
           </div>
         </div>
       </div>

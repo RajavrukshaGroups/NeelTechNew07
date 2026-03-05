@@ -100,7 +100,7 @@ const SuccessStoriesYTVideos = () => {
             <div className="p-6">
               <Quote className="w-8 h-8 text-[#f28c28]/30 mb-3" />
 
-              <p className="text-gray-700 italic mb-4 text-sm leading-relaxed">
+              <p className="text-gray-1000 italic mb-4 text-xl font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
                 “{item.quote}”
               </p>
 

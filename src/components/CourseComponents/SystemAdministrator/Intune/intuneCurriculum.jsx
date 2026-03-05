@@ -160,7 +160,7 @@ const IntuneCurriculum = () => {
                   <span
                     className="text-sm md:text-base font-semibold"
                     style={{
-                      color: theme.darkBlue,
+                      color: "black",
                       fontFamily: "Montserrat",
                     }}
                   >
@@ -201,7 +201,7 @@ const IntuneCurriculum = () => {
                       Learning Objective:
                     </p>
 
-                    <p className="mb-5 text-[15px] md:text-[17px] leading-relaxed">
+                    <p className="mb-5 text-[15px] md:text-[17px] leading-relaxed" style={{  fontFamily: " system-ui", }}>
                       {module.objective}
                     </p>
 
@@ -220,7 +220,8 @@ const IntuneCurriculum = () => {
                       {module.topics.map((topic, i) => (
                         <li
                           key={i}
-                          className="flex items-start gap-3 text-[15px] md:text-[17px] leading-relaxed"
+                          className="flex items-start text-gray-950 gap-3 text-[15px] md:text-[17px] leading-relaxed"
+                          style={{ fontFamily: " system-ui", }}
                         >
                           <span
                             className="mt-2 w-2 h-2 rounded-full"

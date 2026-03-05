@@ -41,7 +41,7 @@ const OnlineTraining = () => {
 
         {/* Description */}
         <p
-          className="mt-3 text-base text-gray-700 max-w-[800px] leading-relaxed"
+          className="mt-3 text-base text-gray-900 font-medium max-w-[800px] leading-relaxed"
           style={{ fontFamily: "'Montserrat', sans-serif" }}
         >
           Live, hands-on online sessions with real-time labs and project
@@ -62,7 +62,7 @@ const OnlineTraining = () => {
                 </div>
 
                 <p
-                  className="text-sm font-medium text-[#0F3E57] leading-snug"
+                  className="text-sm font-medium text-[#041823] leading-snug"
                   style={{ fontFamily: "'Montserrat', sans-serif" }}
                 >
                   {item.text}

@@ -19,7 +19,7 @@ const WhyWindowsPowershell = () => {
               Windows PowerShell Certification?
             </span>
           </h2>
-          <p className="text-gray-600 text-xl mt-6 max-w-3xl mx-auto">
+          <p className="text-gray-1000 font-medium text-xl mt-6 max-w-3xl mx-auto" style={{ fontFamily: "ui-sans-serif" }}>
             Master automation, scripting, and enterprise-level Windows
             administration to accelerate your IT career.
           </p>
@@ -33,7 +33,7 @@ const WhyWindowsPowershell = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               High Salary Potential
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Automation and scripting professionals often see{" "}
               <strong>significant salary growth</strong> due to their ability
               to streamline enterprise IT operations.
@@ -46,7 +46,7 @@ const WhyWindowsPowershell = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Faster Career Advancement
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Move into roles like{" "}
               <strong>
                 System Administrator, Automation Engineer, DevOps Engineer
@@ -61,7 +61,7 @@ const WhyWindowsPowershell = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Enterprise-Level Demand
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               PowerShell is widely used across{" "}
               <strong>Windows Server, Azure, and enterprise IT environments</strong>{" "}
               globally.
@@ -74,7 +74,7 @@ const WhyWindowsPowershell = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               In-Demand IT Roles
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Become a{" "}
               <strong>
                 Windows Server Administrator, Cloud Automation Engineer,
@@ -89,7 +89,7 @@ const WhyWindowsPowershell = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Automation & Security Skills
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Learn to automate tasks, manage Active Directory, configure
               servers, and enhance{" "}
               <strong>enterprise security and efficiency</strong>.
@@ -102,7 +102,7 @@ const WhyWindowsPowershell = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Consulting & Freelancing
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Offer automation solutions as a{" "}
               <strong>PowerShell Consultant or IT Support Specialist</strong>{" "}
               to businesses and enterprises.

@@ -20,7 +20,7 @@ const WhyAWSDevOps = () => {
               AWS DevOps Certification?
             </span>
           </h2>
-          <p className="text-gray-600 text-xl mt-6 max-w-3xl mx-auto">
+          <p className="text-gray-1000 font-medium text-xl mt-6 max-w-3xl mx-auto" style={{ fontFamily: "ui-sans-serif" }}>
             Master automation, CI/CD pipelines, and cloud infrastructure
             to become a highly skilled DevOps engineer.
           </p>
@@ -47,7 +47,7 @@ const WhyAWSDevOps = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               High-Paying DevOps Roles
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Qualify for roles like{" "}
               <strong>
                 DevOps Engineer, Site Reliability Engineer (SRE),
@@ -63,7 +63,7 @@ const WhyAWSDevOps = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               CI/CD Pipeline Mastery
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Build and manage CI/CD pipelines using{" "}
               <strong>
                 CodePipeline, CodeBuild, CodeDeploy, Jenkins
@@ -78,7 +78,7 @@ const WhyAWSDevOps = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Advanced AWS Services
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Gain hands-on experience with{" "}
               <strong>
                 EC2, ECS, EKS, Lambda, CloudFormation, Auto Scaling
@@ -93,7 +93,7 @@ const WhyAWSDevOps = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Monitoring & Security Best Practices
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Implement secure DevOps practices using IAM,
               logging, monitoring, and compliance automation.
             </p>
@@ -105,7 +105,7 @@ const WhyAWSDevOps = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Growing DevOps Job Market
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Companies worldwide are adopting DevOps practices,
               making AWS DevOps professionals highly in demand.
             </p>

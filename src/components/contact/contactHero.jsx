@@ -21,8 +21,8 @@ const ContactHero = () => {
                 <h3 className="text-xl md:text-2xl font-semibold text-blue-600">
                   Customer Support
                 </h3>
-                <p className="text-base md:text-lg text-gray-700">
-                  info@neeltechnologies.com
+                <p className="text-lg md:text-lg font-semibold text-gray-1000">
+                  info@neeltechnologies.net
                 </p>
               </div>
             </div>
@@ -36,8 +36,8 @@ const ContactHero = () => {
                 <h3 className="text-xl md:text-2xl font-semibold text-blue-600">
                   Ask HR
                 </h3>
-                <p className="text-base md:text-lg text-gray-700">
-                  info@neeltechnologies.com
+                <p className="text-lg md:text-lg font-semibold text-gray-1000">
+                  info@neeltechnologies.net
                 </p>
               </div>
             </div>
@@ -51,8 +51,8 @@ const ContactHero = () => {
                 <h3 className="text-xl md:text-2xl font-semibold text-blue-600">
                   After Course Support Desk
                 </h3>
-                <p className="text-base md:text-lg text-gray-700">
-                  info@neeltechnologies.com
+                <p className="text-lg md:text-lg font-semibold text-gray-1000">
+                  info@neeltechnologies.net
                 </p>
               </div>
             </div>

@@ -17,7 +17,9 @@ const WhyMCSE = () => {
             <span className="text-[#0F3E57]">Why Choose</span>{" "}
             <span className="text-blue-500">MCSE Certification?</span>
           </h2>
-          <p className="text-gray-600 text-xl mt-6 max-w-3xl mx-auto">
+          <p className="text-gray-900 text-xl font-medium mt-6 max-w-3xl mx-auto"
+          
+          style={{fontFamily:"ui-sans-serif"}}>
             Boost your IT career with enterprise-level Microsoft Server
             expertise that companies actively hire for.
           </p>
@@ -31,7 +33,8 @@ const WhyMCSE = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               High Salary Growth
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg font-poppins font-medium text-gray-1000 leading-relaxed"
+            style={{fontFamily:"ui-sans-serif"}}>
               Certified professionals often see a{" "}
               <strong>30–50% salary hike</strong>. System Administrators and
               Server Engineers are in high demand globally.
@@ -44,7 +47,8 @@ const WhyMCSE = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Rapid Career Advancement
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg font-medium text-gray-1000 leading-relaxed" 
+            style={{fontFamily:"ui-sans-serif"}}>
               Move from IT Support to{" "}
               <strong>
                 System Administrator, Network Engineer, or IT Manager
@@ -59,7 +63,8 @@ const WhyMCSE = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Global Job Opportunities
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg font-medium text-gray-1000 leading-relaxed"
+            style={{fontFamily:"ui-sans-serif"}}>
               Microsoft Server infrastructure is used worldwide — opening doors
               to
               <strong> international IT careers</strong>.
@@ -72,7 +77,8 @@ const WhyMCSE = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               In-Demand Job Roles
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg font-medium text-gray-1000 leading-relaxed"
+            style={{fontFamily:"ui-sans-serif"}}>
               Become a{" "}
               <strong>
                 System Engineer, Active Directory Specialist, Windows Server
@@ -87,7 +93,8 @@ const WhyMCSE = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Enterprise-Level Skills
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg font-medium text-gray-1000 leading-relaxed"
+            style={{fontFamily:"ui-sans-serif"}}>
               Master Active Directory, DNS, DHCP, Group Policy, Security, and
               Virtualization — real enterprise tools.
             </p>
@@ -99,7 +106,8 @@ const WhyMCSE = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Freelancing & Consulting
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg font-medium text-gray-1000 leading-relaxed"
+            style={{fontFamily:"ui-sans-serif"}}>
               Work independently as a{" "}
               <strong>Server Consultant or IT Support Freelancer</strong>
               for startups and enterprises.

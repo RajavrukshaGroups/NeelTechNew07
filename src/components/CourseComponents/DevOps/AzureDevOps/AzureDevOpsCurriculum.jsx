@@ -181,7 +181,7 @@ const AzureDevOpsCurriculum = () => {
                   <span
                     className="text-sm md:text-base font-semibold"
                     style={{
-                      color: theme.darkBlue,
+                      color: "black",
                       fontFamily: "Montserrat",
                     }}
                   >

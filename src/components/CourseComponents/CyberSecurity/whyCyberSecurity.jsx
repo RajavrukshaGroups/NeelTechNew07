@@ -20,7 +20,7 @@ const WhyCyberSecurity = () => {
               Cyber Security Certification?
             </span>
           </h2>
-          <p className="text-gray-600 text-xl mt-6 max-w-3xl mx-auto">
+          <p className="text-gray-1000 font-medium text-xl mt-6 max-w-3xl mx-auto" style={{ fontFamily: "ui-sans-serif" }}>
             Protect organizations from cyber threats and build a
             high-demand career in ethical hacking and security operations.
           </p>
@@ -35,7 +35,7 @@ const WhyCyberSecurity = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Rising Global Cyber Threats
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               With increasing cyber attacks worldwide, skilled security
               professionals are more important than ever.
             </p>
@@ -47,7 +47,7 @@ const WhyCyberSecurity = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               High-Paying Career Opportunities
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Qualify for roles like{" "}
               <strong>
                 Security Analyst, Ethical Hacker, SOC Analyst,
@@ -62,7 +62,7 @@ const WhyCyberSecurity = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Massive Global Demand
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Organizations across all industries require cybersecurity
               experts to protect data and digital infrastructure.
             </p>
@@ -74,7 +74,7 @@ const WhyCyberSecurity = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Hands-On Security Tools
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Gain practical experience with{" "}
               <strong>
                 SIEM tools, Firewalls, IDS/IPS, Vulnerability Scanners,
@@ -89,7 +89,7 @@ const WhyCyberSecurity = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Cloud & Network Protection
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Learn to secure cloud environments, networks,
               applications, and endpoints against modern threats.
             </p>
@@ -101,7 +101,7 @@ const WhyCyberSecurity = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Future-Proof Career Path
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Cybersecurity remains one of the fastest-growing
               and most secure career paths globally.
             </p>

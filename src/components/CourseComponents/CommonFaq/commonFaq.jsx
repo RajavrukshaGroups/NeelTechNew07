@@ -70,7 +70,7 @@ const CommonFAQ = ({ courseName }) => {
                     : "bg-white text-gray-800 hover:bg-gray-100"
                 }`}
               >
-                <span className="text-lg md:text-xl font-semibold">
+                <span className="text-lg md:text-xl font-bold">
                   {faq.question}
                 </span>
 
@@ -82,7 +82,7 @@ const CommonFAQ = ({ courseName }) => {
               </button>
 
               {openIndex === index && (
-                <div className="px-8 py-6 bg-white text-gray-700 text-lg leading-relaxed">
+                <div className="px-8 py-6 bg-white text-[#032884] text-lg leading-relaxed"  style={{ fontFamily: "ui-sans-serif" }}> 
                   {faq.answer}
                 </div>
               )}

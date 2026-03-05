@@ -19,7 +19,7 @@ const WhyGoogleCloud = () => {
               Google Cloud Certification?
             </span>
           </h2>
-          <p className="text-gray-600 text-xl mt-6 max-w-3xl mx-auto">
+          <p className="text-gray-1000 font-medium text-xl mt-6 max-w-3xl mx-auto" style={{ fontFamily: "ui-sans-serif" }}>
             Build expertise in one of the fastest-growing cloud platforms and
             unlock high-demand cloud and DevOps career opportunities.
           </p>
@@ -34,7 +34,7 @@ const WhyGoogleCloud = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               AI & Innovation Leader
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Google Cloud is a leader in{" "}
               <strong>AI, Machine Learning, and Data Analytics</strong>,
               powering modern digital transformation globally.
@@ -47,7 +47,7 @@ const WhyGoogleCloud = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               High-Paying Career Roles
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Qualify for roles like{" "}
               <strong>
                 Cloud Engineer, Data Engineer, DevOps Engineer, Architect
@@ -62,7 +62,7 @@ const WhyGoogleCloud = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Global Network Infrastructure
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Deploy applications across global regions with{" "}
               <strong>high-performance networking and reliability</strong>.
             </p>
@@ -74,7 +74,7 @@ const WhyGoogleCloud = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Powerful Cloud Services
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Gain hands-on experience with{" "}
               <strong>
                 Compute Engine, Cloud Storage, BigQuery, Kubernetes Engine
@@ -89,7 +89,7 @@ const WhyGoogleCloud = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Advanced Security & Compliance
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Implement secure cloud architectures using{" "}
               <strong>
                 IAM, encryption, Identity-Aware Proxy, and compliance tools
@@ -103,7 +103,7 @@ const WhyGoogleCloud = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Rapidly Expanding Market
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Google Cloud adoption is increasing globally, making GCP skills{" "}
               <strong>future-ready and highly valuable</strong>.
             </p>

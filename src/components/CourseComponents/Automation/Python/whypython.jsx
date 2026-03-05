@@ -17,7 +17,7 @@ const WhyPython = () => {
             <span className="text-[#0F3E57]">Why Choose</span>{" "}
             <span className="text-blue-500">Python Certification?</span>
           </h2>
-          <p className="text-gray-600 text-xl mt-6 max-w-3xl mx-auto">
+          <p className="text-gray-1000 font-medium text-xl mt-6 max-w-3xl mx-auto" style={{ fontFamily: "ui-sans-serif" }}>
             Master one of the world’s most powerful and versatile programming
             languages and unlock high-growth tech career opportunities.
           </p>
@@ -31,7 +31,7 @@ const WhyPython = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               High Salary Potential
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Python Developers often earn{" "}
               <strong>competitive salaries worldwide</strong> across industries
               like tech, finance, healthcare, and AI.
@@ -44,7 +44,7 @@ const WhyPython = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Rapid Career Growth
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Transition into roles like{" "}
               <strong>
                 Python Developer, Software Engineer, Data Analyst, or Backend
@@ -60,7 +60,7 @@ const WhyPython = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Global Demand
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Python is used globally in{" "}
               <strong>Web Development, Automation, AI, Machine Learning,
               and Cloud Computing</strong>.
@@ -73,7 +73,7 @@ const WhyPython = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Diverse Career Roles
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Become a{" "}
               <strong>
                 Full Stack Developer, Automation Engineer, Data Scientist,
@@ -89,7 +89,7 @@ const WhyPython = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Real-World Skills
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Gain hands-on experience with{" "}
               <strong>
                 OOP, File Handling, GUI Development, SQL Integration, and
@@ -104,7 +104,7 @@ const WhyPython = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Freelancing & Remote Work
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{ fontFamily: "ui-sans-serif" }}>
               Work remotely as a{" "}
               <strong>Python Freelancer or Automation Consultant</strong>{" "}
               for startups and global clients.

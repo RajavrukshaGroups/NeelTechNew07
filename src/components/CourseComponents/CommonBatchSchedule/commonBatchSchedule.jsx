@@ -69,7 +69,7 @@ const CommonBatchSchedule = ({
 
               <div className="grid md:grid-cols-2 gap-6 text-xl mb-10">
                 {onlineFeatures.map((item, i) => (
-                  <div key={i} className="flex items-center gap-4">
+                  <div key={i} className="flex items-center text-gray-900 font-medium gap-4">
                     <CheckCircle size={24} color={theme.accent} />
                     {item}
                   </div>
@@ -93,7 +93,7 @@ const CommonBatchSchedule = ({
                 {batchDetails.map((batch, index) => (
                   <div
                     key={index}
-                    className="grid grid-cols-4 p-6 border-b last:border-0 text-lg"
+                    className="grid grid-cols-4 p-6 border-b text-gray-900 font-medium last:border-0 text-lg"
                   >
                     <div className="font-semibold">{batch.date}</div>
                     <div>{batch.schedule}</div>
@@ -126,6 +126,7 @@ const CommonBatchSchedule = ({
               <button
                 className="w-full py-4 rounded-2xl text-white text-xl font-semibold"
                 style={{ backgroundColor: theme.accent }}
+                onClick={() => window.open("https://wa.me/916361866299", "_blank")}
               >
                 Book a Free Demo
               </button>

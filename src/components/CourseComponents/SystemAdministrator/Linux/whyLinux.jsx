@@ -17,7 +17,7 @@ const WhyLinux = () => {
             <span className="text-[#0F3E57]">Why Choose</span>{" "}
             <span className="text-[#0694d1]">Linux Certification?</span>
           </h2>
-          <p className="text-gray-600 text-xl mt-6 max-w-3xl mx-auto">
+          <p className="text-gray-1000 font-medium text-xl mt-6 max-w-3xl mx-auto" style={{fontFamily:"ui-sans-serif"}}>
             Linux powers over 90% of cloud servers worldwide. Mastering Linux
             opens doors to high-paying roles in Cloud, DevOps, and
             Cybersecurity.
@@ -32,7 +32,7 @@ const WhyLinux = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               High Salary Potential
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{fontFamily:"ui-sans-serif"}}>
               Linux professionals often earn{" "}
               <strong>40–70% higher salaries</strong>, especially in DevOps,
               Cloud Engineering, and Site Reliability roles.
@@ -45,7 +45,7 @@ const WhyLinux = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Rapid Career Advancement
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{fontFamily:"ui-sans-serif"}}>
               Transition from IT Support to{" "}
               <strong>
                 Linux Administrator, DevOps Engineer, Cloud Engineer
@@ -60,7 +60,7 @@ const WhyLinux = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Global Demand
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{fontFamily:"ui-sans-serif"}}>
               Linux runs major platforms like AWS, Azure, and Google Cloud —
               making it one of the most demanded skills worldwide.
             </p>
@@ -72,7 +72,7 @@ const WhyLinux = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               In-Demand Job Roles
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{fontFamily:"ui-sans-serif"}}>
               Become a{" "}
               <strong>
                 Linux System Administrator, DevOps Engineer, Cloud Architect,
@@ -88,7 +88,7 @@ const WhyLinux = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Server & Security Expertise
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{fontFamily:"ui-sans-serif"}}>
               Master server hardening, firewall setup, SELinux, automation,
               scripting, and production-grade infrastructure management.
             </p>
@@ -100,7 +100,7 @@ const WhyLinux = () => {
             <h3 className="text-2xl font-bold mb-4 text-[#0F3E57]">
               Freelancing & Remote Work
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-1000 font-medium leading-relaxed" style={{fontFamily:"ui-sans-serif"}}>
               Offer Linux server setup, cloud deployment, and automation
               services globally as a remote consultant or freelancer.
             </p>

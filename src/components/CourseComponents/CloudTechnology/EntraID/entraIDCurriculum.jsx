@@ -173,7 +173,7 @@ const EntraIDCurriculum = () => {
                       Learning Objective:
                     </p>
 
-                    <p className="mb-5 text-[15px] md:text-[17px] leading-relaxed">
+                    <p className="mb-5 text-[15px] md:text-[17px] leading-relaxed" style={{ fontFamily: " system-ui", }}>
                       {module.objective}
                     </p>
 
@@ -193,11 +193,12 @@ const EntraIDCurriculum = () => {
                         <li
                           key={i}
                           className="flex items-start gap-3 text-[15px] md:text-[17px] leading-relaxed"
+                          style={{ fontFamily: " system-ui", }}
                         >
                           <span
                             className="mt-2 w-2 h-2 rounded-full"
                             style={{
-                              backgroundColor: theme.accentOrange,
+                              backgroundColor: theme.accentOrange, 
                             }}
                           ></span>
                           {topic}
