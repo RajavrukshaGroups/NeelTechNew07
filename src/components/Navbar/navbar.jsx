@@ -337,7 +337,7 @@ const [openCategory, setOpenCategory] = useState(null);
         <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 lg:gap-10 text-xs sm:text-sm md:text-base whitespace-nowrap">
           <span className="text-white font-medium">
             <span className="text-blue-200 mr-1 sm:mr-2 font-semibold">Chat Only:</span>
-            <span className="font-bold">+91-636-186-6299</span>
+            <span className="font-bold">+91-6361866299</span>
           </span>
           <span className="text-white font-medium">
             <span className="text-blue-200 mr-1 sm:mr-2 font-semibold">Email:</span>
@@ -809,7 +809,7 @@ const [openCategory, setOpenCategory] = useState(null);
                   className="font-bold font-serif text-sm text-blue-950"
                   // style={{ color: theme.darkBlueBg }}
                 >
-                  +91-636-186-6299
+                  +91-6361866299
                 </span>
               </div>
               <div>
