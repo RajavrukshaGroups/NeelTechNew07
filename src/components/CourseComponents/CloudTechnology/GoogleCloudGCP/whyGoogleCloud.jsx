@@ -120,7 +120,8 @@ const WhyGoogleCloud = () => {
             intelligent cloud solutions.
           </p>
 
-          <button className="bg-white text-[#0F3E57] px-10 py-4 text-xl font-semibold rounded-2xl hover:scale-105 transition-all duration-300 shadow-lg">
+          <button className="bg-white text-[#0F3E57] px-10 py-4 text-xl font-semibold rounded-2xl hover:scale-105 transition-all duration-300 shadow-lg"
+          onClick={() => window.open("https://wa.me/916361866299", "_blank")}>
             Enrol Now
           </button>
         </div>

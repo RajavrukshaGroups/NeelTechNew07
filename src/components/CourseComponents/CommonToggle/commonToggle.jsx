@@ -72,7 +72,7 @@ const CommonCourseToggle = () => {
               <button
                 key={tab.id}
                 onClick={() => handleTabClick(tab.id)}
-                className="relative w-full py-2.5 rounded-lg font-semibold transition-all duration-300 text-sm"
+                className="relative w-full py-2.5 rounded-lg font-semibold transition-all duration-300 text-lg"
                 style={{
                   backgroundColor: isActive ? theme.darkBlue : "#ffffff",
                   border: `1px solid ${theme.borderGray}`,

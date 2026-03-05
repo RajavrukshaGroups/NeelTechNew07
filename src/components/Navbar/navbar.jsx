@@ -296,6 +296,9 @@ const AllCoursesMegaMenu = ({ theme, isOpen, onMouseEnter, onMouseLeave }) => {
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+//const [openDropdown, setOpenDropdown] = useState(null);
+const [openCategory, setOpenCategory] = useState(null);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -353,7 +356,7 @@ const Navbar = () => {
           <img
             src={NeelLogo}
             alt="Neel Technologies"
-            className="h-8 sm:h-9 md:h-12 lg:h-14 xl:h-20 w-auto"
+            className="h-14 sm:h-9 md:h-12 lg:h-14 xl:h-20 w-auto"
             style={{ marginRight: "0.25rem" }}
           />
           <div className="flex items-center">
@@ -611,59 +614,127 @@ const Navbar = () => {
 
       {/* Mobile Menu - Visible on tablet and below */}
       <div
-        className={`lg:hidden overflow-hidden transition-all duration-300 ${
+        className={`lg:hidden overflow-hidden transition-all text-green-950 font-block duration-300 ${
           isMobileMenuOpen ? "max-h-[800px] opacity-100" : "max-h-0 opacity-0"
         }`}
         style={{ backgroundColor: theme.white }}
       >
         <div className="px-3 sm:px-4 py-3 sm:py-4 space-y-3 sm:space-y-4">
           {/* Mobile All Courses Button */}
-          <div className="sm:hidden mb-2">
-            <button
-              className="w-full flex items-center justify-between px-3 py-2 rounded-lg text-sm font-bold"
-              style={{
-                backgroundColor: theme.allCourse,
-                color: theme.allCourseTxtClr,
-              }}
-              onClick={() => {
-                // Handle mobile all courses expand/collapse
-                setOpenDropdown(openDropdown === "mobileCourses" ? null : "mobileCourses");
-              }}
-            >
-              All Courses
-              <ChevronDown
-                className={`h-4 w-4 transition-transform duration-300 ${
-                  openDropdown === "mobileCourses" ? "rotate-180" : ""
-                }`}
-              />
-            </button>
-            
-            {/* Mobile All Courses Grid */}
-            {openDropdown === "mobileCourses" && (
-              <div className="mt-3 grid grid-cols-2 gap-2">
-                {categories[0].subItems.map((course, idx) => (
-                  <Link
-                    key={idx}
-                    to={course.path}
-                    className="text-xs font-medium py-1.5 px-2 bg-gray-50 rounded"
-                    style={{ color: theme.darkBlueBg }}
-                    onClick={() => {
-                      setIsMobileMenuOpen(false);
-                      setOpenDropdown(null);
-                    }}
-                  >
-                    {course.label}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
+         
+
+          {/* Courses - Mobile Version */}
+      <div className="lg:hidden w-full">
+  <button
+    onClick={() =>
+      setOpenDropdown(openDropdown === "courses" ? null : "courses")
+    }
+    className="flex justify-between items-center w-full px-1 py-3 text-sm font-bold uppercase"
+    style={{ color: "black" }}
+  >
+    COURSES
+    <ChevronDown
+      className={`h-5 w-5 transition-transform duration-300 ${
+        openDropdown === "courses" ? "rotate-180" : ""
+      }`}
+    />
+  </button>
+
+  {/* Main Courses Dropdown */}
+  {openDropdown === "courses" && (
+    <div className="bg-white border-t">
+
+      {[
+        {
+          name: "System Administrator",
+          subItems: [
+            { label: "MCSE Training", path: "/mcse-training-certification-course" },
+            { label: "Linux Administrator", path: "/linux-training-certification-course" },
+            { label: "CCNA", path: "/ccna-training-certification-course" },
+            { label: "Intune & O365", path: "/intune-training-certification-course" },
+          ],
+        },
+        {
+          name: "Automation",
+          subItems: [
+            { label: "Windows Powershell", path: "/powershell-training-certification-course" },
+            { label: "Python", path: "/python-training-certification-course" },
+          ],
+        },
+        {
+          name: "Cloud Technology",
+          subItems: [
+            { label: "Microsoft Azure", path: "/microsoft-azure-training-certification-course" },
+            { label: "AWS", path: "/aws-training-certification-course" },
+            { label: "Google Cloud", path: "/google-cloud-gcp-training-certification-course" },
+          ],
+        },
+        {
+          name: "DevOps",
+          subItems: [
+            { label: "AWS DevOps", path: "/aws-devops-training-certification-course" },
+            { label: "Azure DevOps", path: "/azure-devops-training-certification-course" },
+          ],
+        },
+        {
+          name: "Cyber Security",
+          subItems: [
+            { label: "Ethical Hacking", path: "/cyber-security-training-certification-course" },
+          ],
+        },
+      ].map((category, index) => (
+        <div key={index} className="border-b">
+
+          {/* Category Button */}
+          <button
+            onClick={() =>
+              setOpenCategory(openCategory === index ? null : index)
+            }
+            className="flex justify-between items-center w-full px-6 py-3  text-lg font-extrabold"
+          >
+            {category.name}
+            <ChevronDown
+              className={`h-4 w-4 transition-transform duration-300 ${
+                openCategory === index ? "rotate-180" : ""
+              }`}
+            />
+          </button>
+
+          {/* Sub Items */}
+          {openCategory === index && (
+            <div className="bg-white">
+
+              {category.subItems.map((item, i) => (
+                <Link
+                  key={i}
+                  to={item.path}
+                  onClick={() => {
+                    setIsMobileMenuOpen(false); // Same as About Us
+                    setOpenDropdown(null);
+                    setOpenCategory(null);
+                    window.scrollTo(0, 0);
+                  }}
+                  className="block px-10 py-3 text-xs font-medium font-serif text-blue-900 hover:bg-blue-100 transition"
+                >
+                  {item.label}
+                </Link>
+              ))}
+
+            </div>
+          )}
+
+        </div>
+      ))}
+
+    </div>
+  )}
+</div>
 
           {/* Mobile About Links */}
           <div className="border-b pb-2 sm:pb-3" style={{ borderColor: theme.lightGray }}>
             <div
-              className="font-bold text-sm sm:text-base mb-2 sm:mb-3"
-              style={{ color: theme.primaryBlue }}
+              className="font-bold text-base sm:text-base mb-2 sm:mb-3"
+              style={{ color: "black" }}
             >
               About Us
             </div>
@@ -672,8 +743,8 @@ const Navbar = () => {
                 <Link
                   key={idx}
                   to={item.path}
-                  className="text-xs sm:text-sm font-medium py-1"
-                  style={{ color: theme.darkBlueBg }}
+                  className="text-xs sm:text-sm font-medium font-serif text-blue-900 py-1"
+                  // style={{ color: theme.darkBlueBg }}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.label}
@@ -686,8 +757,8 @@ const Navbar = () => {
           <div className="space-y-2">
             <Link
               to="/training-option"
-              className="block text-sm sm:text-base font-bold py-1.5"
-              style={{ color: theme.darkBlueBg }}
+              className="block text-base sm:text-base font-extrabold py-1.5"
+              style={{ color: "black" }}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Training Options
@@ -695,8 +766,8 @@ const Navbar = () => {
 
             <Link
               to="/blogs"
-              className="block text-sm sm:text-base font-bold py-1.5"
-              style={{ color: theme.darkBlueBg }}
+              className="block text-base sm:text-base font-extrabold py-1.5"
+              style={{ color: "black" }}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Blogs
@@ -704,8 +775,8 @@ const Navbar = () => {
 
             <Link
               to="/success-stories"
-              className="block text-sm sm:text-base font-bold py-1.5"
-              style={{ color: theme.darkBlueBg }}
+              className="block text-base sm:text-base font-extrabold py-1.5"
+              style={{ color: "black" }}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Success Stories
@@ -713,8 +784,8 @@ const Navbar = () => {
 
             <Link
               to="/contact"
-              className="block text-sm sm:text-base font-bold py-1.5"
-              style={{ color: theme.primaryBlue }}
+              className="block text-base sm:text-base font-extrabold py-1.5"
+              style={{ color: "black" }}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Contact
@@ -729,27 +800,27 @@ const Navbar = () => {
             <div className="space-y-1.5 sm:space-y-2">
               <div>
                 <span
-                  className="font-bold"
-                  style={{ color: theme.primaryBlue }}
+                  className="font-extrabold text-base"
+                  style={{ color: "black" }}
                 >
                   Chat Only:
                 </span>{" "}
                 <span
-                  className="font-medium"
-                  style={{ color: theme.darkBlueBg }}
+                  className="font-bold font-serif text-sm text-blue-950"
+                  // style={{ color: theme.darkBlueBg }}
                 >
                   +91-636-186-6299
                 </span>
               </div>
               <div>
                 <span
-                  className="font-bold"
-                  style={{ color: theme.primaryBlue }}
+                  className="font-extrabold text-base"
+                  style={{ color: "black" }}
                 >
                   Email:
                 </span>{" "}
                 <span
-                  className="font-medium"
+                  className="font-bold font-serif text-sm"
                   style={{ color: theme.darkBlueBg }}
                 >
                   info@neeltechnologies.net

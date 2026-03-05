@@ -147,10 +147,7 @@ const Footer = () => {
             <p className="text-lg font-medium leading-relaxed text-gray-100 "
             
               style={{ fontFamily: "'Poppins', sans-serif" }}>
-              Neel Technologies boasts a team of highly experienced and
-              qualified trainers who are deeply committed to student success.
-              With a passion for teaching and real-world expertise, we empower
-              learners to achieve their full potential.
+              Highly experienced trainers committed to student success.
             </p>
           </div>
 

@@ -77,7 +77,7 @@ const CommonBatchSchedule = ({
               </div>
 
               {/* UPCOMING BATCHES */}
-              <h4 className="text-2xl font-bold mb-6 flex items-center gap-3">
+              {/* <h4 className="text-2xl font-bold mb-6 flex items-center gap-3">
                 <Calendar size={26} color={theme.accent} />
                 Upcoming Batches
               </h4>
@@ -110,7 +110,93 @@ const CommonBatchSchedule = ({
                     </div>
                   </div>
                 ))}
-              </div>
+              </div> */}
+
+              <h4 className="text-3xl md:text-4xl font-black mb-8 flex items-center gap-3 tracking-wide">
+  <Calendar size={30} color={theme.accent} />
+  Upcoming Batches
+</h4>
+
+<div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-300">
+
+  {/* Desktop Header */}
+  <div className="hidden md:grid grid-cols-4 bg-gray-100 p-6 border-b text-xl font-black text-gray-900">
+    <div>Start Date</div>
+    <div>Schedule</div>
+    <div>Time</div>
+    <div>Seats</div>
+  </div>
+
+  {batchDetails.map((batch, index) => (
+    <div key={index} className="border-b last:border-0">
+
+      {/* Desktop Layout */}
+      <div className="hidden md:grid grid-cols-4 p-6 text-xl items-center">
+
+        <div className="font-black text-blue-800 text-2xl">
+          {batch.date}
+        </div>
+
+        <div className="font-black">
+          {batch.schedule}
+        </div>
+
+        <div className="flex items-center gap-2 font-black">
+          <Clock size={22} />
+          {batch.time}
+        </div>
+
+        <div
+          className={`font-black text-xl ${
+            batch.seats < 10 ? "text-red-700" : "text-green-700"
+          }`}
+        >
+          {batch.seats} Seats Left
+        </div>
+
+      </div>
+
+      {/* Mobile Layout */}
+      <div className="md:hidden p-5 space-y-4 text-lg">
+
+        <div className="flex justify-between">
+          <span className="font-black">Start Date</span>
+          <span className="font-black text-blue-800 text-xl">
+            {batch.date}
+          </span>
+        </div>
+
+        <div className="flex justify-between">
+          <span className="font-black">Schedule</span>
+          <span className="font-black">
+            {batch.schedule}
+          </span>
+        </div>
+
+        <div className="flex justify-between items-center">
+          <span className="font-black">Time</span>
+          <span className="flex items-center ml-6 gap-2 font-black">
+            <Clock size={20} />
+            {batch.time}
+          </span>
+        </div>
+
+        <div className="flex justify-between">
+          <span className="font-black">Seats</span>
+          <span
+            className={`font-black ${
+              batch.seats < 10 ? "text-red-700" : "text-green-700"
+            }`}
+          >
+            {batch.seats} Seats Left
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+  ))}
+</div>
             </div>
           </div>
 
@@ -148,7 +234,8 @@ const CommonBatchSchedule = ({
                 ))}
               </div>
 
-              <button className="w-full py-3 rounded-xl bg-white text-emerald-700 font-semibold">
+              <button className="w-full py-3 rounded-xl bg-white text-emerald-700 font-semibold" 
+               onClick={() => window.open("https://wa.me/916361866299", "_blank")}>
                 Request Proposal
               </button>
             </div>
