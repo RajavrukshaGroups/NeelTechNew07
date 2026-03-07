@@ -1,5 +1,6 @@
 import { useState } from "react";
-import intuneImg from "../../../../../public/assets/intune.png";
+ import intuneImg from "../../../../../public/assets/intune.png";
+//import intuneImg from "../../../../../assets/intune.png";
 import {
   Users,
   BookOpen,
@@ -44,12 +45,12 @@ const IntuneHero = () => {
       id="overview"
       className="relative w-full py-20 bg-[#eef6fb] overflow-hidden"
     >
-      <div className="max-w-[1350px] mx-auto px-10 grid lg:grid-cols-[1.1fr_0.9fr] gap-16 relative">
+      <div className="max-w-[1350px] mx-auto px-10 grid lg:grid-cols-[1.1fr_0.9fr] gap-16 relative font-semibold">
         {/* WATERMARK IMAGE */}
         <img
           src={intuneImg}
           alt="Microsoft Intune"
-          className="absolute left-1/2 top-24 -translate-x-1/2 w-[680px] opacity-[0.05] pointer-events-none select-none"
+          className="absolute left-1/2 top-24 -translate-x-1/2 w-[680px] opacity-20  pointer-events-none select-none"
         />
 
         {/* LEFT CONTENT */}

@@ -65,7 +65,7 @@ const McseHero = () => {
           </h1>
 
           <div
-            className={`text-[18px] leading-relaxed text-[#334155] space-y-6 ${
+            className={`text-[18px] leading-relaxed font-semibold text-[#000000] space-y-6 ${
               expanded ? "" : "line-clamp-6"
             }`}
             style={{ fontFamily: "'Montserrat', sans-serif" }}

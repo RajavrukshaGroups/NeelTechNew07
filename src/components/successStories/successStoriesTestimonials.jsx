@@ -10,14 +10,15 @@ const SuccessStoriesTestimonials = () => {
       <section className="w-full bg-white py-12 md:py-16">
         <div className="max-w-[900px] mx-auto px-4 text-center">
           {/* Heading */}
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1F2933] mb-4">
-            The Neel Experience
-          </h2>
-
-          <p className="text-lg md:text-xl font-medium text-[#180303] mb-10">
+          <h2 className="text-xl md:text-2xl pb-4 md:pb-12 font-bold text-[#1F2933] mb-4">
             Hear firsthand from students who’ve experienced the Neel
             Technologies difference.
-          </p>
+          </h2>
+
+          {/* <p className="text-lg md:text-xl font-medium text-[#180303] mb-10">
+            Hear firsthand from students who’ve experienced the Neel
+            Technologies difference.
+          </p> */}
 
           {/* Toggle */}
           <div className="flex justify-center">

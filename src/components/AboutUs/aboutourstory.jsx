@@ -101,13 +101,13 @@ const OurStory = () => {
           className="w-full h-[250px] md:h-[320px] object-cover rounded-2xl md:rounded-3xl"
         />
         <div className="absolute bottom-8 left-8 md:bottom-12 md:left-12 z-20 text-white">
-          <p className="text-base md:text-lg font-light tracking-wider mb-3 opacity-80">
+          <p className="text-base md:text-lg font-bold tracking-wider mb-3 opacity-90">
             EST. 2020
           </p>
           <h3 className="text-3xl md:text-4xl lg:text-5xl font-medium">
             Neel Technologies
           </h3>
-          <p className="text-base md:text-lg lg:text-xl max-w-2xl mt-3 opacity-90" style={{ fontFamily: "ui-sans-serif" }}>
+          <p className="text-base md:text-xl font-bold lg:text-2xl max-w-2xl mt-3 opacity-90" style={{ fontFamily: "ui-sans-serif" }}>
             From a small initiative to a premier IT training institute
           </p>
         </div>
@@ -129,7 +129,7 @@ const OurStory = () => {
             >
               {/* Year Marker */}
               <div
-                className={`w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center text-white font-medium text-base md:text-lg transition-all duration-300 mb-4 ${
+                className={`w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center text-white font-bold text-xl md:text-2xl transition-all duration-300 mb-4 ${
                   activeYear === index ? "scale-110 shadow-lg" : ""
                 }`}
                 style={{ backgroundColor: item.color }}
@@ -138,12 +138,12 @@ const OurStory = () => {
               </div>
 
               {/* Year Label */}
-              <span className="text-lg md:text-base font-medium text-gray-600 mb-2" style={{ fontFamily: "ui-sans-serif" }}>
+              <span className="text-lg md:text-xl font-bold text-gray-600 mb-2" style={{ fontFamily: "ui-sans-serif" }}>
                 {item.year}
               </span>
 
               {/* Title */}
-              <span className="text-4xl md:text-lg font-medium text-[#072536]">
+              <span className="text-4xl md:text-2xl font-semibold text-[#072536]">
                 {item.title}
               </span>
 
@@ -292,7 +292,7 @@ const OurStory = () => {
           {stat.value}
         </div>
 
-        <div className="text-sm text-gray-500 mt-2 tracking-wide">
+        <div className="text-base font-semibold text-gray-600 mt-2 tracking-wide">
           {stat.label}
         </div>
       </div>

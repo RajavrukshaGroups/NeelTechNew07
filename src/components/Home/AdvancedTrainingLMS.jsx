@@ -400,7 +400,7 @@ const AdvancedTrainingLms = () => {
               style={{ backgroundColor: "#f28c28" }}
             ></span>
             <p
-              className="text-gray-600 mt-3"
+              className="text-gray-600 text-lg font-medium mt-3"
               style={{
                 fontFamily: "'Inter', sans-serif",
                 fontSize: "1rem",
@@ -433,11 +433,11 @@ const AdvancedTrainingLms = () => {
 
                     {/* Title */}
                     <h4
-                      className="mb-2"
+                      className="mb-2 font-medium"
                       style={{
                         fontFamily: "'Poppins', sans-serif",
                         fontWeight: 600,
-                        fontSize: "1.1rem",
+                        fontSize: "1.3rem",
                         color: "#0F3E57",
                       }}
                     >
@@ -446,10 +446,10 @@ const AdvancedTrainingLms = () => {
 
                     {/* Description */}
                     <p
-                      className="text-gray-1000 font-normal"
+                      className="text-gray-1000 font-medium text-base"
                       style={{
                         fontFamily: "'Inter', sans-serif",
-                        fontSize: "0.9rem",
+                        fontSize: "1rem",
                         lineHeight: "1.5",
                       }}
                     >

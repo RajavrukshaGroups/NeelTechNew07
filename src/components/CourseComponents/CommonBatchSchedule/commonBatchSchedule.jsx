@@ -35,7 +35,7 @@ const CommonBatchSchedule = ({
             {/* <span style={{ color: theme.accent }}></span> */}
             <span className="text-orange-500">Batch Schedule</span>
           </h2>
-          <p className="text-gray-600 text-xl md:text-2xl max-w-3xl mx-auto">
+          <p className="text-gray-600 text-xl font-semibold md:text-2xl max-w-3xl mx-auto">
             Choose the learning format that suits your schedule and career
             growth
           </p>
@@ -50,7 +50,7 @@ const CommonBatchSchedule = ({
 
               <div className="grid md:grid-cols-2 gap-6 text-xl">
                 {selfPacedFeatures.map((item, i) => (
-                  <div key={i} className="flex items-center gap-4">
+                  <div key={i} className="flex items-center gap-4" style={{ fontFamily: "Roboto" }}>
                     <CheckCircle size={24} color={theme.accent} />
                     {item}
                   </div>
@@ -69,7 +69,7 @@ const CommonBatchSchedule = ({
 
               <div className="grid md:grid-cols-2 gap-6 text-xl mb-10">
                 {onlineFeatures.map((item, i) => (
-                  <div key={i} className="flex items-center text-gray-900 font-medium gap-4">
+                  <div key={i} className="flex items-center text-gray-900 font-medium gap-4" style={{ fontFamily: "Roboto" }}>
                     <CheckCircle size={24} color={theme.accent} />
                     {item}
                   </div>
@@ -203,9 +203,9 @@ const CommonBatchSchedule = ({
           {/* RIGHT SIDE */}
           <div className="lg:sticky lg:top-24 h-fit space-y-10">
             {/* OFFER CARD */}
-            <div className="bg-white rounded-3xl shadow-2xl p-10">
+            {/* <div className="bg-white rounded-3xl shadow-2xl p-10">
               <div className="bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-3xl py-8 text-center mb-8">
-                <div className="text-6xl font-extrabold">10% OFF</div>
+                <div className="text-6xl font-extrabold font-serif">10% OFF</div>
                 <p className="text-lg">Limited Time Offer</p>
               </div>
 
@@ -216,7 +216,53 @@ const CommonBatchSchedule = ({
               >
                 Book a Free Demo
               </button>
-            </div>
+            </div> */}
+
+            
+            <div
+  className="relative bg-white rounded-3xl shadow-xl p-10 overflow-hidden transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl"
+  style={{ fontFamily: "'Poppins', sans-serif" }}
+>
+  {/* Glow Background */}
+  <div className="absolute -top-16 -right-16 w-40 h-40 bg-orange-200 opacity-40 rounded-full blur-3xl animate-pulse"></div>
+
+  {/* OFFER BOX */}
+  <div className="relative bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 text-white rounded-3xl py-8 text-center mb-8 transform transition duration-500 hover:scale-105">
+    
+    <div className="text-6xl font-extrabold tracking-wide animate-pulse">
+      10% OFF
+    </div>
+
+    <p className="text-lg mt-2 opacity-90">
+      Limited Time Offer
+    </p>
+  </div>
+
+  {/* BUTTON */}
+  <button
+    className="relative w-full py-4 rounded-2xl text-white text-xl font-semibold overflow-hidden transition-all duration-300 hover:scale-105 active:scale-95"
+    style={{
+      background: "linear-gradient(135deg,#0694d1,#0F3E57)",
+    }}
+    onClick={() => window.open("https://wa.me/916361866299", "_blank")}
+  >
+    {/* Shine animation */}
+    <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full animate-[shine_3s_infinite]"></span>
+
+    <span className="relative z-10">Book a Free Demo</span>
+  </button>
+
+  {/* Tailwind custom animation */}
+  <style>
+    {`
+      @keyframes shine {
+        100% {
+          transform: translateX(200%);
+        }
+      }
+    `}
+  </style>
+</div>
 
             {/* CORPORATE TRAINING */}
             <div className="bg-emerald-700 rounded-3xl p-8 shadow-2xl text-white">

@@ -159,7 +159,7 @@ const Testimonials = () => {
         <h2 className="text-4xl md:text-5xl font-bold text-[#0F3E57] mb-4">
           What Our Students Say
         </h2>
-        <p className="text-lg text-gray-1000  max-w-3xl mx-auto" style={{ fontFamily: "ui-sans-serif" }}>
+        <p className="text-lg text-gray-1000 font-medium  max-w-3xl mx-auto" style={{ fontFamily: "ui-sans-serif" }}>
           Real experiences. Real transformations. Hear directly from our
           students who achieved success with Neel Technologies.
         </p>
@@ -222,7 +222,7 @@ const Testimonials = () => {
                   <Quote className="w-8 h-8 text-[#f28c28]/20 mb-3" />
 
                   {/* Quote Text */}
-                  <p className="text-gray-1000 font-medium text-lg italic mb-4 line-clamp-3" >
+                  <p className="text-gray-1000 font-bold text-lg italic mb-4 line-clamp-3" >
                     “{item.quote}”
                   </p>
 
@@ -296,10 +296,10 @@ const Testimonials = () => {
             </h3>
             <button
               onClick={handleViewLess}
-              className="flex items-center gap-2 px-4 py-2 bg-gray-100 text-[#0F3E57] rounded-full hover:bg-gray-200 transition-all duration-300"
+              className="flex items-center gap-2 px-4 py-2 bg-gray-200 text-lg font-bold text-[#0F3E57] rounded-full hover:bg-gray-200 transition-all duration-300"
             >
               <X className="w-4 h-4" />
-              <span>View Less</span>
+              <span className="font-bold">View Less</span>
             </button>
           </div>
 
@@ -320,7 +320,7 @@ const Testimonials = () => {
 
                   {/* Detailed Review */}
                   <div className="bg-gray-50 rounded-xl p-5 mb-4 border-l-4 border-[#f28c28]">
-                    <p className="text-gray-600 text-sm leading-relaxed">
+                    <p className="text-gray-600 text-lg font-bold leading-relaxed">
                       {item.text}
                     </p>
                   </div>
@@ -337,10 +337,10 @@ const Testimonials = () => {
 
                   {/* Student Info */}
                   <div className="border-t pt-4">
-                    <h4 className="font-semibold text-[#0F3E57] text-lg">
+                    <h4 className="font-bold text-[#0F3E57] text-xl">
                       {item.name}
                     </h4>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-lg font-medium text-gray-800">
                       {item.role} at {item.company}
                     </p>
                   </div>
@@ -351,7 +351,7 @@ const Testimonials = () => {
 
           {/* Additional text testimonials can be added here */}
           <div className="mt-8 text-center">
-            <p className="text-gray-500 italic">
+            <p className="text-gray-700 font-bold text-lg italic">
               And many more success stories from our students across the globe.
             </p>
           </div>
@@ -371,7 +371,7 @@ const Testimonials = () => {
         ) : (
           <button
             onClick={handleViewLess}
-            className="group inline-flex items-center gap-2 px-8 py-3 bg-[#0F3E57] text-white rounded-full font-semibold hover:bg-[#f28c28] transition-all duration-300 hover:scale-105"
+            className="group inline-flex items-center gap-2 px-8 py-3 bg-[#0F3E57] text-white rounded-full text-lg font-bold hover:bg-[#f28c28] transition-all duration-300 hover:scale-105"
           >
             <span>Show Video Testimonials</span>
             <ChevronLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />

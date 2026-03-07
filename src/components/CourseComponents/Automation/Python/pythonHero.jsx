@@ -43,7 +43,7 @@ const PythonHero = () => {
       id="overview"
       className="relative w-full py-20 bg-[#eef6fb] overflow-hidden"
     >
-      <div className="max-w-[1350px] mx-auto px-10 grid lg:grid-cols-[1.1fr_0.9fr] gap-16 relative">
+      <div className="max-w-[1350px] mx-auto px-10 grid lg:grid-cols-[1.1fr_0.9fr] gap-16 relative font-semibold">
 
         {/* WATERMARK */}
         <img
@@ -65,7 +65,7 @@ const PythonHero = () => {
           </h1>
 
           <div
-            className={`text-[18px] leading-relaxed font-bold text-[#000000] space-y-6 ${
+            className={`text-[18px] leading-relaxed text-[#0c1934] space-y-6 ${
               expanded ? "" : "line-clamp-6"
             }`}
             style={{ fontFamily: "'Montserrat', sans-serif" }}

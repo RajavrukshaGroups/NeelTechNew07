@@ -801,6 +801,25 @@ import { useState } from "react";
 import { Clock, Users, BookOpen, ChevronDown, ChevronUp, Award, TrendingUp, Star, Target, Zap, Shield, Cloud, Code, Server, Wifi, Lock } from "lucide-react";
 import { Link } from "react-router-dom";
 
+import mcseLogo from "../../../public/assets/mcse.png";
+import linuxLogo from "../../../public/assets/linux.png";
+import ccnaLogo from "../../../public/assets/ccna.png";
+import intuneLogo from "../../../public/assets/intune.png";
+import powerShellLogo from "../../../public/assets/powershell.png";
+import pythonLogo from "../../../public/assets/python.png";
+import microsoftLogo from "../../../public/assets/microsoft.jpg";
+import entraIdLogo from "../../../public/assets/entra_id.jpg";
+import awsLogo from "../../../public/assets/aws_solution_tech.png";
+import googleCloudLogo from "../../../public/assets/google_cloud_gcp.png";
+import azureSentinelLogo from "../../../public/assets/azure_sentinel.webp";
+import awsDevOpsLogo from "../../../public/assets/aws_devops.png";
+import azureDevOpsLogo from "../../../public/assets/azure_devops.png";
+import cyberSecurityLogo from "../../../public/assets/cyber_security.png";
+import o365Logo from "../../../public/assets/o365.png";
+
+
+
+
 const CourseDetails = () => {
   const [activeTab, setActiveTab] = useState("top");
   const [showAllCourses, setShowAllCourses] = useState(false);
@@ -825,6 +844,7 @@ const CourseDetails = () => {
     // System Administrator
     {
       title: "MCSE Training Certification Course",
+      backgroundLogo: mcseLogo,
       duration: "40 Hrs",
       category: "System Administrator",
       enrolled: "12,345 enrolled",
@@ -837,6 +857,7 @@ const CourseDetails = () => {
     {
       title: "LINUX Training Certification Course",
       duration: "40 Hrs",
+      backgroundLogo: linuxLogo,
       category: "System Administrator",
       enrolled: "10,234 enrolled",
       path: "/linux-training-certification-course",
@@ -847,6 +868,7 @@ const CourseDetails = () => {
     },
     {
       title: "The CCNA Training Certification Course",
+      backgroundLogo: ccnaLogo,
       duration: "40 Hrs",
       category: "System Administrator",
       enrolled: "15,678 enrolled",
@@ -858,6 +880,7 @@ const CourseDetails = () => {
     },
     {
       title: "Intune Training Certification Course",
+      backgroundLogo: intuneLogo,
       duration: "24 Hrs",
       category: "System Administrator",
       enrolled: "5,432 enrolled",
@@ -869,6 +892,7 @@ const CourseDetails = () => {
     },
     {
       title: "0365 Training Certification Course",
+      backgroundLogo: o365Logo,
       duration: "24 Hrs",
       category: "System Administrator",
       enrolled: "7,891 enrolled",
@@ -882,6 +906,7 @@ const CourseDetails = () => {
     // Automation/Program
     {
       title: "Windows Powershell Training Certification Course",
+      backgroundLogo: powerShellLogo,
       duration: "24 Hrs",
       category: "Automation/Program",
       enrolled: "6,543 enrolled",
@@ -893,6 +918,7 @@ const CourseDetails = () => {
     },
     {
       title: "Python Training Certification Course",
+      backgroundLogo: pythonLogo,
       duration: "40 Hrs",
       category: "Automation/Program",
       enrolled: "18,765 enrolled",
@@ -906,6 +932,7 @@ const CourseDetails = () => {
     // Cloud Technology
     {
       title: "Microsoft Azure Training Certification Course",
+      backgroundLogo: microsoftLogo,
       duration: "40 Hrs",
       category: "Cloud Technology",
       enrolled: "22,345 enrolled",
@@ -917,6 +944,7 @@ const CourseDetails = () => {
     },
     {
       title: "Microsoft Entra ID Training Certification Course",
+      backgroundLogo: entraIdLogo,
       duration: "24 Hrs",
       category: "Cloud Technology",
       enrolled: "4,321 enrolled",
@@ -928,6 +956,7 @@ const CourseDetails = () => {
     },
     {
       title: "AWS Training Certification Course",
+      backgroundLogo: awsLogo,
       duration: "40 Hrs",
       category: "Cloud Technology",
       enrolled: "25,678 enrolled",
@@ -939,6 +968,7 @@ const CourseDetails = () => {
     },
     {
       title: "Google Cloud (GCP) Training Certification Course",
+      backgroundLogo: googleCloudLogo,
       duration: "40 Hrs",
       category: "Cloud Technology",
       enrolled: "8,901 enrolled",
@@ -950,6 +980,7 @@ const CourseDetails = () => {
     },
     {
       title: "Azure Sentinel Training Certification Course",
+      backgroundLogo: azureSentinelLogo,
       duration: "24 Hrs",
       category: "Cloud Technology",
       enrolled: "3,456 enrolled",
@@ -963,6 +994,7 @@ const CourseDetails = () => {
     // DevOps
     {
       title: "AWS DevOps Training Certification Course",
+      backgroundLogo: awsDevOpsLogo,
       duration: "40 Hrs",
       category: "DevOps",
       enrolled: "9,876 enrolled",
@@ -974,6 +1006,7 @@ const CourseDetails = () => {
     },
     {
       title: "Azure DevOps Training Certification Course",
+      backgroundLogo: azureDevOpsLogo,
       duration: "40 Hrs",
       category: "DevOps",
       enrolled: "8,765 enrolled",
@@ -987,6 +1020,7 @@ const CourseDetails = () => {
     // Cyber Security
     {
       title: "Cyber Security Training Certification Course",
+      backgroundLogo: cyberSecurityLogo,
       duration: "40 Hrs",
       category: "Cyber Security",
       enrolled: "14,567 enrolled",
@@ -1122,6 +1156,7 @@ const CourseDetails = () => {
                 transform: activeTab === tab.id ? "scale(1.05)" : "scale(1)",
               }}
             >
+             
               {tab.label}
               {activeTab === tab.id && (
                 <span
@@ -1151,13 +1186,15 @@ const CourseDetails = () => {
               <Link
                 to={course.path}
                 key={index}
-                className="group relative rounded-lg transition-all duration-500 cursor-pointer overflow-hidden"
+                className="image-card group relative rounded-lg transition-all duration-500 cursor-pointer overflow-hidden"
                 style={{
                   backgroundColor: theme.white,
                   border: `1px solid ${hoveredCard === index ? theme.accentOrange : theme.primaryBlue + '40'}`,
                   boxShadow: hoveredCard === index ? `0 10px 25px -5px ${theme.primaryBlue}30` : '0 2px 8px rgba(0,0,0,0.05)',
                   transform: hoveredCard === index ? 'translateY(-4px)' : 'translateY(0)',
                   fontFamily: "'Poppins', sans-serif",
+                 
+
                 }}
                 onMouseEnter={() => setHoveredCard(index)}
                 onMouseLeave={() => setHoveredCard(null)}
@@ -1169,7 +1206,7 @@ const CourseDetails = () => {
                     background: `linear-gradient(135deg, ${theme.primaryBlue}08 0%, ${theme.accentOrange}08 100%)`,
                   }}
                 />
-
+                  
                 {/* Accent Line with hover effect */}
                 <div
                   className="absolute left-0 top-0 bottom-0 w-[4px] transition-all duration-500"
@@ -1195,7 +1232,10 @@ const CourseDetails = () => {
                   >
                     {course.title}
                   </h3>
-
+                      <div className=" flex items-center text-center justify-center">
+                           <img src={course.backgroundLogo} alt=""  width={"82px"} height={"100%"} style={{objectFit:"cover"}}/>
+                      </div>
+                    
                   {/* Rating Section */}
                   <div className="flex items-center gap-2 mb-2">
                     <div className="flex items-center">

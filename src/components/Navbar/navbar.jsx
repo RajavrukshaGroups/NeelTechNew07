@@ -336,8 +336,8 @@ const [openCategory, setOpenCategory] = useState(null);
       >
         <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 lg:gap-10 text-xs sm:text-sm md:text-base whitespace-nowrap">
           <span className="text-white font-medium">
-            <span className="text-blue-200 mr-1 sm:mr-2 font-semibold">Chat Only:</span>
-            <span className="font-bold">+91-6361866299</span>
+            <span className="text-blue-200 mr-1 sm:mr-2 font-semibold">Call:</span>
+            <span className="font-bold">+91 6361866299</span>
           </span>
           <span className="text-white font-medium">
             <span className="text-blue-200 mr-1 sm:mr-2 font-semibold">Email:</span>
@@ -359,19 +359,22 @@ const [openCategory, setOpenCategory] = useState(null);
             className="h-14 sm:h-9 md:h-12 lg:h-14 xl:h-20 w-auto"
             style={{ marginRight: "0.25rem" }}
           />
-          <div className="flex items-center">
+          <div className="flex flex-col ">
+            <div>
             <span
-              className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-extrabold tracking-tight"
+              className="text-base sm:text-lg md:text-xl lg:text-xl xl:text-2xl font-extrabold tracking-tight"
               style={{ color: theme.neelBlue }}
             >
               NEEL
             </span>
             <span
-              className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-extrabold tracking-tight whitespace-nowrap ml-1"
+              className="text-base sm:text-lg md:text-xl lg:text-xl xl:text-2xl font-extrabold tracking-tight whitespace-nowrap ml-1"
               style={{ color: theme.technologiesOrange }}
             >
               TECHNOLOGIES
             </span>
+            </div>
+            <span className="text-lg gap-18 sm:text-lg md:text-lg font-bold ">Build Your Tech Future</span>
           </div>
         </Link>
 
@@ -803,13 +806,13 @@ const [openCategory, setOpenCategory] = useState(null);
                   className="font-extrabold text-base"
                   style={{ color: "black" }}
                 >
-                  Chat Only:
+                  Call:
                 </span>{" "}
                 <span
                   className="font-bold font-serif text-sm text-blue-950"
                   // style={{ color: theme.darkBlueBg }}
                 >
-                  +91-6361866299
+                  +91 6361866299
                 </span>
               </div>
               <div>

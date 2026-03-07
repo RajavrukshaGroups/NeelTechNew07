@@ -43,7 +43,7 @@ const GoogleCloudHero = () => {
       id="overview"
       className="relative w-full py-20 bg-[#eef4ff] overflow-hidden"
     >
-      <div className="max-w-[1350px] mx-auto px-10 grid lg:grid-cols-[1.1fr_0.9fr] gap-16 relative">
+      <div className="max-w-[1350px] mx-auto px-10 grid lg:grid-cols-[1.1fr_0.9fr] gap-16 relative font-semibold">
 
         {/* WATERMARK */}
         <img

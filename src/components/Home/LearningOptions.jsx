@@ -48,7 +48,7 @@ const LearningOptions = () => {
               style={{ backgroundColor: "#f28c28" , }}
             ></span>
           <p
-            className="mt-2 text-gray-600 mt-8 text-sm md:text-base"
+            className="mt-2 text-gray-600 mt-8 text-base font-medium  md:text-lg"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
             Choose the learning format that best suits your schedule and goals.
@@ -87,7 +87,7 @@ const LearningOptions = () => {
 
                 {/* Description */}
                 <p
-                  className="text-gray-600 text-sm leading-relaxed mb-4 text-center"
+                  className="text-gray-600 text-base font-medium leading-relaxed mb-4 text-center"
                   style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   {item.description}

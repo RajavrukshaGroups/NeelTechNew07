@@ -33,6 +33,16 @@ body {
   letter-spacing: 0.5px;
 }
 
+@layer utilities {
+  .bg-brand-pattern {
+    background-color: #005494;
+    background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%230066B2' stroke-width='1'%3E%3Cpath d='M10 60 Q 30 10 60 10 Q 90 10 110 60 Q 90 110 60 110 Q 30 110 10 60 Z'/%3E%3Cpath d='M60 10 L 60 110' stroke-width='0.5'/%3E%3Cpath d='M60 20 L 20 40 M 60 35 L 15 60 M 60 50 L 20 80 M 60 65 L 30 100' stroke-width='0.5'/%3E%3Cpath d='M60 20 L 100 40 M 60 35 L 105 60 M 60 50 L 100 80 M 60 65 L 90 100' stroke-width='0.5'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 80px 80px;
+  }
+}
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

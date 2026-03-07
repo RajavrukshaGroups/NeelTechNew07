@@ -232,7 +232,7 @@ const Footer = () => {
         </div>
 
         {/* ================= BOTTOM COPYRIGHT ================= */}
-        <div className="border-t border-blue-800 pt-8 text-center text-lg text-gray-400">
+        <div className="border-t border-blue-800 pt-8 text-center text-lg text-gray-300">
           © 2026 All Rights Reserved by{" "}
           <Link to="/" className="text-[#F28C28] font-semibold hover:underline">
             Neel Technologies

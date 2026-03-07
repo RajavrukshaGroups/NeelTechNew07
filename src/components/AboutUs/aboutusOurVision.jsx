@@ -24,7 +24,7 @@ const OurVision = () => {
         </p>
 
         {/* Supporting Statement */}
-        <p className="text-lg md:text-xl leading-relaxed text-[#1C5D8F]">
+        <p className="text-xl md:text-2xl font-bold leading-relaxed text-[#1C5D8F]">
           We aim to empower our students with{" "}
           <span className="font-semibold text-[#f28c28]">
             knowledge, confidence, and real-world expertise

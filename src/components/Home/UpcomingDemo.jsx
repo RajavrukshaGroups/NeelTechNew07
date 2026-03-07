@@ -216,7 +216,7 @@ const UpcomingDemo = () => {
           <div className="w-20 h-1 bg-orange-500 mx-auto mt-4 rounded-full relative">
             <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-orange-500 rounded-full animate-ping"></div>
           </div>
-          <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+          <p className="text-gray-800 text-xl font-bold mt-4 max-w-2xl mx-auto">
             Join live sessions from industry experts and enhance your skills
           </p>
         </div>
@@ -300,33 +300,33 @@ const UpcomingDemo = () => {
                     </div>
 
                     {/* Speaker name with hover underline effect */}
-                    <h4 className="mt-3 text-lg font-extrabold text-gray-800 text-center relative">
+                    <h4 className="mt-3 text-xl font-extrabold text-gray-800 text-center relative">
                       {demo.speaker}
                       <span className={`absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-blue-600 
                         transition-all duration-300 ${isHovered ? 'w-12' : 'w-0'}`}></span>
                     </h4>
 
                     {/* Title with slide-up effect on hover */}
-                    <p className={`text-[#0F172A] font-bold text-base leading-snug text-center mt-2 
+                    <p className={`text-[#0F172A] font-bold text-lg leading-snug text-center mt-2 
                       transition-all duration-500 ${isHovered ? 'opacity-100' : 'opacity-90'}`}>
                       {demo.title}
                     </p>
 
                     {/* Description appears on hover with fade-in */}
-                    <p className={`text-sm text-orange-900 font-bold  text-center mt-2 transition-all duration-500
+                    <p className={`text-base text-orange-900 font-bold  text-center mt-2 transition-all duration-500
                       ${isHovered ? 'max-h-12 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
                       {demo.description}
                     </p>
                   </div>
 
                   {/* Info Section with animated entries */}
-                  <div className="mt-4 space-y-2 text-sm font-semibold text-gray-800 relative">
+                  <div className="mt-4 space-y-2 text-base  font-bold text-gray-800 relative" >
                     {/* Date with hover slide */}
                     <div className={`flex items-center gap-2 justify-center transition-all duration-300 
                       ${isHovered ? 'translate-x-0' : ''}`}>
                       <Calendar size={16} className={`transition-all duration-300 
                         ${isHovered ? 'text-blue-600 rotate-12' : 'text-blue-600'}`} />
-                      <span>{demo.date}</span>
+                      <span className=" " style={{fontFamily : "ui-sans-serif"}}>{demo.date}</span>
                     </div>
 
                     {/* Duration with hover slide */}
@@ -349,8 +349,8 @@ const UpcomingDemo = () => {
 
                     {/* Progress Bar with hover effect */}
                     <div className="relative pt-1">
-                      <div className="flex justify-between text-xs mb-1">
-                        <span className="text-gray-500">Available</span>
+                      <div className="flex justify-between text-sm mb-1">
+                        <span className="text-gray-700">Available</span>
                         <span className={`font-bold ${getSeatTextColor(seatPercentage)}`}>
                           {demo.seats}/{demo.totalSeats}
                         </span>
@@ -392,7 +392,7 @@ const UpcomingDemo = () => {
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent 
                           -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000"></div>
                       )}
-                      <span className="relative z-10">
+                      <span className=" test-base z-10">
                         {demo.seats === 0 ? "Fully Booked" : "Register Now"}
                       </span>
                     </button>
@@ -402,7 +402,7 @@ const UpcomingDemo = () => {
                       ${isHovered && demo.seats > 0 ? 'opacity-100 max-h-8' : 'opacity-0 max-h-0 overflow-hidden'}`}>
                       <button
                         onClick={(e) => handleNotifyMe(index, e)}
-                        className="text-xs text-blue-600 hover:text-blue-800 font-medium flex items-center gap-1"
+                        className="text-sm text-blue-600 hover:text-blue-800 font-medium flex items-center gap-1"
                       >
                         <Bell size={12} className={isNotified ? 'animate-bounce' : ''} />
                         {isNotified ? 'Notification Set!' : 'Notify me for next session'}

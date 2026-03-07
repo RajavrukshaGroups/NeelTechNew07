@@ -41,7 +41,7 @@ const CCNAHero = () => {
   return (
     <section
       id="overview"
-      className="relative w-full py-20 bg-[#eef6fb] overflow-hidden"
+      className="relative w-full py-20 bg-[#eef6fb] overflow-hidden font-semibold"
     >
       <div className="max-w-[1350px] mx-auto px-10 grid lg:grid-cols-[1.1fr_0.9fr] gap-16 relative">
         {/* WATERMARK */}
