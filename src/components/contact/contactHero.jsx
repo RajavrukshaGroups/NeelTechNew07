@@ -1,5 +1,5 @@
 // import { Headphones, MessageCircleQuestion, BookOpen } from "lucide-react";
-// import contactUsImage from "../../../public/assets/onlinetraining3.jpg";
+ import contactUsImage from "../../../public/assets/onlinetraining3.jpg";
 
 // const ContactHero = () => {
 //   return (
@@ -133,7 +133,7 @@ const ContactHero = () => {
           <div className="absolute -inset-4 bg-[#0694d110] rounded-full blur-3xl -z-10"></div>
           <div className="w-[220px] h-[200px] md:w-[400px] md:h-[400px] rounded-full border-8 border-white shadow-2xl overflow-hidden relative group">
             <img
-              src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=800"
+              src={contactUsImage}
               alt="Customer Support Team"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               referrerPolicy="no-referrer"
