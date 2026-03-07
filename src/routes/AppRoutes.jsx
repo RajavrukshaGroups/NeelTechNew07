@@ -27,8 +27,8 @@ const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/about/:tab" element={<About />} />
+      <Route path="/about-us" element={<About />} />
+      <Route path="/about-us/:tab" element={<About />} />
       <Route
         path="/mcse-training-certification-course"
         element={<MCSETraining />}
@@ -89,8 +89,8 @@ const AppRoutes = () => {
         path="/cyber-security-training-certification-course"
         element={<CyberSecurityTraining />}
       />
-      <Route path="/training-option" element={<TrainingOption />} />
-      <Route path="/contact" element={<ContactMainPage />} />
+      <Route path="/our-services" element={<TrainingOption />} />
+      <Route path="/contact-us" element={<ContactMainPage />} />
       <Route path="/blogs" element={<Blogs />} />
       <Route path="/success-stories" element={<SuccessStories />} />
     </Routes>

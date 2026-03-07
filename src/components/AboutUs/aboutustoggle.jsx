@@ -84,7 +84,7 @@ const AboutUsToggle = () => {
               {tabs.map((tabItem) => (
                 <button
                   key={tabItem.id}
-                  onClick={() => navigate(`/about/${tabItem.id}`)}
+                  onClick={() => navigate(`/about-us/${tabItem.id}`)}
                   className="px-5 py-2 rounded-full whitespace-nowrap transition-all duration-300 flex-shrink-0 cursor-pointer"
                   style={{
                     backgroundColor:

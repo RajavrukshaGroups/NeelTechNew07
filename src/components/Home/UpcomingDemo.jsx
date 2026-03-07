@@ -126,22 +126,22 @@ import demo3 from "../../../public/assets/hero6.jpeg";
 import demo4 from "../../../public/assets/hero4.jpeg";
 
 const demos = [
+  // {
+  //   speaker: "Imran Ali MR",
+  //   title: "Mastering Automated Payment Program (APP) in SAP",
+  //   date: "18 Feb 2026 | 12:00 PM IST",
+  //   duration: "90 Minutes",
+  //   category: "SAP",
+  //   seats: 60,
+  //   totalSeats: 100,
+  //   image: demo1,
+  //   description: "Complete APP configuration & execution with real-time scenarios.",
+  //   // expertLevel: "Advanced",
+  // },
   {
-    speaker: "Imran Ali MR",
-    title: "Mastering Automated Payment Program (APP) in SAP",
-    date: "18 Feb 2026 | 12:00 PM IST",
-    duration: "90 Minutes",
-    category: "SAP",
-    seats: 60,
-    totalSeats: 100,
-    image: demo1,
-    description: "Complete APP configuration & execution with real-time scenarios.",
-    // expertLevel: "Advanced",
-  },
-  {
-    speaker: "Neeraj Pathak",
+    speaker: "Neel",
     title: "Thinking on Your Feet - Smart Decisions",
-    date: "18 Feb 2026 | 01:00 PM IST",
+    date: "15 Mar 2026 | 06:00 PM IST",
     duration: "60 Minutes",
     category: "Leadership",
     seats: 40,
@@ -150,30 +150,30 @@ const demos = [
     description: "Improve fast decision-making using practical frameworks.",
     // expertLevel: "Intermediate",
   },
-  {
-    speaker: "Monika Ahlawat",
-    title: "Securing The Grid - ICS/SCADA Intro",
-    date: "18 Feb 2026 | 02:00 PM IST",
-    duration: "75 Minutes",
-    category: "Cybersecurity",
-    seats: 25,
-    totalSeats: 100,
-    image: demo3,
-    description: "Industrial cybersecurity fundamentals explained clearly.",
-    // expertLevel: "Beginner",
-  },
-  {
-    speaker: "Rahul Sharma",
-    title: "DevOps Best Practices for Enterprises",
-    date: "19 Feb 2026 | 11:00 AM IST",
-    duration: "90 Minutes",
-    category: "DevOps",
-    seats: 90,
-    totalSeats: 100,
-    image: demo4,
-    description: "CI/CD pipelines & automation strategies overview.",
-    // expertLevel: "Advanced",
-  },
+  // {
+  //   speaker: "Monika Ahlawat",
+  //   title: "Securing The Grid - ICS/SCADA Intro",
+  //   date: "18 Feb 2026 | 02:00 PM IST",
+  //   duration: "75 Minutes",
+  //   category: "Cybersecurity",
+  //   seats: 25,
+  //   totalSeats: 100,
+  //   image: demo3,
+  //   description: "Industrial cybersecurity fundamentals explained clearly.",
+  //   // expertLevel: "Beginner",
+  // },
+  // {
+  //   speaker: "Rahul Sharma",
+  //   title: "DevOps Best Practices for Enterprises",
+  //   date: "19 Feb 2026 | 11:00 AM IST",
+  //   duration: "90 Minutes",
+  //   category: "DevOps",
+  //   seats: 90,
+  //   totalSeats: 100,
+  //   image: demo4,
+  //   description: "CI/CD pipelines & automation strategies overview.",
+  //   // expertLevel: "Advanced",
+  // },
 ];
 
 const UpcomingDemo = () => {
@@ -202,7 +202,7 @@ const UpcomingDemo = () => {
   };
 
   return (
-    <section className="w-full bg-gradient-to-b from-gray-50 to-white py-16">
+    <section className="w-full flex justify-center items-center bg-gradient-to-b from-gray-50 to-white py-16">
       <div className="max-w-[1200px] mx-auto px-6">
         {/* Title with decorative elements */}
         <div className="text-center mb-12 relative">
@@ -222,7 +222,7 @@ const UpcomingDemo = () => {
         </div>
 
         {/* Cards Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl w-full">
           {demos.map((demo, index) => {
             const seatPercentage = (demo.seats / demo.totalSeats) * 100;
             const isHovered = hoveredCard === index;
@@ -424,7 +424,7 @@ const UpcomingDemo = () => {
         </div>
 
         {/* Enhanced Pagination with hover effects */}
-        <div className="flex items-center justify-center gap-4 mt-12">
+        {/* <div className="flex items-center justify-center gap-4 mt-12">
           <button className="group w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center 
             hover:bg-blue-700 hover:border-blue-700 hover:text-white transition-all duration-300
             hover:shadow-lg transform hover:scale-110">
@@ -451,10 +451,10 @@ const UpcomingDemo = () => {
             transition-all duration-300 hover:shadow-lg transform hover:scale-110">
             <ArrowRight size={18} className="group-hover:translate-x-0.5 transition-transform" />
           </button>
-        </div>
+        </div> */}
 
         {/* Show All with enhanced animation */}
-        <div className="text-center mt-10">
+        {/* <div className="text-center mt-10">
           <button className="group relative bg-blue-700 text-white px-10 py-3 rounded-full 
             font-bold overflow-hidden transition-all duration-300 hover:shadow-xl 
             transform hover:scale-105 inline-flex items-center gap-2">
@@ -463,7 +463,7 @@ const UpcomingDemo = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-blue-800 to-blue-900 
               opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </button>
-        </div>
+        </div> */}
       </div>
 
       {/* Add custom animations */}

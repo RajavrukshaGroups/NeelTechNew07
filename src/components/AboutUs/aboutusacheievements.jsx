@@ -12,7 +12,7 @@ const OurAchievements = () => {
       {/* Intro Content */}
       <div className="max-w-5xl mx-auto text-center mb-16">
         <p className="text-xl md:text-2xl leading-relaxed text-[#0F3E57] font-medium">
-          <span className="font-bold text-[#f28c28]">Neel Technologies</span>{" "}
+          <span className="font-bold text-[#f28c28]"><span className="text-[#0F3E57]">Neel</span> Technologies</span>{" "}
           has established itself as a trusted name in IT training in Bangalore.
           With a strong focus on{" "}
           <span className="font-bold text-[#f28c28]">

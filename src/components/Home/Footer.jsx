@@ -77,14 +77,14 @@ const Footer = () => {
   // Quick links
   const quickLinks = [
     { name: "Our Services", path: "/services" },
-    { name: "Training", path: "/training-option" },
+    { name: "Training", path: "/our-services" },
     { name: "Batch Schedule", path: "/batch-schedule" },
-    { name: "About Us", path: "/about" },
+    { name: "About Us", path: "/about-us" },
     { name: "Success Stories", path: "/success-stories" },
     { name: "Blog", path: "/blogs" },
-    { name: "Contact Us", path: "/contact" },
+    { name: "Contact Us", path: "/contact-us" },
     { name: "Placement", path: "/success-stories" }, // Placement also goes to success stories
-    { name: "Student Review", path: "/about/testimonials" },
+    { name: "Student Review", path: "/about-us/testimonials" },
   ];
 
   return (

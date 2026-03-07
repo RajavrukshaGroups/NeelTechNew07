@@ -6,11 +6,11 @@ import { Link } from "react-router-dom";
 // Dropdown Component for About Us
 const AboutDropdown = ({ theme, isOpen, onMouseEnter, onMouseLeave }) => {
   const aboutMenuItems = [
-    { label: "About Us", path: "/about" },
-    { label: "Our Vision", path: "/about/vision" },
-    { label: "Our Mission", path: "/about/mission" },
-    { label: "Our Achievements", path: "/about/achievements" },
-    { label: "Testimonials", path: "/about/testimonials" },
+    { label: "About Us", path: "/about-us" },
+    { label: "Our Vision", path: "/about-us/vision" },
+    { label: "Our Mission", path: "/about-us/mission" },
+    { label: "Our Achievements", path: "/about-us/achievements" },
+    { label: "Testimonials", path: "/about-us/testimonials" },
   ];
 
   return (
@@ -362,19 +362,19 @@ const [openCategory, setOpenCategory] = useState(null);
           <div className="flex flex-col ">
             <div>
             <span
-              className="text-base sm:text-lg md:text-xl lg:text-xl xl:text-2xl font-extrabold tracking-tight"
+              className="text-base sm:text-xl md:text-xl lg:text-xl xl:text-2xl font-extrabold tracking-tight"
               style={{ color: theme.neelBlue }}
             >
               NEEL
             </span>
             <span
-              className="text-base sm:text-lg md:text-xl lg:text-xl xl:text-2xl font-extrabold tracking-tight whitespace-nowrap ml-1"
+              className="text-base sm:text-xl md:text-xl lg:text-xl xl:text-2xl font-extrabold tracking-tight whitespace-nowrap ml-1"
               style={{ color: theme.technologiesOrange }}
             >
               TECHNOLOGIES
             </span>
             </div>
-            <span className="text-lg gap-18 sm:text-lg md:text-lg font-bold ">Build Your Tech Future</span>
+            <span className="text-base gap-18 sm:text-base md:text-lg font-bold ">Build Your Tech Future</span>
           </div>
         </Link>
 
@@ -558,7 +558,7 @@ const [openCategory, setOpenCategory] = useState(null);
           </div>
 
           <Link
-            to="/training-option"
+            to="/our-services"
             className="text-xs xl:text-sm font-bold uppercase tracking-wide whitespace-nowrap px-1 xl:px-2"
             style={{ color: theme.darkBlueBg }}
           >
@@ -582,7 +582,7 @@ const [openCategory, setOpenCategory] = useState(null);
           </Link>
 
           <Link
-            to="/contact"
+            to="/contact-us"
             className="px-2 xl:px-3 py-1 rounded text-xs xl:text-sm font-bold border-2 transition-colors whitespace-nowrap"
             style={{
               color: theme.primaryBlue,
@@ -759,7 +759,7 @@ const [openCategory, setOpenCategory] = useState(null);
           {/* Mobile Other Links */}
           <div className="space-y-2">
             <Link
-              to="/training-option"
+              to="/our-services"
               className="block text-base sm:text-base font-extrabold py-1.5"
               style={{ color: "black" }}
               onClick={() => setIsMobileMenuOpen(false)}
@@ -786,7 +786,7 @@ const [openCategory, setOpenCategory] = useState(null);
             </Link>
 
             <Link
-              to="/contact"
+              to="/contact-us"
               className="block text-base sm:text-base font-extrabold py-1.5"
               style={{ color: "black" }}
               onClick={() => setIsMobileMenuOpen(false)}
@@ -839,11 +839,11 @@ const [openCategory, setOpenCategory] = useState(null);
 
 // Add this at the bottom of the file
 const aboutMenuItems = [
-  { label: "About Us", path: "/about" },
-  { label: "Our Vision", path: "/about/vision" },
-  { label: "Our Mission", path: "/about/mission" },
-  { label: "Our Achievements", path: "/about/achievements" },
-  { label: "Testimonials", path: "/about/testimonials" },
+  { label: "About Us", path: "/about-us" },
+  { label: "Our Vision", path: "/about-us/vision" },
+  { label: "Our Mission", path: "/about-us/mission" },
+  { label: "Our Achievements", path: "/about-us/achievements" },
+  { label: "Testimonials", path: "/about-us/testimonials" },
 ];
 
 const categories = [

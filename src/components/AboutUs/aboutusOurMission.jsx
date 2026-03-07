@@ -11,7 +11,7 @@ const OurMission = () => {
 
       {/* Main Mission Statement */}
       <div className="max-w-4xl mx-auto text-center mb-16">
-        <p className="text-xl font-bold md:text-2xl leading-relaxed text-[#0F3E57] font-medium">
+        <p className="text-xl font-bold md:text-2xl leading-relaxed text-[#0F3E57]">
           To become a{" "}
           <span className="font-bold text-[#f28c28]">
             globally trusted leader

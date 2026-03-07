@@ -31,7 +31,8 @@ const ContactUsPage = ({ courseName }) => {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/contact",
+        // "http://localhost:5000/api/contact",
+        "https://api.neeltechnologies.com/api/contact",
         {
           method: "POST",
           headers: {

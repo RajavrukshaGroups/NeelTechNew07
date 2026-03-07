@@ -21,7 +21,7 @@ const AboutUsOverview = () => {
           <div className="bg-[#EAF2F7] rounded-3xl p-8 md:p-10 shadow-md">
             <p className="text-lg md:text-xl leading-relaxed text-[#0F3E57] font-medium mb-6">
               <span className="font-bold text-[#f28c28]">
-                Neel Technologies
+               <span className="text-[#0F3E57]">Neel</span> Technologies
               </span>{" "}
               has established itself as a trusted name in IT training in
               Bangalore. With a strong focus on
