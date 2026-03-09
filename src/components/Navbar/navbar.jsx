@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import NeelLogo from "/assets/head-logo.png";
 import { Link } from "react-router-dom";
+import { label, path } from "framer-motion/client";
 
 // Dropdown Component for About Us
 const AboutDropdown = ({ theme, isOpen, onMouseEnter, onMouseLeave }) => {
@@ -269,7 +270,10 @@ const AllCoursesMegaMenu = ({ theme, isOpen, onMouseEnter, onMouseLeave }) => {
 
           <div className=" max-h-[300px] sm:max-h-[400px] pr-2">
             {courseChunks.map((chunk, chunkIndex) => (
-              <div key={chunkIndex} className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3 md:gap-4 mb-3 sm:mb-4">
+              <div
+                key={chunkIndex}
+                className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3 md:gap-4 mb-3 sm:mb-4"
+              >
                 {chunk.map((item, itemIndex) => (
                   <Link
                     key={`${chunkIndex}-${itemIndex}`}
@@ -297,8 +301,8 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-//const [openDropdown, setOpenDropdown] = useState(null);
-const [openCategory, setOpenCategory] = useState(null);
+  //const [openDropdown, setOpenDropdown] = useState(null);
+  const [openCategory, setOpenCategory] = useState(null);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -336,11 +340,15 @@ const [openCategory, setOpenCategory] = useState(null);
       >
         <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 lg:gap-10 text-xs sm:text-sm md:text-base whitespace-nowrap">
           <span className="text-white font-medium">
-            <span className="text-blue-200 mr-1 sm:mr-2 font-semibold">Call:</span>
+            <span className="text-blue-200 mr-1 sm:mr-2 font-semibold">
+              Call:
+            </span>
             <span className="font-bold">+91 6361866299</span>
           </span>
           <span className="text-white font-medium">
-            <span className="text-blue-200 mr-1 sm:mr-2 font-semibold">Email:</span>
+            <span className="text-blue-200 mr-1 sm:mr-2 font-semibold">
+              Email:
+            </span>
             <span className="font-bold">info@neeltechnologies.net</span>
           </span>
         </div>
@@ -361,20 +369,22 @@ const [openCategory, setOpenCategory] = useState(null);
           />
           <div className="flex flex-col ">
             <div>
-            <span
-              className="text-base sm:text-xl md:text-xl lg:text-xl xl:text-2xl font-extrabold tracking-tight"
-              style={{ color: theme.neelBlue }}
-            >
-              NEEL
-            </span>
-            <span
-              className="text-base sm:text-xl md:text-xl lg:text-xl xl:text-2xl font-extrabold tracking-tight whitespace-nowrap ml-1"
-              style={{ color: theme.technologiesOrange }}
-            >
-              TECHNOLOGIES
-            </span>
+              <span
+                className="text-base sm:text-xl md:text-xl lg:text-xl xl:text-2xl font-extrabold tracking-tight"
+                style={{ color: theme.neelBlue }}
+              >
+                NEEL
+              </span>
+              <span
+                className="text-base sm:text-xl md:text-xl lg:text-xl xl:text-2xl font-extrabold tracking-tight whitespace-nowrap ml-1"
+                style={{ color: theme.technologiesOrange }}
+              >
+                TECHNOLOGIES
+              </span>
             </div>
-            <span className="text-base gap-18 sm:text-base md:text-lg font-bold ">Build Your Tech Future</span>
+            <span className="text-base gap-18 sm:text-base md:text-lg font-bold ">
+              Build Your Tech Future
+            </span>
           </div>
         </Link>
 
@@ -409,122 +419,155 @@ const [openCategory, setOpenCategory] = useState(null);
           </div>
         </div> */}
 
-       
-        
-
         {/* Desktop Navigation */}
         <div
           className="hidden lg:flex items-center gap-2 xl:gap-4 ml-auto"
           style={{ fontFamily: "Montserrat", zIndex: "100" }}
         >
-
-           {/* Courses */}
-        <div
-          className="relative"
-          onMouseEnter={() => setOpenDropdown("courses")}
-          onMouseLeave={() => setOpenDropdown(null)}
-        >
-          <button
-            className="flex items-center gap-1 text-xs xl:text-sm font-bold uppercase tracking-wide whitespace-nowrap px-1 xl:px-2"
-            style={{
-              color:
-                openDropdown === "courses"
-                  ? theme.primaryBlue
-                  : theme.darkBlueBg,
-            }}
-          >
-            Courses
-            <ChevronDown
-              className={`h-5 w-5 transition-transform duration-300 ${
-                openDropdown === "courses" ? "rotate-180" : ""
-              }`}
-            />
-          </button>
-
-         
+          {/* Courses */}
           <div
-            className={`absolute top-full left-0 mt-2 w-64 rounded-lg shadow-2xl transition-all duration-300 ${
-              openDropdown === "courses"
-                ? "opacity-100 visible translate-y-0"
-                : "opacity-0 invisible -translate-y-2"
-            }`}
-            style={{
-              backgroundColor: theme.white,
-              border: `1px solid ${theme.lightGray}`,
-              zIndex: 50,
-            }}
+            className="relative"
+            onMouseEnter={() => setOpenDropdown("courses")}
+            onMouseLeave={() => setOpenDropdown(null)}
           >
-            {[
-              {
-                name: "System Administrator",
-                subItems: [
-                  { label: "MCSE Training", path: "/mcse-training-certification-course" },
-                  { label: "Linux Administrator", path: "/linux-training-certification-course" },
-                  { label: "CCNA", path: "/ccna-training-certification-course" },
-                  { label: "Intune & O365", path: "/intune-training-certification-course" },
-                ],
-              },
-              {
-                name: "Automation",
-                subItems: [
-                  { label: "Windows Powershell", path: "/powershell-training-certification-course" },
-                  { label: "Python", path: "/python-training-certification-course" },
-                ],
-              },
-              {
-                name: "Cloud Technology",
-                subItems: [
-                  { label: "Microsoft Azure", path: "/microsoft-azure-training-certification-course" },
-                  { label: "AWS", path: "/aws-training-certification-course" },
-                  { label: "Google Cloud", path: "/google-cloud-gcp-training-certification-course" },
-                ],
-              },
-              {
-                name: "DevOps",
-                subItems: [
-                  { label: "AWS DevOps", path: "/aws-devops-training-certification-course" },
-                  { label: "Azure DevOps", path: "/azure-devops-training-certification-course" },
-                ],
-              },
-              {
-                name: "Cyber Security",
-                subItems: [
-                  { label: "Ethical Hacking", path: "/cyber-security-training-certification-course" },
-                ],
-              },
-            ].map((category, index) => (
-              <div key={index} className="relative group">
-               
-                <div
-                  className="px-5 py-3 text-xs xl:text-sm font-bold cursor-pointer hover:bg-gray-100"
-                  style={{ color: theme.darkBlueBg }}
-                >
-                  {category.name}
-                </div>
+            <button
+              className="flex items-center gap-1 text-xs xl:text-sm font-bold uppercase tracking-wide whitespace-nowrap px-1 xl:px-2"
+              style={{
+                color:
+                  openDropdown === "courses"
+                    ? theme.primaryBlue
+                    : theme.darkBlueBg,
+              }}
+            >
+              Courses
+              <ChevronDown
+                className={`h-5 w-5 transition-transform duration-300 ${
+                  openDropdown === "courses" ? "rotate-180" : ""
+                }`}
+              />
+            </button>
 
-              
-                <div
-                  className="absolute top-0 left-full w-64 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
-                  style={{
-                    backgroundColor: theme.white,
-                    border: `1px solid ${theme.lightGray}`,
-                  }}
-                >
-                  {category.subItems.map((item, i) => (
-                    <Link
-                      key={i}
-                      to={item.path}
-                      className="block px-5 py-3 text-xs xl:text-sm font-bold hover:bg-gray-100"
-                      style={{ color: theme.darkBlueBg }}
-                    >
-                      {item.label}
-                    </Link>
-                  ))}
+            <div
+              className={`absolute top-full left-0 mt-2 w-64 rounded-lg shadow-2xl transition-all duration-300 ${
+                openDropdown === "courses"
+                  ? "opacity-100 visible translate-y-0"
+                  : "opacity-0 invisible -translate-y-2"
+              }`}
+              style={{
+                backgroundColor: theme.white,
+                border: `1px solid ${theme.lightGray}`,
+                zIndex: 50,
+              }}
+            >
+              {[
+                {
+                  name: "System Administrator",
+                  subItems: [
+                    {
+                      label: "MCSE Training",
+                      path: "/mcse-training-certification-course",
+                    },
+                    {
+                      label: "Linux Administrator",
+                      path: "/linux-training-certification-course",
+                    },
+                    {
+                      label: "CCNA",
+                      path: "/ccna-training-certification-course",
+                    },
+                    {
+                      label: "Intune & O365",
+                      path: "/intune-training-certification-course",
+                    },
+                  ],
+                },
+                {
+                  name: "Automation",
+                  subItems: [
+                    {
+                      label: "Windows Powershell",
+                      path: "/powershell-training-certification-course",
+                    },
+                    {
+                      label: "Python",
+                      path: "/python-training-certification-course",
+                    },
+                  ],
+                },
+                {
+                  name: "Cloud Technology",
+                  subItems: [
+                    {
+                      label: "Microsoft Azure",
+                      path: "/microsoft-azure-training-certification-course",
+                    },
+                    {
+                      label: "AWS",
+                      path: "/aws-training-certification-course",
+                    },
+                    {
+                      label: "Google Cloud",
+                      path: "/google-cloud-gcp-training-certification-course",
+                    },
+                    {
+                      label: "Entra ID",
+                      path: "/microsoft-entra-id-training-certification-course",
+                    },
+                  ],
+                },
+                {
+                  name: "DevOps",
+                  subItems: [
+                    {
+                      label: "AWS DevOps",
+                      path: "/aws-devops-training-certification-course",
+                    },
+                    {
+                      label: "Azure DevOps",
+                      path: "/azure-devops-training-certification-course",
+                    },
+                  ],
+                },
+                {
+                  name: "Cyber Security",
+                  subItems: [
+                    {
+                      label: "Ethical Hacking",
+                      path: "/cyber-security-training-certification-course",
+                    },
+                  ],
+                },
+              ].map((category, index) => (
+                <div key={index} className="relative group">
+                  <div
+                    className="px-5 py-3 text-xs xl:text-sm font-bold cursor-pointer hover:bg-gray-100"
+                    style={{ color: theme.darkBlueBg }}
+                  >
+                    {category.name}
+                  </div>
+
+                  <div
+                    className="absolute top-0 left-full w-64 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
+                    style={{
+                      backgroundColor: theme.white,
+                      border: `1px solid ${theme.lightGray}`,
+                    }}
+                  >
+                    {category.subItems.map((item, i) => (
+                      <Link
+                        key={i}
+                        to={item.path}
+                        className="block px-5 py-3 text-xs xl:text-sm font-bold hover:bg-gray-100"
+                        style={{ color: theme.darkBlueBg }}
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
 
           {/* About Us */}
           <div
@@ -608,9 +651,15 @@ const [openCategory, setOpenCategory] = useState(null);
           aria-label="Toggle menu"
         >
           {isMobileMenuOpen ? (
-            <X className="h-5 w-5 sm:h-6 sm:w-6" style={{ color: theme.darkBlueBg }} />
+            <X
+              className="h-5 w-5 sm:h-6 sm:w-6"
+              style={{ color: theme.darkBlueBg }}
+            />
           ) : (
-            <Menu className="h-5 w-5 sm:h-6 sm:w-6" style={{ color: theme.darkBlueBg }} />
+            <Menu
+              className="h-5 w-5 sm:h-6 sm:w-6"
+              style={{ color: theme.darkBlueBg }}
+            />
           )}
         </button>
       </div>
@@ -624,117 +673,153 @@ const [openCategory, setOpenCategory] = useState(null);
       >
         <div className="px-3 sm:px-4 py-3 sm:py-4 space-y-3 sm:space-y-4">
           {/* Mobile All Courses Button */}
-         
 
           {/* Courses - Mobile Version */}
-      <div className="lg:hidden w-full">
-  <button
-    onClick={() =>
-      setOpenDropdown(openDropdown === "courses" ? null : "courses")
-    }
-    className="flex justify-between items-center w-full px-1 py-3 text-sm font-bold uppercase"
-    style={{ color: "black" }}
-  >
-    COURSES
-    <ChevronDown
-      className={`h-5 w-5 transition-transform duration-300 ${
-        openDropdown === "courses" ? "rotate-180" : ""
-      }`}
-    />
-  </button>
+          <div className="lg:hidden w-full">
+            <button
+              onClick={() =>
+                setOpenDropdown(openDropdown === "courses" ? null : "courses")
+              }
+              className="flex justify-between items-center w-full px-1 py-3 text-sm font-bold uppercase"
+              style={{ color: "black" }}
+            >
+              COURSES
+              <ChevronDown
+                className={`h-5 w-5 transition-transform duration-300 ${
+                  openDropdown === "courses" ? "rotate-180" : ""
+                }`}
+              />
+            </button>
 
-  {/* Main Courses Dropdown */}
-  {openDropdown === "courses" && (
-    <div className="bg-white border-t">
+            {/* Main Courses Dropdown */}
+            {openDropdown === "courses" && (
+              <div className="bg-white border-t">
+                {[
+                  {
+                    name: "System Administrator",
+                    subItems: [
+                      {
+                        label: "MCSE Training",
+                        path: "/mcse-training-certification-course",
+                      },
+                      {
+                        label: "Linux Administrator",
+                        path: "/linux-training-certification-course",
+                      },
+                      {
+                        label: "CCNA",
+                        path: "/ccna-training-certification-course",
+                      },
+                      {
+                        label: "Intune & O365",
+                        path: "/intune-training-certification-course",
+                      },
+                    ],
+                  },
+                  {
+                    name: "Automation",
+                    subItems: [
+                      {
+                        label: "Windows Powershell",
+                        path: "/powershell-training-certification-course",
+                      },
+                      {
+                        label: "Python",
+                        path: "/python-training-certification-course",
+                      },
+                    ],
+                  },
+                  {
+                    name: "Cloud Technology",
+                    subItems: [
+                      {
+                        label: "Microsoft Azure",
+                        path: "/microsoft-azure-training-certification-course",
+                      },
+                      {
+                        label: "AWS",
+                        path: "/aws-training-certification-course",
+                      },
+                      {
+                        label: "Google Cloud",
+                        path: "/google-cloud-gcp-training-certification-course",
+                      },
+                      {
+                        label: "Entra ID",
+                        path: "/microsoft-entra-id-training-certification-course",
+                      },
+                    ],
+                  },
+                  {
+                    name: "DevOps",
+                    subItems: [
+                      {
+                        label: "AWS DevOps",
+                        path: "/aws-devops-training-certification-course",
+                      },
+                      {
+                        label: "Azure DevOps",
+                        path: "/azure-devops-training-certification-course",
+                      },
+                    ],
+                  },
+                  {
+                    name: "Cyber Security",
+                    subItems: [
+                      {
+                        label: "Ethical Hacking",
+                        path: "/cyber-security-training-certification-course",
+                      },
+                    ],
+                  },
+                ].map((category, index) => (
+                  <div key={index} className="border-b">
+                    {/* Category Button */}
+                    <button
+                      onClick={() =>
+                        setOpenCategory(openCategory === index ? null : index)
+                      }
+                      className="flex justify-between items-center w-full px-6 py-3  text-lg font-extrabold"
+                    >
+                      {category.name}
+                      <ChevronDown
+                        className={`h-4 w-4 transition-transform duration-300 ${
+                          openCategory === index ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
 
-      {[
-        {
-          name: "System Administrator",
-          subItems: [
-            { label: "MCSE Training", path: "/mcse-training-certification-course" },
-            { label: "Linux Administrator", path: "/linux-training-certification-course" },
-            { label: "CCNA", path: "/ccna-training-certification-course" },
-            { label: "Intune & O365", path: "/intune-training-certification-course" },
-          ],
-        },
-        {
-          name: "Automation",
-          subItems: [
-            { label: "Windows Powershell", path: "/powershell-training-certification-course" },
-            { label: "Python", path: "/python-training-certification-course" },
-          ],
-        },
-        {
-          name: "Cloud Technology",
-          subItems: [
-            { label: "Microsoft Azure", path: "/microsoft-azure-training-certification-course" },
-            { label: "AWS", path: "/aws-training-certification-course" },
-            { label: "Google Cloud", path: "/google-cloud-gcp-training-certification-course" },
-          ],
-        },
-        {
-          name: "DevOps",
-          subItems: [
-            { label: "AWS DevOps", path: "/aws-devops-training-certification-course" },
-            { label: "Azure DevOps", path: "/azure-devops-training-certification-course" },
-          ],
-        },
-        {
-          name: "Cyber Security",
-          subItems: [
-            { label: "Ethical Hacking", path: "/cyber-security-training-certification-course" },
-          ],
-        },
-      ].map((category, index) => (
-        <div key={index} className="border-b">
-
-          {/* Category Button */}
-          <button
-            onClick={() =>
-              setOpenCategory(openCategory === index ? null : index)
-            }
-            className="flex justify-between items-center w-full px-6 py-3  text-lg font-extrabold"
-          >
-            {category.name}
-            <ChevronDown
-              className={`h-4 w-4 transition-transform duration-300 ${
-                openCategory === index ? "rotate-180" : ""
-              }`}
-            />
-          </button>
-
-          {/* Sub Items */}
-          {openCategory === index && (
-            <div className="bg-white">
-
-              {category.subItems.map((item, i) => (
-                <Link
-                  key={i}
-                  to={item.path}
-                  onClick={() => {
-                    setIsMobileMenuOpen(false); // Same as About Us
-                    setOpenDropdown(null);
-                    setOpenCategory(null);
-                    window.scrollTo(0, 0);
-                  }}
-                  className="block px-10 py-3 text-xs font-medium font-serif text-blue-900 hover:bg-blue-100 transition"
-                >
-                  {item.label}
-                </Link>
-              ))}
-
-            </div>
-          )}
-
-        </div>
-      ))}
-
-    </div>
-  )}
-</div>
+                    {/* Sub Items */}
+                    {openCategory === index && (
+                      <div className="bg-white">
+                        {category.subItems.map((item, i) => (
+                          <Link
+                            key={i}
+                            to={item.path}
+                            onClick={() => {
+                              setIsMobileMenuOpen(false); // Same as About Us
+                              setOpenDropdown(null);
+                              setOpenCategory(null);
+                              window.scrollTo(0, 0);
+                            }}
+                            className="block px-10 py-3 text-xs font-medium font-serif text-blue-900 hover:bg-blue-100 transition"
+                          >
+                            {item.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
 
           {/* Mobile About Links */}
-          <div className="border-b pb-2 sm:pb-3" style={{ borderColor: theme.lightGray }}>
+          <div
+            className="border-b pb-2 sm:pb-3"
+            style={{ borderColor: theme.lightGray }}
+          >
             <div
               className="font-bold text-base sm:text-base mb-2 sm:mb-3"
               style={{ color: "black" }}
@@ -896,4 +981,3 @@ const categories = [
 ];
 
 export default Navbar;
-
