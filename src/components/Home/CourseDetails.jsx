@@ -1,805 +1,25 @@
-// import { useState } from "react";
-// import { Clock, Users, BookOpen, ChevronDown, ChevronUp } from "lucide-react";
-// import { Link } from "react-router-dom";
-
-// const CourseDetails = () => {
-//   const [activeTab, setActiveTab] = useState("top");
-//   const [showAllCourses, setShowAllCourses] = useState(false);
-
-//   // Theme colors from your navbar
-//   const theme = {
-//     primaryBlue: "#0694d1",
-//     accentOrange: "#f28c28",
-//     goldenAccent: "#D4AF37",
-//     darkBlueBg: "#0F3E57",
-//     lightGray: "#F5F7FA",
-//     white: "#FFFFFF",
-//     rgbBg: "rgb(14, 24, 89)",
-//     allCourse: "#0694d1",
-//     lightBg: "#f0faff",
-//   };
-
-//   // Updated courses with proper paths based on your routes
-//   const allCourses = [
-//     // System Administrator
-//     {
-//       title: "MCSE Training Certification Course",
-//       duration: "40 Hrs",
-//       category: "System Administrator",
-//       enrolled: "12,345 enrolled",
-//       path: "/mcse-training-certification-course",
-//     },
-//     {
-//       title: "LINUX Training Certification Course",
-//       duration: "40 Hrs",
-//       category: "System Administrator",
-//       enrolled: "10,234 enrolled",
-//       path: "/linux-training-certification-course",
-//     },
-//     {
-//       title: "The CCNA Training Certification Course",
-//       duration: "40 Hrs",
-//       category: "System Administrator",
-//       enrolled: "15,678 enrolled",
-//       path: "/ccna-training-certification-course",
-//     },
-//     {
-//       title: "Intune Training Certification Course",
-//       duration: "24 Hrs",
-//       category: "System Administrator",
-//       enrolled: "5,432 enrolled",
-//       path: "/intune-training-certification-course",
-//     },
-//     {
-//       title: "0365 Training Certification Course",
-//       duration: "24 Hrs",
-//       category: "System Administrator",
-//       enrolled: "7,891 enrolled",
-//       path: "/O365-training-certification-course",
-//     },
-
-//     // Automation/Program
-//     {
-//       title: "Windows Powershell Training Certification Course",
-//       duration: "24 Hrs",
-//       category: "Automation/Program",
-//       enrolled: "6,543 enrolled",
-//       path: "/powershell-training-certification-course",
-//     },
-//     {
-//       title: "Python Training Certification Course",
-//       duration: "40 Hrs",
-//       category: "Automation/Program",
-//       enrolled: "18,765 enrolled",
-//       path: "/python-training-certification-course",
-//     },
-
-//     // Cloud Technology
-//     {
-//       title: "Microsoft Azure Training Certification Course",
-//       duration: "40 Hrs",
-//       category: "Cloud Technology",
-//       enrolled: "22,345 enrolled",
-//       path: "/microsoft-azure-training-certification-course",
-//     },
-//     {
-//       title: "Microsoft Entra ID Training Certification Course",
-//       duration: "24 Hrs",
-//       category: "Cloud Technology",
-//       enrolled: "4,321 enrolled",
-//       path: "/microsoft-entra-id-training-certification-course",
-//     },
-//     {
-//       title: "AWS Training Certification Course",
-//       duration: "40 Hrs",
-//       category: "Cloud Technology",
-//       enrolled: "25,678 enrolled",
-//       path: "/aws-training-certification-course",
-//     },
-//     {
-//       title: "Google Cloud (GCP) Training Certification Course",
-//       duration: "40 Hrs",
-//       category: "Cloud Technology",
-//       enrolled: "8,901 enrolled",
-//       path: "/google-cloud-gcp-training-certification-course",
-//     },
-//     {
-//       title: "Azure Sentinel Training Certification Course",
-//       duration: "24 Hrs",
-//       category: "Cloud Technology",
-//       enrolled: "3,456 enrolled",
-//       path: "/azure-sentinel-training-certification-course",
-//     },
-
-//     // DevOps
-//     {
-//       title: "AWS DevOps Training Certification Course",
-//       duration: "40 Hrs",
-//       category: "DevOps",
-//       enrolled: "9,876 enrolled",
-//       path: "/aws-devops-training-certification-course",
-//     },
-//     {
-//       title: "Azure DevOps Training Certification Course",
-//       duration: "40 Hrs",
-//       category: "DevOps",
-//       enrolled: "8,765 enrolled",
-//       path: "/azure-devops-training-certification-course",
-//     },
-
-//     // Cyber Security
-//     {
-//       title: "Cyber Security Training Certification Course",
-//       duration: "40 Hrs",
-//       category: "Cyber Security",
-//       enrolled: "14,567 enrolled",
-//       path: "/cyber-security-training-certification-course",
-//     },
-//   ];
-
-//   // Show only 9 courses initially, all when showAllCourses is true
-//   const displayedCourses = showAllCourses ? allCourses : allCourses.slice(0, 9);
-
-//   // Get unique categories for filtering
-//   const categories = [
-//     { id: "top", label: "Top Courses" },
-//     { id: "system", label: "System Admin" },
-//     { id: "automation", label: "Automation" },
-//     { id: "cloud", label: "Cloud Tech" },
-//     { id: "devops", label: "DevOps" },
-//     { id: "security", label: "Cyber Security" },
-//   ];
-
-//   // Filter courses based on active tab
-//   const getFilteredCourses = () => {
-//     const categoryMap = {
-//       system: "System Administrator",
-//       automation: "Automation/Program",
-//       cloud: "Cloud Technology",
-//       devops: "DevOps",
-//       security: "Cyber Security",
-//     };
-
-//     if (activeTab === "top") {
-//       return showAllCourses ? allCourses : allCourses.slice(0, 9);
-//     }
-
-//     return allCourses.filter(
-//       (course) => course.category === categoryMap[activeTab],
-//     );
-//   };
-
-//   const filteredCourses = getFilteredCourses();
-
-//   return (
-//     <section className="w-full py-14">
-//       <div className="max-w-[1300px] mx-auto px-12">
-//         {/* Title */}
-//         <h2
-//           className="text-center mb-10"
-//           style={{
-//             fontSize: "42px",
-//             fontWeight: 700,
-//             color: theme.darkBlueBg,
-//             fontFamily: "'Cormorant Garamond', serif",
-//           }}
-//         >
-//           Explore Our Courses
-//         </h2>
-
-//         {/* Category Tabs */}
-//         <div className="flex flex-wrap justify-center gap-4 md:gap-6 lg:gap-8 mb-8">
-//           {categories.map((tab) => (
-//             <button
-//               key={tab.id}
-//               onClick={() => setActiveTab(tab.id)}
-//               className="relative pb-2 transition-all duration-300 whitespace-nowrap"
-//               style={{
-//                 fontSize: "18px",
-//                 fontWeight: 600,
-//                 fontFamily: "'Montserrat', sans-serif",
-//                 color: activeTab === tab.id ? theme.primaryBlue : "#6c7a89",
-//               }}
-//             >
-//               {tab.label}
-//               {activeTab === tab.id && (
-//                 <span
-//                   className="absolute left-0 bottom-0 w-8 h-[3px] rounded-full"
-//                   style={{ backgroundColor: theme.accentOrange }}
-//                 />
-//               )}
-//             </button>
-//           ))}
-//         </div>
-
-//         {/* Divider */}
-//         <div
-//           className="w-full h-[1px] mb-10"
-//           style={{ backgroundColor: theme.primaryBlue + "40" }}
-//         />
-
-//         {/* Course Cards - Reduced width with smaller gaps */}
-//         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-5">
-//           {filteredCourses.map((course, index) => (
-//             <Link
-//               to={course.path}
-//               key={index}
-//               className="group relative rounded-lg hover:shadow-md transition-all duration-300 cursor-pointer"
-//               style={{
-//                 backgroundColor: theme.lightBg,
-//                 border: `1px solid ${theme.primaryBlue}`,
-//               }}
-//             >
-//               {/* Accent Line with hover effect */}
-//               <div
-//                 className="absolute left-0 top-8 bottom-8 w-[4px] transition-all duration-300 group-hover:top-5 group-hover:bottom-5 group-hover:w-[6px]"
-//                 style={{ backgroundColor: theme.accentOrange }}
-//               />
-
-//               {/* Content - Reduced padding */}
-//               <div className="pl-5 pr-3 py-3">
-//                 {/* Title - Smaller font */}
-//                 <h3
-//                   className="mb-2 font-medium line-clamp-2"
-//                   style={{
-//                     fontSize: "15px",
-//                     fontFamily: "'Montserrat', sans-serif",
-//                     color: theme.darkBlueBg,
-//                     lineHeight: "1.4",
-//                     minHeight: "42px",
-//                   }}
-//                   title={course.title}
-//                 >
-//                   {course.title}
-//                 </h3>
-
-//                 {/* Info Section - Smaller gaps and font */}
-//                 <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs">
-//                   <div className="flex items-center gap-1">
-//                     <Clock size={13} color={theme.accentOrange} />
-//                     <span style={{ color: theme.darkBlueBg }}>
-//                       {course.duration}
-//                     </span>
-//                   </div>
-
-//                   <div className="flex items-center gap-1">
-//                     <BookOpen size={13} color={theme.accentOrange} />
-//                     <span style={{ color: theme.darkBlueBg }}>
-//                       {course.category.split("/")[0]}
-//                     </span>
-//                   </div>
-
-//                   <div className="flex items-center gap-1">
-//                     <Users size={13} color={theme.accentOrange} />
-//                     <span style={{ color: theme.darkBlueBg }}>
-//                       {course.enrolled}
-//                     </span>
-//                   </div>
-//                 </div>
-//               </div>
-//             </Link>
-//           ))}
-//         </div>
-
-//         {/* Show More / Show Less Button */}
-//         {activeTab === "top" && allCourses.length > 9 && (
-//           <div className="flex justify-center mt-10">
-//             <button
-//               onClick={() => setShowAllCourses(!showAllCourses)}
-//               className="flex items-center gap-2 px-8 py-3 rounded-full transition-all duration-300 hover:scale-105"
-//               style={{
-//                 backgroundColor: theme.primaryBlue,
-//                 color: theme.white,
-//                 fontFamily: "'Montserrat', sans-serif",
-//                 fontSize: "16px",
-//                 fontWeight: 600,
-//               }}
-//               onMouseEnter={(e) => {
-//                 e.target.style.backgroundColor = theme.accentOrange;
-//               }}
-//               onMouseLeave={(e) => {
-//                 e.target.style.backgroundColor = theme.primaryBlue;
-//               }}
-//             >
-//               <span>{showAllCourses ? "Show Less" : "Show More Courses"}</span>
-//               {showAllCourses ? (
-//                 <ChevronUp size={18} />
-//               ) : (
-//                 <ChevronDown size={18} />
-//               )}
-//             </button>
-//           </div>
-//         )}
-
-//         {/* Course count */}
-//         <div
-//           className="text-center mt-6 text-sm"
-//           style={{ color: theme.darkBlueBg + "80" }}
-//         >
-//           {activeTab === "top"
-//             ? `Showing ${filteredCourses.length} of ${allCourses.length} courses`
-//             : `Showing ${filteredCourses.length} courses`}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default CourseDetails;
-
-
-// import { useState } from "react";
-// import { Clock, Users, BookOpen, ChevronDown, ChevronUp, Award, TrendingUp, Star } from "lucide-react";
-// import { Link } from "react-router-dom";
-
-// const CourseDetails = () => {
-//   const [activeTab, setActiveTab] = useState("top");
-//   const [showAllCourses, setShowAllCourses] = useState(false);
-//   const [hoveredCard, setHoveredCard] = useState(null);
-//   const [selectedCategory, setSelectedCategory] = useState("all");
-
-//   // Theme colors from your navbar
-//   const theme = {
-//     primaryBlue: "#0694d1",
-//     accentOrange: "#f28c28",
-//     goldenAccent: "#D4AF37",
-//     darkBlueBg: "#0F3E57",
-//     lightGray: "#F5F7FA",
-//     white: "#FFFFFF",
-//     rgbBg: "rgb(14, 24, 89)",
-//     allCourse: "#0694d1",
-//     lightBg: "#f0faff",
-//   };
-
-//   // Updated courses with proper paths based on your routes
-//   const allCourses = [
-//     // System Administrator
-//     {
-//       title: "MCSE Training Certification Course",
-//       duration: "40 Hrs",
-//       category: "System Administrator",
-//       enrolled: "12,345 enrolled",
-//       path: "/mcse-training-certification-course",
-//       level: "Intermediate",
-//       rating: 4.8,
-//       students: 12345,
-//     },
-//     {
-//       title: "LINUX Training Certification Course",
-//       duration: "40 Hrs",
-//       category: "System Administrator",
-//       enrolled: "10,234 enrolled",
-//       path: "/linux-training-certification-course",
-//       level: "Beginner",
-//       rating: 4.7,
-//       students: 10234,
-//     },
-//     {
-//       title: "The CCNA Training Certification Course",
-//       duration: "40 Hrs",
-//       category: "System Administrator",
-//       enrolled: "15,678 enrolled",
-//       path: "/ccna-training-certification-course",
-//       level: "Advanced",
-//       rating: 4.9,
-//       students: 15678,
-//     },
-//     {
-//       title: "Intune Training Certification Course",
-//       duration: "24 Hrs",
-//       category: "System Administrator",
-//       enrolled: "5,432 enrolled",
-//       path: "/intune-training-certification-course",
-//       level: "Intermediate",
-//       rating: 4.6,
-//       students: 5432,
-//     },
-//     {
-//       title: "0365 Training Certification Course",
-//       duration: "24 Hrs",
-//       category: "System Administrator",
-//       enrolled: "7,891 enrolled",
-//       path: "/O365-training-certification-course",
-//       level: "Beginner",
-//       rating: 4.7,
-//       students: 7891,
-//     },
-
-//     // Automation/Program
-//     {
-//       title: "Windows Powershell Training Certification Course",
-//       duration: "24 Hrs",
-//       category: "Automation/Program",
-//       enrolled: "6,543 enrolled",
-//       path: "/powershell-training-certification-course",
-//       level: "Intermediate",
-//       rating: 4.8,
-//       students: 6543,
-//     },
-//     {
-//       title: "Python Training Certification Course",
-//       duration: "40 Hrs",
-//       category: "Automation/Program",
-//       enrolled: "18,765 enrolled",
-//       path: "/python-training-certification-course",
-//       level: "Beginner",
-//       rating: 4.9,
-//       students: 18765,
-//     },
-
-//     // Cloud Technology
-//     {
-//       title: "Microsoft Azure Training Certification Course",
-//       duration: "40 Hrs",
-//       category: "Cloud Technology",
-//       enrolled: "22,345 enrolled",
-//       path: "/microsoft-azure-training-certification-course",
-//       level: "Advanced",
-//       rating: 4.9,
-//       students: 22345,
-//     },
-//     {
-//       title: "Microsoft Entra ID Training Certification Course",
-//       duration: "24 Hrs",
-//       category: "Cloud Technology",
-//       enrolled: "4,321 enrolled",
-//       path: "/microsoft-entra-id-training-certification-course",
-//       level: "Intermediate",
-//       rating: 4.7,
-//       students: 4321,
-//     },
-//     {
-//       title: "AWS Training Certification Course",
-//       duration: "40 Hrs",
-//       category: "Cloud Technology",
-//       enrolled: "25,678 enrolled",
-//       path: "/aws-training-certification-course",
-//       level: "Advanced",
-//       rating: 4.9,
-//       students: 25678,
-//     },
-//     {
-//       title: "Google Cloud (GCP) Training Certification Course",
-//       duration: "40 Hrs",
-//       category: "Cloud Technology",
-//       enrolled: "8,901 enrolled",
-//       path: "/google-cloud-gcp-training-certification-course",
-//       level: "Intermediate",
-//       rating: 4.8,
-//       students: 8901,
-//     },
-//     {
-//       title: "Azure Sentinel Training Certification Course",
-//       duration: "24 Hrs",
-//       category: "Cloud Technology",
-//       enrolled: "3,456 enrolled",
-//       path: "/azure-sentinel-training-certification-course",
-//       level: "Advanced",
-//       rating: 4.7,
-//       students: 3456,
-//     },
-
-//     // DevOps
-//     {
-//       title: "AWS DevOps Training Certification Course",
-//       duration: "40 Hrs",
-//       category: "DevOps",
-//       enrolled: "9,876 enrolled",
-//       path: "/aws-devops-training-certification-course",
-//       level: "Intermediate",
-//       rating: 4.8,
-//       students: 9876,
-//     },
-//     {
-//       title: "Azure DevOps Training Certification Course",
-//       duration: "40 Hrs",
-//       category: "DevOps",
-//       enrolled: "8,765 enrolled",
-//       path: "/azure-devops-training-certification-course",
-//       level: "Intermediate",
-//       rating: 4.8,
-//       students: 8765,
-//     },
-
-//     // Cyber Security
-//     {
-//       title: "Cyber Security Training Certification Course",
-//       duration: "40 Hrs",
-//       category: "Cyber Security",
-//       enrolled: "14,567 enrolled",
-//       path: "/cyber-security-training-certification-course",
-//       level: "Advanced",
-//       rating: 4.9,
-//       students: 14567,
-//     },
-//   ];
-
-//   // Show only 9 courses initially, all when showAllCourses is true
-//   const displayedCourses = showAllCourses ? allCourses : allCourses.slice(0, 9);
-
-//   // Get unique categories for filtering
-//   const categories = [
-//     { id: "top", label: "Top Courses" },
-//     { id: "system", label: "System Admin" },
-//     { id: "automation", label: "Automation" },
-//     { id: "cloud", label: "Cloud Tech" },
-//     { id: "devops", label: "DevOps" },
-//     { id: "security", label: "Cyber Security" },
-//   ];
-
-//   // Filter courses based on active tab
-//   const getFilteredCourses = () => {
-//     const categoryMap = {
-//       system: "System Administrator",
-//       automation: "Automation/Program",
-//       cloud: "Cloud Technology",
-//       devops: "DevOps",
-//       security: "Cyber Security",
-//     };
-
-//     if (activeTab === "top") {
-//       return showAllCourses ? allCourses : allCourses.slice(0, 9);
-//     }
-
-//     return allCourses.filter(
-//       (course) => course.category === categoryMap[activeTab],
-//     );
-//   };
-
-//   const filteredCourses = getFilteredCourses();
-
-//   // Get level color
-//   const getLevelColor = (level) => {
-//     switch(level) {
-//       case "Beginner": return "#4CAF50";
-//       case "Intermediate": return "#FF9800";
-//       case "Advanced": return "#F44336";
-//       default: return theme.primaryBlue;
-//     }
-//   };
-
-//   // Format student count
-//   const formatStudentCount = (count) => {
-//     if (count >= 1000) {
-//       return `${(count / 1000).toFixed(1)}k+ students`;
-//     }
-//     return `${count} students`;
-//   };
-
-//   return (
-//     <section className="w-full py-14">
-//       <div className="max-w-[1300px] mx-auto px-12">
-//         {/* Title */}
-//         <h2
-//           className="text-center mb-10"
-//           style={{
-//             fontSize: "42px",
-//             fontWeight: 700,
-//             color: theme.darkBlueBg,
-//             fontFamily: "'Cormorant Garamond', serif",
-//           }}
-//         >
-//           Explore Our Courses
-//         </h2>
-
-//         {/* Category Tabs */}
-//         <div className="flex flex-wrap justify-center gap-4 md:gap-6 lg:gap-8 mb-8">
-//           {categories.map((tab) => (
-//             <button
-//               key={tab.id}
-//               onClick={() => {
-//                 setActiveTab(tab.id);
-//                 setShowAllCourses(false);
-//               }}
-//               className="relative pb-2 transition-all duration-300 whitespace-nowrap"
-//               style={{
-//                 fontSize: "18px",
-//                 fontWeight: 600,
-//                 fontFamily: "'Poppins', sans-serif",
-//                 color: activeTab === tab.id ? theme.primaryBlue : "#0a1f26",
-//                 transform: activeTab === tab.id ? "scale(1.05)" : "scale(1)",
-//               }}
-//             >
-//               {tab.label}
-//               {activeTab === tab.id && (
-//                 <span
-//                   className="absolute left-0 bottom-0 text-gray-700 w-8 h-[3px] rounded-full transition-all duration-300"
-//                   style={{ 
-//                     backgroundColor: theme.accentOrange,
-//                     width: activeTab === tab.id ? "100%" : "2rem",
-//                   }}
-//                 />
-//               )}
-//             </button>
-//           ))}
-//         </div>
-
-//         {/* Divider */}
-//         <div
-//           className="w-full h-[1px] mb-10"
-//           style={{ backgroundColor: theme.primaryBlue + "40" }}
-//         />
-
-//         {/* Course Cards - Reduced width with smaller gaps */}
-//         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-5">
-//           {filteredCourses.map((course, index) => (
-//             <Link
-//               to={course.path}
-//               key={index}
-//               className="group relative rounded-lg transition-all duration-500 cursor-pointer overflow-hidden"
-//               style={{
-//                 backgroundColor: theme.white,
-//                 border: `1px solid ${hoveredCard === index ? theme.accentOrange : theme.primaryBlue + '40'}`,
-//                 boxShadow: hoveredCard === index ? `0 10px 25px -5px ${theme.primaryBlue}30` : '0 2px 8px rgba(0,0,0,0.05)',
-//                 transform: hoveredCard === index ? 'translateY(-4px)' : 'translateY(0)',
-//                 fontFamily: "'Poppins', sans-serif",
-//               }}
-//               onMouseEnter={() => setHoveredCard(index)}
-//               onMouseLeave={() => setHoveredCard(null)}
-//             >
-//               {/* Animated gradient overlay on hover */}
-//               <div 
-//                 className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-//                 style={{
-//                   background: `linear-gradient(135deg, ${theme.primaryBlue}08 0%, ${theme.accentOrange}08 100%)`,
-//                 }}
-//               />
-
-//               {/* Accent Line with hover effect */}
-//               <div
-//                 className="absolute left-0 top-0 bottom-0 w-[4px] transition-all duration-500"
-//                 style={{ 
-//                   backgroundColor: hoveredCard === index ? theme.accentOrange : theme.primaryBlue,
-//                   boxShadow: hoveredCard === index ? `0 0 10px ${theme.accentOrange}` : 'none',
-//                 }}
-//               />
-
-//               {/* Content - Reduced padding */}
-//               <div className="pl-5 pr-3 py-3 relative">
-//                 {/* Title - Smaller font */}
-//                 <h3
-//                   className="mb-2 font-semibold line-clamp-2 transition-all duration-300"
-//                   style={{
-//                     fontSize: "16px",
-//                     fontFamily: "'Poppins', sans-serif",
-//                     color: hoveredCard === index ? theme.primaryBlue : theme.darkBlueBg,
-//                     lineHeight: "1.4",
-//                     minHeight: "45px",
-//                   }}
-//                   title={course.title}
-//                 >
-//                   {course.title}
-//                 </h3>
-
-//                 {/* Rating Section */}
-//                 <div className="flex items-center gap-2 mb-2">
-//                   <div className="flex items-center">
-//                     <Star size={14} color={theme.goldenAccent} fill={theme.goldenAccent} />
-//                     <span 
-//                       className="ml-1 text-sm font-semibold"
-//                       style={{ color: theme.darkBlueBg }}
-//                     >
-//                       {course.rating}
-//                     </span>
-//                   </div>
-//                   <span 
-//                     className="text-xs text-gray-500"
-//                     // style={{ color: theme.darkBlueBg + '900' }}
-//                   >
-//                     ({formatStudentCount(course.students)})
-//                   </span>
-//                 </div>
-
-//                 {/* Info Section - Smaller gaps and font */}
-//                 <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs mb-2">
-//                   <div className="flex items-center gap-1 group-hover:scale-105 transition-transform duration-300">
-//                     <Clock size={13} color={theme.accentOrange} />
-//                     <span style={{ color: theme.darkBlueBg }}>
-//                       {course.duration}
-//                     </span>
-//                   </div>
-
-//                   <div className="flex items-center gap-1 group-hover:scale-105 transition-transform duration-300">
-//                     <BookOpen size={13} color={theme.accentOrange} />
-//                     <span style={{ color: theme.darkBlueBg }}>
-//                       {course.category.split("/")[0]}
-//                     </span>
-//                   </div>
-
-//                   <div className="flex items-center gap-1 group-hover:scale-105 transition-transform duration-300">
-//                     <Users size={13} color={theme.accentOrange} />
-//                     <span style={{ color: theme.darkBlueBg }}>
-//                       {course.enrolled}
-//                     </span>
-//                   </div>
-//                 </div>
-
-//                 {/* Level Badge */}
-//                 <div className="flex justify-between items-center mt-2">
-//                   <span 
-//                     className="text-[10px] px-2 py-1 rounded-full font-medium"
-//                     style={{
-//                       backgroundColor: getLevelColor(course.level) + '20',
-//                       color: getLevelColor(course.level),
-//                       border: `1px solid ${getLevelColor(course.level)}40`,
-//                     }}
-//                   >
-//                     {course.level}
-//                   </span>
-                  
-//                   {/* Animated arrow on hover */}
-//                   <span 
-//                     className="text-xs font-medium transition-all duration-300 flex items-center gap-1"
-//                     style={{
-//                       color: hoveredCard === index ? theme.accentOrange : 'transparent',
-//                       opacity: hoveredCard === index ? 1 : 0,
-//                       transform: hoveredCard === index ? 'translateX(0)' : 'translateX(-10px)',
-//                     }}
-//                   >
-//                     View Course 
-//                     <span className="text-lg">→</span>
-//                   </span>
-//                 </div>
-//               </div>
-//             </Link>
-//           ))}
-//         </div>
-
-//         {/* Show More / Show Less Button */}
-//         {activeTab === "top" && allCourses.length > 9 && (
-//           <div className="flex justify-center mt-10">
-//             <button
-//               onClick={() => setShowAllCourses(!showAllCourses)}
-//               className="flex items-center gap-2 px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg group"
-//               style={{
-//                 backgroundColor: theme.primaryBlue,
-//                 color: theme.white,
-//                 fontFamily: "'Poppins', sans-serif",
-//                 fontSize: "16px",
-//                 fontWeight: 600,
-//                 border: `2px solid ${theme.primaryBlue}`,
-//               }}
-//               onMouseEnter={(e) => {
-//                 e.target.style.backgroundColor = theme.accentOrange;
-//                 e.target.style.borderColor = theme.accentOrange;
-//               }}
-//               onMouseLeave={(e) => {
-//                 e.target.style.backgroundColor = theme.primaryBlue;
-//                 e.target.style.borderColor = theme.primaryBlue;
-//               }}
-//             >
-//               <span>{showAllCourses ? "Show Less" : "Show More Courses"}</span>
-//               <span className="group-hover:animate-bounce">
-//                 {showAllCourses ? (
-//                   <ChevronUp size={18} />
-//                 ) : (
-//                   <ChevronDown size={18} />
-//                 )}
-//               </span>
-//             </button>
-//           </div>
-//         )}
-
-//         {/* Course count */}
-//         <div
-//           className="text-center mt-6 text-sm text-gray-600 transition-all duration-300"
-//           style={{  fontFamily: "'Poppins', sans-serif" }}
-//         >
-//           {activeTab === "top"
-//             ? `Showing ${filteredCourses.length} of ${allCourses.length} courses`
-//             : `Showing ${filteredCourses.length} courses`}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default CourseDetails;
-
-
 import { useState } from "react";
 import { Clock, Users, BookOpen, ChevronDown, ChevronUp, Award, TrendingUp, Star, Target, Zap, Shield, Cloud, Code, Server, Wifi, Lock } from "lucide-react";
 import { Link } from "react-router-dom";
+
+import mcseLogo from "../../../public/assets/mcse.png";
+import linuxLogo from "../../../public/assets/linux.png";
+import ccnaLogo from "../../../public/assets/ccna.png";
+import intuneLogo from "../../../public/assets/intune.png";
+import powerShellLogo from "../../../public/assets/powershell.png";
+import pythonLogo from "../../../public/assets/python.png";
+import microsoftLogo from "../../../public/assets/microsoft.jpg";
+import entraIdLogo from "../../../public/assets/entra_id.jpg";
+import awsLogo from "../../../public/assets/aws_solution_tech.png";
+import googleCloudLogo from "../../../public/assets/google_cloud_gcp.png";
+import azureSentinelLogo from "../../../public/assets/azure_sentinel.webp";
+import awsDevOpsLogo from "../../../public/assets/aws_devops.png";
+import azureDevOpsLogo from "../../../public/assets/azure_devops.png";
+import cyberSecurityLogo from "../../../public/assets/cyber_security.png";
+import o365Logo from "../../../public/assets/o365.png";
+
+
+
 
 const CourseDetails = () => {
   const [activeTab, setActiveTab] = useState("top");
@@ -825,7 +45,7 @@ const CourseDetails = () => {
     // System Administrator
     {
       title: "MCSE Training Certification Course",
-      image: "/assets/mcse.png",
+      backgroundLogo: mcseLogo,
       duration: "40 Hrs",
       category: "System Administrator",
       enrolled: "12,345 enrolled",
@@ -838,6 +58,7 @@ const CourseDetails = () => {
     {
       title: "LINUX Training Certification Course",
       duration: "40 Hrs",
+      backgroundLogo: linuxLogo,
       category: "System Administrator",
       enrolled: "10,234 enrolled",
       path: "/linux-training-certification-course",
@@ -848,6 +69,7 @@ const CourseDetails = () => {
     },
     {
       title: "The CCNA Training Certification Course",
+      backgroundLogo: ccnaLogo,
       duration: "40 Hrs",
       category: "System Administrator",
       enrolled: "15,678 enrolled",
@@ -859,6 +81,7 @@ const CourseDetails = () => {
     },
     {
       title: "Intune Training Certification Course",
+      backgroundLogo: intuneLogo,
       duration: "24 Hrs",
       category: "System Administrator",
       enrolled: "5,432 enrolled",
@@ -870,6 +93,7 @@ const CourseDetails = () => {
     },
     {
       title: "0365 Training Certification Course",
+      backgroundLogo: o365Logo,
       duration: "24 Hrs",
       category: "System Administrator",
       enrolled: "7,891 enrolled",
@@ -883,6 +107,7 @@ const CourseDetails = () => {
     // Automation/Program
     {
       title: "Windows Powershell Training Certification Course",
+      backgroundLogo: powerShellLogo,
       duration: "24 Hrs",
       category: "Automation/Program",
       enrolled: "6,543 enrolled",
@@ -894,6 +119,7 @@ const CourseDetails = () => {
     },
     {
       title: "Python Training Certification Course",
+      backgroundLogo: pythonLogo,
       duration: "40 Hrs",
       category: "Automation/Program",
       enrolled: "18,765 enrolled",
@@ -907,6 +133,7 @@ const CourseDetails = () => {
     // Cloud Technology
     {
       title: "Microsoft Azure Training Certification Course",
+      backgroundLogo: microsoftLogo,
       duration: "40 Hrs",
       category: "Cloud Technology",
       enrolled: "22,345 enrolled",
@@ -918,6 +145,7 @@ const CourseDetails = () => {
     },
     {
       title: "Microsoft Entra ID Training Certification Course",
+      backgroundLogo: entraIdLogo,
       duration: "24 Hrs",
       category: "Cloud Technology",
       enrolled: "4,321 enrolled",
@@ -929,6 +157,7 @@ const CourseDetails = () => {
     },
     {
       title: "AWS Training Certification Course",
+      backgroundLogo: awsLogo,
       duration: "40 Hrs",
       category: "Cloud Technology",
       enrolled: "25,678 enrolled",
@@ -940,6 +169,7 @@ const CourseDetails = () => {
     },
     {
       title: "Google Cloud (GCP) Training Certification Course",
+      backgroundLogo: googleCloudLogo,
       duration: "40 Hrs",
       category: "Cloud Technology",
       enrolled: "8,901 enrolled",
@@ -951,6 +181,7 @@ const CourseDetails = () => {
     },
     {
       title: "Azure Sentinel Training Certification Course",
+      backgroundLogo: azureSentinelLogo,
       duration: "24 Hrs",
       category: "Cloud Technology",
       enrolled: "3,456 enrolled",
@@ -964,6 +195,7 @@ const CourseDetails = () => {
     // DevOps
     {
       title: "AWS DevOps Training Certification Course",
+      backgroundLogo: awsDevOpsLogo,
       duration: "40 Hrs",
       category: "DevOps",
       enrolled: "9,876 enrolled",
@@ -975,6 +207,7 @@ const CourseDetails = () => {
     },
     {
       title: "Azure DevOps Training Certification Course",
+      backgroundLogo: azureDevOpsLogo,
       duration: "40 Hrs",
       category: "DevOps",
       enrolled: "8,765 enrolled",
@@ -988,6 +221,7 @@ const CourseDetails = () => {
     // Cyber Security
     {
       title: "Cyber Security Training Certification Course",
+      backgroundLogo: cyberSecurityLogo,
       duration: "40 Hrs",
       category: "Cyber Security",
       enrolled: "14,567 enrolled",
@@ -1123,6 +357,7 @@ const CourseDetails = () => {
                 transform: activeTab === tab.id ? "scale(1.05)" : "scale(1)",
               }}
             >
+             
               {tab.label}
               {activeTab === tab.id && (
                 <span
@@ -1152,13 +387,15 @@ const CourseDetails = () => {
               <Link
                 to={course.path}
                 key={index}
-                className="group relative rounded-lg transition-all duration-500 cursor-pointer overflow-hidden"
+                className="image-card group relative rounded-lg transition-all duration-500 cursor-pointer overflow-hidden"
                 style={{
                   backgroundColor: theme.white,
                   border: `1px solid ${hoveredCard === index ? theme.accentOrange : theme.primaryBlue + '40'}`,
                   boxShadow: hoveredCard === index ? `0 10px 25px -5px ${theme.primaryBlue}30` : '0 2px 8px rgba(0,0,0,0.05)',
                   transform: hoveredCard === index ? 'translateY(-4px)' : 'translateY(0)',
                   fontFamily: "'Poppins', sans-serif",
+                 
+
                 }}
                 onMouseEnter={() => setHoveredCard(index)}
                 onMouseLeave={() => setHoveredCard(null)}
@@ -1170,7 +407,7 @@ const CourseDetails = () => {
                     background: `linear-gradient(135deg, ${theme.primaryBlue}08 0%, ${theme.accentOrange}08 100%)`,
                   }}
                 />
-
+                  
                 {/* Accent Line with hover effect */}
                 <div
                   className="absolute left-0 top-0 bottom-0 w-[4px] transition-all duration-500"
@@ -1196,7 +433,10 @@ const CourseDetails = () => {
                   >
                     {course.title}
                   </h3>
-
+                      <div className=" flex items-center text-center justify-center">
+                           <img src={course.backgroundLogo} alt=""  width={"82px"} height={"100%"} style={{objectFit:"cover"}}/>
+                      </div>
+                    
                   {/* Rating Section */}
                   <div className="flex items-center gap-2 mb-2">
                     <div className="flex items-center">

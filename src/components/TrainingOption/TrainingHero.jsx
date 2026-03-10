@@ -249,7 +249,7 @@ const TrainingHero = () => {
             {/* Floating Badge */}
             <div className="absolute top-10 -left-10 bg-white p-3 rounded-3xl shadow-2xl border border-slate-50 animate-bounce-slow z-20">
               <div className="flex items-center hidden md:block gap-3">
-                <div className="w-10 h-10 rounded-full bg-[#f39221] flex items-center justify-center text-white">
+                <div className="w-8 h-8 rounded-full bg-[#f39221] flex items-center justify-center text-white">
                   ★
                 </div>
                 <div>
