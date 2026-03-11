@@ -403,12 +403,13 @@ const handleSuccess = () => {
 
           <div>
             <h4 className="text-3xl font-semibold mb-5 text-[#F28C28]">Courses</h4>
-            <ul className="space-y-3 text-gray-100 text-base font-normal">
+            <ul className="space-y-3 text-gray-100 text-base font-normal ">
               {courseLinks.map((course, index) => (
                 <li key={index}>
                   <button
                     onClick={() => handleCourseClick(course.path)}
                     className="hover:text-[#F28C28] transition-colors text-left"
+                     style={{ fontFamily: "'Poppins', sans-serif"}}
                   >
                     {course.name}
                   </button>
