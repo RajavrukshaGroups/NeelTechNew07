@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Clock, Users, BookOpen, ChevronDown, ChevronUp, Award, TrendingUp, Star, Target, Zap, Shield, Cloud, Code, Server, Wifi, Lock } from "lucide-react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import LeadPopup from "../LeadPopup/LeadPopup";
 
 import mcseLogo from "../../../public/assets/mcse.png";
 import linuxLogo from "../../../public/assets/linux.png";
@@ -22,6 +23,12 @@ import o365Logo from "../../../public/assets/o365.png";
 
 
 const CourseDetails = () => {
+  const navigate = useNavigate();
+
+const [showPopup, setShowPopup] = useState(false);
+const [selectedCourse, setSelectedCourse] = useState(null);
+const [pendingRoute, setPendingRoute] = useState("");
+  
   const [activeTab, setActiveTab] = useState("top");
   const [showAllCourses, setShowAllCourses] = useState(false);
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -264,6 +271,28 @@ const CourseDetails = () => {
       (course) => course.category === categoryMap[activeTab],
     );
   };
+const handleCourseClick = (path) => {
+
+  const leadSubmitted = localStorage.getItem("leadSubmitted");
+
+  // If form already submitted → go directly
+  if (leadSubmitted === "true") {
+    navigate(path);
+    return;
+  }
+
+  // Otherwise show popup
+  setPendingRoute(path);
+  setShowPopup(true);
+};
+
+const handleSuccess = () => {
+  setShowPopup(false);
+
+  if (pendingRoute) {
+    navigate(pendingRoute);
+  }
+};
 
   const filteredCourses = getFilteredCourses();
 
@@ -314,6 +343,7 @@ const CourseDetails = () => {
   };
 
   return (
+    <>
     <section className="w-full py-14">
       <div className="max-w-[1300px] mx-auto px-12">
         <div></div>
@@ -384,8 +414,8 @@ const CourseDetails = () => {
             const badgeColor = getBadgeColor(course.badge);
             
             return (
-              <Link
-                to={course.path}
+              <div
+                onClick={() => handleCourseClick(course.path)}
                 key={index}
                 className="image-card group relative rounded-lg transition-all duration-500 cursor-pointer overflow-hidden"
                 style={{
@@ -509,7 +539,7 @@ const CourseDetails = () => {
                     </span>
                   </div>
                 </div>
-              </Link>
+              </div>
             );
           })}
         </div>
@@ -562,6 +592,12 @@ const CourseDetails = () => {
         </div>
       </div>
     </section>
+   <LeadPopup
+  open={showPopup}
+  setOpen={setShowPopup}
+  onSuccess={handleSuccess}
+/>
+    </>
   );
 };
 

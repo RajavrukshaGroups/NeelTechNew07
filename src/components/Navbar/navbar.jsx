@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import NeelLogo from "/assets/head-logo.png";
 import { Link } from "react-router-dom";
-import { label, path } from "framer-motion/client";
+import { useNavigate } from "react-router-dom";
+import LeadPopup from "../LeadPopup/LeadPopup";
 
 // Dropdown Component for About Us
 const AboutDropdown = ({ theme, isOpen, onMouseEnter, onMouseLeave }) => {
@@ -298,11 +299,41 @@ const AllCoursesMegaMenu = ({ theme, isOpen, onMouseEnter, onMouseLeave }) => {
 };
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
+const [showPopup, setShowPopup] = useState(false);
+const [pendingRoute, setPendingRoute] = useState("");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   //const [openDropdown, setOpenDropdown] = useState(null);
   const [openCategory, setOpenCategory] = useState(null);
+
+const handleCourseClick = (route) => {
+
+  const leadSubmitted = localStorage.getItem("leadSubmitted");
+
+  // If form already submitted → go directly to course
+  if (leadSubmitted === "true") {
+    navigate(route);
+    return;
+  }
+
+  // Otherwise show popup
+  setPendingRoute(route);
+  setShowPopup(true);
+};
+
+const handleSuccess = () => {
+  navigate(pendingRoute);
+};
+const handleClose = () => {
+  if (!localStorage.getItem("leadSubmitted")) {
+    alert("Please submit the form to continue");
+    return;
+  }
+  setOpen(false);
+};
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -376,13 +407,13 @@ const Navbar = () => {
                 NEEL
               </span>
               <span
-                className="text-base sm:text-xl md:text-xl lg:text-xl xl:text-2xl font-extrabold tracking-tight whitespace-nowrap ml-1"
+                className="text-base sm:text-2xl md:text-xl lg:text-xl xl:text-2xl font-extrabold tracking-tight whitespace-nowrap ml-1"
                 style={{ color: theme.technologiesOrange }}
               >
                 TECHNOLOGIES
               </span>
             </div>
-            <span className="text-base gap-18 sm:text-base md:text-lg font-bold ">
+            <span className="test-xs gap-18 sm:text-xs md:text-lg font-medium ">
               Build Your Tech Future
             </span>
           </div>
@@ -553,15 +584,15 @@ const Navbar = () => {
                       border: `1px solid ${theme.lightGray}`,
                     }}
                   >
-                    {category.subItems.map((item, i) => (
-                      <Link
+                   {category.subItems.map((item, i) => (
+                      <button
                         key={i}
-                        to={item.path}
-                        className="block px-5 py-3 text-xs xl:text-sm font-bold hover:bg-gray-100"
+                        onClick={() => handleCourseClick(item.path)}
+                        className="block w-full text-left px-5 py-3 text-xs xl:text-sm font-bold hover:bg-gray-100"
                         style={{ color: theme.darkBlueBg }}
                       >
                         {item.label}
-                      </Link>
+                      </button>
                     ))}
                   </div>
                 </div>
@@ -680,10 +711,10 @@ const Navbar = () => {
               onClick={() =>
                 setOpenDropdown(openDropdown === "courses" ? null : "courses")
               }
-              className="flex justify-between items-center w-full px-1 py-3 text-sm font-bold uppercase"
+              className="flex justify-between items-center w-full px-1 py-3 text-lg font-bold "
               style={{ color: "black" }}
             >
-              COURSES
+              Courses
               <ChevronDown
                 className={`h-5 w-5 transition-transform duration-300 ${
                   openDropdown === "courses" ? "rotate-180" : ""
@@ -793,19 +824,18 @@ const Navbar = () => {
                     {openCategory === index && (
                       <div className="bg-white">
                         {category.subItems.map((item, i) => (
-                          <Link
+                          <button
                             key={i}
-                            to={item.path}
                             onClick={() => {
-                              setIsMobileMenuOpen(false); // Same as About Us
+                              handleCourseClick(item.path);
+                              setIsMobileMenuOpen(false);
                               setOpenDropdown(null);
                               setOpenCategory(null);
-                              window.scrollTo(0, 0);
                             }}
-                            className="block px-10 py-3 text-xs font-medium font-serif text-blue-900 hover:bg-blue-100 transition"
+                            className="block w-full text-left px-10 py-3 text-xs font-medium font-serif text-blue-900 hover:bg-blue-100 transition"
                           >
                             {item.label}
-                          </Link>
+                          </button>
                         ))}
                       </div>
                     )}
@@ -918,6 +948,12 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+     <LeadPopup
+  open={showPopup}
+  setOpen={setShowPopup}
+  onSuccess={handleSuccess}
+/>
+
     </div>
   );
 };

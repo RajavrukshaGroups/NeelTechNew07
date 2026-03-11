@@ -275,7 +275,7 @@ const ContactUsPage = ({ courseName = "" }) => {
 
           {/* ================= LEFT SIDE - FORM ================= */}
           <div className="flex-1 bg-[#0694d115] p-10 rounded-2xl shadow-sm border border-blue-50">
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6 font-serif">
 
               <input
                 type="text"
