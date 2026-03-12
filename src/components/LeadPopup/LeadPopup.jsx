@@ -198,7 +198,7 @@ const LeadPopup = ({ open, setOpen, onSuccess }) => {
             Unlock Your Course Details 🚀
           </h2>
 
-          <p className="text-blue-100 font-medium">
+          <p className="text-gray-100 text-xl font-medium">
             Join thousands of students accelerating their careers
           </p>
         </div>
@@ -207,12 +207,12 @@ const LeadPopup = ({ open, setOpen, onSuccess }) => {
 
         <div className="px-6 pt-4 pb-2 bg-gray-50 border-b">
 
-          <div className="flex items-center text-base text-gray-800">
-            <CheckCircle size={16} className="text-green-500 mr-2" />
+          <div className="flex items-center text-xl font-medium text-gray-800">
+            <CheckCircle size={16} className="text-green-500  mr-2" />
             Free access to premium content
           </div>
 
-          <div className="flex items-center text-base text-gray-800 mt-1">
+          <div className="flex items-center text-xl font-medium text-gray-800 mt-1">
             <CheckCircle size={16} className="text-green-500 mr-2" />
             Get 20% discount on enrollment
           </div>
@@ -225,7 +225,7 @@ const LeadPopup = ({ open, setOpen, onSuccess }) => {
 
           {/* NAME */}
           <div className="relative">
-            <User size={18} className="absolute left-3 top-3.5 text-gray-400" />
+            <User size={18} className="absolute left-3 top-3.5 text-lg text-gray-400" />
 
             <input
               type="text"
@@ -237,11 +237,12 @@ const LeadPopup = ({ open, setOpen, onSuccess }) => {
               onBlur={handleBlur}
               className={getInputClassName("name")}
               disabled={isSubmitting}
+             style={{ fontSize: '18px', fontFamily: 'Roboto, sans-serif' }}
             />
 
             {touched.name && errors.name && (
-              <p className="text-red-500 text-xs mt-1 flex items-center">
-                <AlertCircle size={12} className="mr-1" />
+              <p className="text-red-500 text-lg mt-1 flex items-center">
+                <AlertCircle size={18} className="mr-1" />
                 {errors.name}
               </p>
             )}
@@ -261,11 +262,12 @@ const LeadPopup = ({ open, setOpen, onSuccess }) => {
               onBlur={handleBlur}
               className={getInputClassName("email")}
               disabled={isSubmitting}
+              style={{ fontSize: '18px', fontFamily: 'Roboto, sans-serif' }}
             />
 
             {touched.email && errors.email && (
-              <p className="text-red-500 text-xs mt-1 flex items-center">
-                <AlertCircle size={12} className="mr-1" />
+              <p className="text-red-500 text-lg mt-1 flex items-center">
+                <AlertCircle size={18} className="mr-1" />
                 {errors.email}
               </p>
             )}
@@ -285,11 +287,12 @@ const LeadPopup = ({ open, setOpen, onSuccess }) => {
               onBlur={handleBlur}
               className={getInputClassName("phone")}
               disabled={isSubmitting}
+              style={{ fontSize: '18px', fontFamily: 'Roboto, sans-serif' }}
             />
 
             {touched.phone && errors.phone && (
-              <p className="text-red-500 text-xs mt-1 flex items-center">
-                <AlertCircle size={12} className="mr-1" />
+              <p className="text-red-500 text-lg mt-1 flex items-center">
+                <AlertCircle size={18} className="mr-1" />
                 {errors.phone}
               </p>
             )}
@@ -316,7 +319,7 @@ const LeadPopup = ({ open, setOpen, onSuccess }) => {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold flex justify-center items-center"
+            className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold text-lg flex justify-center items-center"
           >
             {isSubmitting ? (
               "Processing..."
