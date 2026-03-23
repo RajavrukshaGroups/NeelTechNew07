@@ -192,9 +192,9 @@ const handleSuccess = () => {
           <Link to="/" className="text-[#F28C28] font-semibold hover:underline">
             Neel Technologies
           </Link>{" "}
-          | <Link to="/privacy-policy">Privacy Policy</Link>{" "}
-          | <Link to="/terms-conditions">Terms & Conditions</Link>{" "}
-          | <Link to="/refund-policy">Refund Policy</Link>
+          | <Link to="/privacy-policy" className="font-semibold hover:text-[#F28C28]">Privacy Policy</Link>{" "}
+          | <Link to="/terms-conditions" className="font-semibold hover:text-[#F28C28]">Terms & Conditions</Link>{" "}
+          | <Link to="/refund-policy" className="font-semibold hover:text-[#F28C28]">Refund Policy</Link>
         </div>
       </div>
 
