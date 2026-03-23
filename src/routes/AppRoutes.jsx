@@ -126,6 +126,9 @@ import ContactMainPage from "../components/contact/contactMain";
 import Blogs from "../components/Blogs/blogs";
 import SuccessStories from "../components/successStories/successStories";
 import ProtectedRoute from "../components/ProtectedRoute/ProtectedRoute";
+import PrivacyPolicy from "../components/Home/PrivacyPolicy"; 
+import TermsConditions from "../components/Home/TermsConditions";
+import RefundPolicy from "../components/Home/RefundPolicy";
 
 const AppRoutes = () => {
   return (
@@ -138,6 +141,9 @@ const AppRoutes = () => {
       <Route path="/contact-us" element={<ContactMainPage />} />
       <Route path="/blogs" element={<Blogs />} />
       <Route path="/success-stories" element={<SuccessStories />} />
+      <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+      <Route path="/terms-conditions" element={<TermsConditions />} />
+      <Route path="/refund-policy" element={<RefundPolicy />} />
 
       {/* Protected Course Routes (Popup required) */}
       <Route
