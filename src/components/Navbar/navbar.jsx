@@ -374,14 +374,27 @@ const handleClose = () => {
             <span className="text-blue-200 mr-1 sm:mr-2 font-semibold">
               Call:
             </span>
-            <span className="font-bold">+91 6361866299</span>
+            {/* <span className="font-bold">+91 6361866299</span> */}
+            <a href="tel:+916361866299" className="hover:text-[#F28C28] transition-colors font-bold text-base" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                  +91 6361866299
+                </a>
+            , {" "}
+             <a href="tel:+918310521980" className="hover:text-[#F28C28] transition-colors font-bold text-base" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                  +91 8310521980
+                </a>
           </span>
           <span className="text-white font-medium">
-            <span className="text-blue-200 mr-1 sm:mr-2 font-semibold">
-              Email:
-            </span>
-            <span className="font-bold">info@neeltechnologies.net</span>
+          <span className="text-blue-200 mr-1 sm:mr-2 font-semibold">
+            Email:
           </span>
+
+  <a
+    href="mailto:info@neeltechnologies.net"
+    className="font-bold hover:text-[#F28C28] transition-colors"
+  >
+    info@neeltechnologies.net
+  </a>
+</span>
         </div>
       </div>
 
@@ -929,6 +942,7 @@ const handleClose = () => {
                 >
                   +91 6361866299
                 </span>
+               
               </div>
               <div>
                 <span

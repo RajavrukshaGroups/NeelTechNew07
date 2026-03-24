@@ -11,6 +11,7 @@ import UniqueOfferings from "./UniqueOfferings";
 import UpcomingDemo from "./UpcomingDemo";
 import WhyNeelTech from "./WhyNeelTech";
 import BannerImg from "/assets/banner_slider.png";
+import PricingDetails from "./PricingDetails";
 
 const Home = () => {
 
@@ -65,6 +66,7 @@ const Home = () => {
     <div>
       <Hero />
       <CourseDetails />
+      <PricingDetails />
       <UniqueOfferings />
       <WhyNeelTech />
       <LearningOptions />

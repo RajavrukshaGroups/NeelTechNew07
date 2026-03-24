@@ -169,9 +169,14 @@ const handleSuccess = () => {
               </div>
               <div className="flex items-center gap-4">
                 <Phone size={20} className="text-[#F28C28] flex-shrink-0" />
+                <div className="flex flex-col items-center gap-2">
                 <a href="tel:+916361866299" className="hover:text-[#F28C28] transition-colors text-sm" style={{ fontFamily: "'Poppins', sans-serif" }}>
                   +91 6361866299
                 </a>
+                <a href="tel:+918310521980" className="hover:text-[#F28C28] transition-colors text-sm" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                  +91 8310521980
+                </a>
+                </div>
               </div>
               <div className="flex items-center gap-4">
                 <Mail size={20} className="text-[#F28C28] flex-shrink-0" />

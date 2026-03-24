@@ -401,12 +401,20 @@ const ContactUsPage = ({ courseName = "" }) => {
                   <Phone size={22} className="text-blue-600 mt-1" />
                   <div>
                     <h3 className="font-semibold mb-2 text-xl">Call Us</h3>
+                    <div className="flex flex-col">
                     <a
                       href="tel:+916361866299"
                       className="text-gray-700 hover:text-blue-600 transition"
                     >
                       +91 6361866299
                     </a>
+                    <a
+                      href="tel:+918310521980"
+                      className="text-gray-700 hover:text-blue-600 transition"
+                    >
+                      +91 8310521980
+                    </a>
+                    </div>
                   </div>
                 </div>
 

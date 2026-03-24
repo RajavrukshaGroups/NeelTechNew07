@@ -76,6 +76,7 @@ const RefundPolicy = () => {
         <Section title="9. Contact Information">
           <p>Email: info@neeltechnologies.net</p>
           <p>Phone: +91 6361866299</p>
+          <p>Phone: +91 8310521980</p>
           <p>Location: Bangalore, India</p>
         </Section>
 
