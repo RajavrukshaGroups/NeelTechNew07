@@ -23,7 +23,7 @@ const PricingDetails = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 font-sans">
+    <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 font-sans">
       <div className="max-w-7xl mx-auto">
         {/* Page Header */}
         <div className="text-center mb-16">
@@ -34,10 +34,10 @@ const PricingDetails = () => {
             Get instant access to our premium individual course. Expert-led training with hands-on labs and certification.
           </p>
         </div>
-                            {/* grid grid-cols-1 lg:grid-cols-3 */}
-        <div className=" gap-8 items-center">
+                          {/* grid grid-cols-1 lg:grid-cols-3    */}
+        <div className="grid grid-cols-1 lg:grid-cols-2  gap-12 items-start">
           {/* Left Column: Main Pricing & Comparison */}
-          <div className="lg:col-span-2 space-y-16">
+          <div className="lg:col-span-1 space-y-16">
             {/* 01: Full Feature Pricing Card */}
             <div>
               {/* <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
@@ -52,64 +52,37 @@ const PricingDetails = () => {
                 </div>
 
                 <div className="p-6 md:p-8">
-                  <div className="text-center mb-6">
+                   
+                <div className="text-center mb-6">
                     <p className="text-gray-500 text-sm mb-2">Individual Course Access</p>
                     <div className="flex items-center justify-center gap-3 flex-wrap">
-                      <span className="text-3xl text-gray-400 line-through font-medium">{formatPrice(originalPrice)}</span>
-                      <span className="text-4xl md:text-5xl font-extrabold text-[#F78E22]">{formatPrice(coursePrice)}</span>
+                    <span className="text-3xl text-gray-400 line-through font-medium">{formatPrice(originalPrice)}</span>
+                    <span className="text-4xl md:text-5xl font-extrabold text-[#F78E22]">{formatPrice(coursePrice)}</span>
                     </div>
                     <div className="mt-3 inline-flex items-center gap-2 bg-green-100 text-green-700 px-3 py-1.5 rounded-full text-sm font-semibold">
-                      <span>💸</span> Save {formatPrice(savings)} ({savingsPercentage}% OFF)
+                    <span>💸</span> Save {formatPrice(savings)} ({savingsPercentage}% OFF)
                     </div>
-                  </div>
-
-                  <div className="border-t border-b border-gray-100 py-4 mb-5">
+                </div>
+        
+        
+                <div className="border-t border-b border-gray-100 py-4 mb-5">
                     <div className="flex justify-between items-center py-2">
-                      <span className="text-gray-600">Original Course Price</span>
-                      <span className="text-gray-500 line-through">{formatPrice(originalPrice)}</span>
+                    <span className="text-gray-600">Original Course Price</span>
+                    <span className="text-gray-500 line-through">{formatPrice(originalPrice)}</span>
                     </div>
                     <div className="flex justify-between items-center py-2">
-                      <span className="text-gray-600">Limited Time Discount</span>
-                      <span className="text-[#F78E22] font-semibold">- {formatPrice(savings)}</span>
+                    <span className="text-gray-600">Limited Time Discount</span>
+                    <span className="text-[#F78E22] font-semibold">- {formatPrice(savings)}</span>
                     </div>
                     <div className="flex justify-between items-center py-2 pt-3 mt-1 border-t border-gray-100">
-                      <span className="font-bold text-[#195A92]">Final Course Price</span>
-                      <span className="text-2xl font-bold text-[#F78E22]">{formatPrice(coursePrice)}</span>
+                    <span className="font-bold text-[#195A92]">Final Course Price</span>
+                    <span className="text-2xl font-bold text-[#F78E22]">{formatPrice(coursePrice)}</span>
                     </div>
-                  </div>
+                </div>
+                            
 
-                  <div className="mb-6">
-                    <p className="text-sm text-gray-500 mb-3 flex items-center gap-1">
-                      <span className="text-[#F78E22]">●</span> What's included:
-                    </p>
-                    <ul className="space-y-2 text-sm">
-                      <li className="flex items-center gap-2">
-                        <svg className="w-4 h-4 text-[#195A92]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span>Access to <strong>Full Course Content</strong> (Video lectures, Labs & Quizzes)</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <svg className="w-4 h-4 text-[#195A92]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span>Full access with regular updates</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <svg className="w-4 h-4 text-[#195A92]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span>Industry-recognized certificates</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <svg className="w-4 h-4 text-[#195A92]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span>24/7 support & doubt resolution</span>
-                      </li>
-                    </ul>
-                  </div>
-
+            
+                    
                   <button
                     onClick={handleEnroll}
                     onMouseEnter={() => setIsHovered(true)}
@@ -124,9 +97,11 @@ const PricingDetails = () => {
                   </button>
 
                   <div className="mt-4 text-center">
-                    <div className="flex items-center justify-center gap-3 text-xs text-gray-500">
-                      <span>✅ Instant access</span>
-                      <span>🛡️ Secure payment</span>
+                    <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-600 text-center">
+                        {/* <span>✅ 7-Day Money Back Guarantee</span> */}
+                        <span>🛡️ Secure Payment</span>
+                        <span>🎓 Certified Courses</span>
+                        <span>📈 Career Growth Focused</span>
                     </div>
                   </div>
                 </div>
@@ -156,7 +131,39 @@ const PricingDetails = () => {
           </div>
 
           {/* Right Column: Minimal & Summary */}
-          <div className="space-y-12">
+          {/* <div className="space-y-12"> */}
+                  {/* <div className="mb-6">
+                            <p className="text-2xl text-gray-800 mb-3 flex items-center gap-4">
+                            <span className="text-[#F78E22]">●</span> What's included:
+                            </p>
+                            <ul className="space-y-2 text-lg">
+                            <li className="flex items-center gap-2">
+                                <svg className="w-6 h-6 text-[#195A92]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Access to <strong>Full Course Content</strong> (Video lectures, Labs & Quizzes)</span>
+                            </li>
+                            <li className="flex items-center gap-2">
+                                <svg className="w-6 h-6 text-[#195A92]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Full access with regular updates</span>
+                            </li>
+                            <li className="flex items-center gap-2">
+                                <svg className="w-6 h-6 text-[#195A92]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Industry-recognized certificates</span>
+                            </li>
+                            <li className="flex items-center gap-2">
+                                <svg className="w-6 h-6 text-[#195A92]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>24/7 support & doubt resolution</span>
+                            </li>
+                            </ul>
+                        </div> */}
+
             {/* 03: Minimal View */}
             {/* <div>
               <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
@@ -209,7 +216,112 @@ const PricingDetails = () => {
                 </div>
               </div>
             </div> */}
-          </div>
+          {/* </div> */}
+          <div className="space-y-6">
+
+  {/* TITLE */}
+  <div>
+    <p className="text-2xl md:text-3xl font-bold text-gray-900 flex items-center gap-3">
+      {/* <span className="text-[#F78E22] text-3xl">●</span> */}
+      What's Included in This Course
+    </p>
+    <p className="text-gray-600 mt-2  text-medium">
+      Everything you need to master skills & get job-ready
+    </p>
+  </div>
+
+  {/* MAIN FEATURES */}
+  <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8 space-y-4">
+
+    {/* LEARNING */}
+    <div>
+      <h3 className="text-lg font-semibold text-[#195A92] mb-3"> Learning Content</h3>
+      <ul className="space-y-3 text-base">
+        {[
+          "Full Course Access (HD Video Lectures, Labs & Quizzes)",
+          "Real-time Projects & Case Studies",
+        //   "Assignments with Solutions",
+        ].map((item, index) => (
+          <li key={index} className="flex items-start gap-3">
+            <span className="text-green-500 text-lg">✔</span>
+            <span className="text-gray-700">{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    {/* ACCESS */}
+    {/* <div>
+      <h3 className="text-lg font-semibold text-[#195A92] mb-3">🔓 Access & Updates</h3>
+      <ul className="space-y-3 text-base">
+        {[
+          "Free Course Updates (No extra cost)",
+          "Mobile, Tablet & Desktop Access",
+        ].map((item, index) => (
+          <li key={index} className="flex items-start gap-3">
+            <span className="text-green-500 text-lg">✔</span>
+            <span className="text-gray-700">{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div> */}
+
+    {/* SUPPORT */}
+    <div>
+      <h3 className="text-lg font-semibold text-[#195A92] mb-3"> Support & Guidance</h3>
+      <ul className="space-y-3 text-base">
+        {[
+          "24/7 Doubt Support & Mentorship",
+          "Live Q&A Sessions with Experts",
+         // "Dedicated Student Community",
+        ].map((item, index) => (
+          <li key={index} className="flex items-start gap-3">
+            <span className="text-green-500 text-lg">✔</span>
+            <span className="text-gray-700">{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    {/* CAREER */}
+    <div>
+      <h3 className="text-lg font-semibold text-[#195A92] mb-3"> Career Benefits</h3>
+      <ul className="space-y-3 text-base">
+        {[
+          "Industry-Recognized Certificate",
+          "Resume Building & Interview Preparation",
+          "Job Assistance & Placement Support",
+          
+        ].map((item, index) => (
+          <li key={index} className="flex items-start gap-3">
+            <span className="text-green-500 text-lg">✔</span>
+            <span className="text-gray-700">{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+  </div>
+
+  {/* BONUS SECTION */}
+  {/* <div className="bg-gradient-to-r from-[#195A92] to-[#0f3f64] text-white rounded-2xl p-6 shadow-md">
+    <h3 className="text-lg font-semibold mb-3">🎁 Exclusive Bonuses</h3>
+    <ul className="space-y-2 text-sm">
+      <li>🔥 Free DevOps & Cloud Interview Questions Pack</li>
+      <li>🔥 Resume Templates & Career Guide</li>
+      <li>🔥 Access to Private Job Updates Group</li>
+    </ul>
+  </div> */}
+
+  {/* TRUST SECTION */}
+  {/* <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-600 text-center">
+    <span>✅ 7-Day Money Back Guarantee</span>
+    <span>🛡️ Secure Payment</span>
+    <span>🎓 Certified Courses</span>
+    <span>📈 Career Growth Focused</span>
+  </div> */}
+
+</div>
         </div>
 
         
