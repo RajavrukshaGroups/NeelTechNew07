@@ -3,7 +3,7 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import NeelLogo from "/assets/head-logo.png";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import LeadPopup from "../LeadPopup/LeadPopup";
+//import LeadPopup from "../LeadPopup/LeadPopup";
 
 // Dropdown Component for About Us
 const AboutDropdown = ({ theme, isOpen, onMouseEnter, onMouseLeave }) => {
@@ -309,24 +309,28 @@ const [pendingRoute, setPendingRoute] = useState("");
   //const [openDropdown, setOpenDropdown] = useState(null);
   const [openCategory, setOpenCategory] = useState(null);
 
-const handleCourseClick = (route) => {
+// const handleCourseClick = (route) => {
 
-  const leadSubmitted = localStorage.getItem("leadSubmitted");
+//   const leadSubmitted = localStorage.getItem("leadSubmitted");
 
-  // If form already submitted → go directly to course
-  if (leadSubmitted === "true") {
-    navigate(route);
-    return;
-  }
+//   // If form already submitted → go directly to course
+//   if (leadSubmitted === "true") {
+//     navigate(route);
+//     return;
+//   }
 
-  // Otherwise show popup
-  setPendingRoute(route);
-  setShowPopup(true);
+//   // Otherwise show popup
+//   setPendingRoute(route);
+//   setShowPopup(true);
+// };
+
+// const handleSuccess = () => {
+//   navigate(pendingRoute);
+// };
+const handleCourseClick = (path) => {
+  navigate(path);
 };
 
-const handleSuccess = () => {
-  navigate(pendingRoute);
-};
 const handleClose = () => {
   if (!localStorage.getItem("leadSubmitted")) {
     alert("Please submit the form to continue");
@@ -962,11 +966,11 @@ const handleClose = () => {
           </div>
         </div>
       </div>
-     <LeadPopup
+     {/* <LeadPopup
   open={showPopup}
   setOpen={setShowPopup}
   onSuccess={handleSuccess}
-/>
+/> */}
 
     </div>
   );

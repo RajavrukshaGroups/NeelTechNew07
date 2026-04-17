@@ -146,124 +146,131 @@ const AppRoutes = () => {
       <Route path="/refund-policy" element={<RefundPolicy />} />
 
       {/* Protected Course Routes (Popup required) */}
-      <Route
+      {/* <Route
         path="/mcse-training-certification-course"
         element={
           <ProtectedRoute>
             <MCSETraining />
           </ProtectedRoute>
         }
+      /> */}
+      <Route
+        path="/mcse-training-certification-course"
+        element={
+        
+            <MCSETraining />
+        }
       />
       <Route
         path="/linux-training-certification-course"
         element={
-          <ProtectedRoute>
+          
             <LinuxTraining />
-          </ProtectedRoute>
+         
         }
       />
       <Route
         path="/ccna-training-certification-course"
         element={
-          <ProtectedRoute>
+          
             <CCNATraining />
-          </ProtectedRoute>
+         
         }
       />
       <Route
         path="/intune-training-certification-course"
         element={
-          <ProtectedRoute>
+         
             <IntuneTraining />
-          </ProtectedRoute>
+          
         }
       />
       <Route
         path="/O365-training-certification-course"
         element={
-          <ProtectedRoute>
+          
             <O365Training />
-          </ProtectedRoute>
+         
         }
       />
       <Route
         path="/powershell-training-certification-course"
         element={
-          <ProtectedRoute>
+         
             <WindowsPowershellTrianing />
-          </ProtectedRoute>
+          
         }
       />
       <Route
         path="/python-training-certification-course"
         element={
-          <ProtectedRoute>
+         
             <PythonTraining />
-          </ProtectedRoute>
+         
         }
       />
       <Route
         path="/microsoft-azure-training-certification-course"
         element={
-          <ProtectedRoute>
+        
             <MicrosoftAzureTraining />
-          </ProtectedRoute>
+         
         }
       />
       <Route
         path="/microsoft-entra-id-training-certification-course"
         element={
-          <ProtectedRoute>
+       
             <MicrosoftEntraIdTraining />
-          </ProtectedRoute>
+         
         }
       />
       <Route
         path="/aws-training-certification-course"
         element={
-          <ProtectedRoute>
+          
             <AWSTraining />
-          </ProtectedRoute>
+          
         }
       />
       <Route
         path="/google-cloud-gcp-training-certification-course"
         element={
-          <ProtectedRoute>
+          
             <GoogleCloudGCPTraining />
-          </ProtectedRoute>
+         
         }
       />
       <Route
         path="/azure-sentinel-training-certification-course"
         element={
-          <ProtectedRoute>
+         
             <AzureSentinelTraining />
-          </ProtectedRoute>
+         
         }
       />
       <Route
         path="/aws-devops-training-certification-course"
         element={
-          <ProtectedRoute>
+         
             <AWSDevOpsTraining />
-          </ProtectedRoute>
+         
         }
       />
       <Route
         path="/azure-devops-training-certification-course"
         element={
-          <ProtectedRoute>
+         
             <AzureDevOpsTraining />
-          </ProtectedRoute>
+         
         }
       />
       <Route
         path="/cyber-security-training-certification-course"
         element={
-          <ProtectedRoute>
+         
             <CyberSecurityTraining />
-          </ProtectedRoute>
+        
         }
       />
     </Routes>

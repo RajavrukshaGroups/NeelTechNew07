@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Clock, Users, BookOpen, ChevronDown, ChevronUp, Award, TrendingUp, Star, Target, Zap, Shield, Cloud, Code, Server, Wifi, Lock } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import LeadPopup from "../LeadPopup/LeadPopup";
+//import LeadPopup from "../LeadPopup/LeadPopup";
 
 import mcseLogo from "../../../public/assets/mcse.png";
 import linuxLogo from "../../../public/assets/linux.png";
@@ -25,9 +25,9 @@ import o365Logo from "../../../public/assets/o365.png";
 const CourseDetails = () => {
   const navigate = useNavigate();
 
-const [showPopup, setShowPopup] = useState(false);
-const [selectedCourse, setSelectedCourse] = useState(null);
-const [pendingRoute, setPendingRoute] = useState("");
+// const [showPopup, setShowPopup] = useState(false);
+// const [selectedCourse, setSelectedCourse] = useState(null);
+// const [pendingRoute, setPendingRoute] = useState("");
   
   const [activeTab, setActiveTab] = useState("top");
   const [showAllCourses, setShowAllCourses] = useState(false);
@@ -271,28 +271,33 @@ const [pendingRoute, setPendingRoute] = useState("");
       (course) => course.category === categoryMap[activeTab],
     );
   };
+
 const handleCourseClick = (path) => {
-
-  const leadSubmitted = localStorage.getItem("leadSubmitted");
-
-  // If form already submitted → go directly
-  if (leadSubmitted === "true") {
-    navigate(path);
-    return;
-  }
-
-  // Otherwise show popup
-  setPendingRoute(path);
-  setShowPopup(true);
+  navigate(path);
 };
 
-const handleSuccess = () => {
-  setShowPopup(false);
+// const handleCourseClick = (path) => {
 
-  if (pendingRoute) {
-    navigate(pendingRoute);
-  }
-};
+//   const leadSubmitted = localStorage.getItem("leadSubmitted");
+
+//   // If form already submitted → go directly
+//   if (leadSubmitted === "true") {
+//     navigate(path);
+//     return;
+//   }
+
+//   // Otherwise show popup
+//   setPendingRoute(path);
+//   setShowPopup(true);
+// };
+
+// const handleSuccess = () => {
+//   setShowPopup(false);
+
+//   if (pendingRoute) {
+//     navigate(pendingRoute);
+//   }
+// };
 
   const filteredCourses = getFilteredCourses();
 
@@ -592,11 +597,11 @@ const handleSuccess = () => {
         </div>
       </div>
     </section>
-   <LeadPopup
+   {/* <LeadPopup
   open={showPopup}
   setOpen={setShowPopup}
   onSuccess={handleSuccess}
-/>
+/> */}
     </>
   );
 };

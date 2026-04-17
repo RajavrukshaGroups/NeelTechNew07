@@ -10,14 +10,14 @@ import {
 import NeelLogo from "../../../public/assets/head-logo.png";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import LeadPopup from "../LeadPopup/LeadPopup";
+//import LeadPopup from "../LeadPopup/LeadPopup";
 import PrivacyPolicy from "./PrivacyPolicy";
 
 const Footer = () => {
   const navigate = useNavigate();
 
-  const [showPopup, setShowPopup] = useState(false);
-  const [pendingRoute, setPendingRoute] = useState("");
+  // const [showPopup, setShowPopup] = useState(false);
+  // const [pendingRoute, setPendingRoute] = useState("");
 
   const socialLinks = [
     { icon: Youtube, href: "http://www.youtube.com/@NeelTechnologies", label: "YouTube" },
@@ -55,27 +55,31 @@ const Footer = () => {
     { name: "Student Review", path: "/about-us/testimonials" },
   ];
 
- const handleCourseClick = (path) => {
+//  const handleCourseClick = (path) => {
 
-  const leadSubmitted = localStorage.getItem("leadSubmitted");
+//   const leadSubmitted = localStorage.getItem("leadSubmitted");
 
-  // If form already submitted → go directly
-  if (leadSubmitted === "true") {
-    navigate(path);
-    return;
-  }
+//   // If form already submitted → go directly
+//   if (leadSubmitted === "true") {
+//     navigate(path);
+//     return;
+//   }
 
-  // Otherwise show popup
-  setPendingRoute(path);
-  setShowPopup(true);
-};
+//   // Otherwise show popup
+//   setPendingRoute(path);
+//   setShowPopup(true);
+// };
 
-const handleSuccess = () => {
-  setShowPopup(false);
+// const handleSuccess = () => {
+//   setShowPopup(false);
 
-  if (pendingRoute) {
-    navigate(pendingRoute);
-  }
+//   if (pendingRoute) {
+//     navigate(pendingRoute);
+//   }
+// };
+
+const handleCourseClick = (path) => {
+  navigate(path);
 };
 
   return (
@@ -203,11 +207,11 @@ const handleSuccess = () => {
         </div>
       </div>
 
-      <LeadPopup
+      {/* <LeadPopup
   open={showPopup}
   setOpen={setShowPopup}
   onSuccess={handleSuccess}
-/>
+/> */}
     </footer>
   );
 };
