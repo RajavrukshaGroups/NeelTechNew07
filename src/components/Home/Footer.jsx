@@ -196,7 +196,7 @@ const handleCourseClick = (path) => {
           © 2026 All Rights Reserved by{" "}
           <Link to="/" className="text-[#F28C28] font-semibold hover:underline">Neel Technologies</Link>
         </div> */}
-       <div className="border-t border-blue-800 pt-8 text-center text-lg text-gray-300">
+       {/* <div className="border-t border-blue-800 pt-8  text-lg text-gray-300">
           © 2026 All Rights Reserved by{" "}
           <Link to="/" className="text-[#F28C28] font-semibold hover:underline">
             Neel Technologies
@@ -204,7 +204,55 @@ const handleCourseClick = (path) => {
           | <Link to="/privacy-policy" className="font-semibold hover:text-[#F28C28]">Privacy Policy</Link>{" "}
           | <Link to="/terms-conditions" className="font-semibold hover:text-[#F28C28]">Terms & Conditions</Link>{" "}
           | <Link to="/refund-policy" className="font-semibold hover:text-[#F28C28]">Refund Policy</Link>
-        </div>
+          <Link to="/sitemap" className="font-semibold ml-4 hover:text-[#F28C28]">Sitemap</Link>
+        </div> */}
+        <div className="border-t border-blue-800 pt-6 text-sm md:text-base text-gray-300 text-center leading-relaxed">
+  <p className="flex flex-wrap justify-center items-center gap-x-2 gap-y-1">
+    © 2026 All Rights Reserved by{" "}
+    <Link
+      to="/"
+      className="text-[#F28C28] font-semibold hover:underline"
+    >
+      Neel Technologies
+    </Link>
+
+    <span className="hidden sm:inline">|</span>
+
+    <Link
+      to="/privacy-policy"
+      className="font-semibold hover:text-[#F28C28]"
+    >
+      Privacy Policy
+    </Link>
+
+    <span className="hidden sm:inline">|</span>
+
+    <Link
+      to="/terms-conditions"
+      className="font-semibold hover:text-[#F28C28]"
+    >
+      Terms & Conditions
+    </Link>
+
+    <span className="hidden sm:inline">|</span>
+
+    <Link
+      to="/refund-policy"
+      className="font-semibold hover:text-[#F28C28]"
+    >
+      Refund Policy
+    </Link>
+
+    <span className="hidden sm:inline">|</span>
+
+    <Link
+      to="/sitemap"
+      className="font-semibold hover:text-[#F28C28]"
+    >
+      Sitemap
+    </Link>
+  </p>
+</div>
       </div>
 
       {/* <LeadPopup

@@ -129,12 +129,14 @@ import ProtectedRoute from "../components/ProtectedRoute/ProtectedRoute";
 import PrivacyPolicy from "../components/Home/PrivacyPolicy"; 
 import TermsConditions from "../components/Home/TermsConditions";
 import RefundPolicy from "../components/Home/RefundPolicy";
+import SitemapPage from "../components/ProtectedRoute/SitemapPage";
 
 const AppRoutes = () => {
   return (
     <Routes>
       {/* Public Routes (No popup required) */}
       <Route path="/" element={<Home />} />
+      <Route path="/sitemap" element={<SitemapPage />} />
       <Route path="/about-us" element={<About />} />
       <Route path="/about-us/:tab" element={<About />} />
       <Route path="/our-services" element={<TrainingOption />} />
