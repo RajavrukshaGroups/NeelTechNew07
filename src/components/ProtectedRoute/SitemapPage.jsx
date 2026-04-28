@@ -113,7 +113,7 @@ export default function SitemapPage() {
             ))}
           </div>
 
-          {/* <div className="mt-16 text-center">
+           <div className="mt-16 text-center">
             <a 
               href="/sitemap.xml" 
               target="_blank" 
@@ -122,7 +122,7 @@ export default function SitemapPage() {
             >
               XML Search Engine Sitemap <ExternalLink size={12} />
             </a>
-          </div> */}
+          </div> 
         </motion.div>
       </main>
 
