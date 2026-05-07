@@ -143,6 +143,7 @@ const AppRoutes = () => {
       <Route path="/contact-us" element={<ContactMainPage />} />
       <Route path="/blogs" element={<Blogs />} />
       <Route path="/success-stories" element={<SuccessStories />} />
+      <Route path="/student-reviews" element={<SuccessStories />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route path="/terms-conditions" element={<TermsConditions />} />
       <Route path="/refund-policy" element={<RefundPolicy />} />
