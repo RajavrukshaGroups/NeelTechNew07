@@ -221,6 +221,14 @@ const AppRoutes = () => {
         }
       />
       <Route
+        path="/azure-training-certification-course/"
+        element={
+        
+            <MicrosoftAzureTraining />
+         
+        }
+      />
+      <Route
         path="/microsoft-entra-id-training-certification-course"
         element={
        
