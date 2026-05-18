@@ -6,7 +6,6 @@ import AboutUsToggle from "./aboutustoggle";
 import BannerImg from "/assets/banner_slider.png"; // optional if needed
 
 const AboutUs = () => {
-
   useEffect(() => {
     // Page Title
     document.title =
@@ -17,7 +16,7 @@ const AboutUs = () => {
     if (descriptionMeta) {
       descriptionMeta.setAttribute(
         "content",
-        "Neel Technologies Bangalore is a leading IT training institute offering professional software training, cloud & DevOps courses, AWS & Azure certification, cyber security, Python, networking, and 100% placement assistance."
+        "Neel Technologies Bangalore is a leading IT training institute offering professional software training, cloud & DevOps courses, AWS & Azure certification, cyber security, Python, networking, and 100% placement assistance.",
       );
     }
 
@@ -32,18 +31,18 @@ const AboutUs = () => {
     if (ogTitle) {
       ogTitle.setAttribute(
         "content",
-        "Neel Technologies Bangalore | Trusted IT Education Provider"
+        "Neel Technologies Bangalore | Trusted IT Education Provider",
       );
     }
 
     // Open Graph Description
     const ogDescription = document.querySelector(
-      "meta[property='og:description']"
+      "meta[property='og:description']",
     );
     if (ogDescription) {
       ogDescription.setAttribute(
         "content",
-        "Industry-focused IT certification training with real-time projects, experienced trainers, and career-focused programs in Bangalore."
+        "Industry-focused IT certification training with real-time projects, experienced trainers, and career-focused programs in Bangalore.",
       );
     }
 
@@ -55,6 +54,19 @@ const AboutUs = () => {
     const ogImage = document.querySelector("meta[property='og:image']");
     if (ogImage) ogImage.setAttribute("content", BannerImg);
 
+    // Canonical Tag
+    let canonicalTag = document.querySelector("link[rel='canonical']");
+
+    if (!canonicalTag) {
+      canonicalTag = document.createElement("link");
+      canonicalTag.setAttribute("rel", "canonical");
+      document.head.appendChild(canonicalTag);
+    }
+
+    canonicalTag.setAttribute(
+      "href",
+      "https://www.neeltechnologies.com/about-us",
+    );
   }, []);
 
   return (

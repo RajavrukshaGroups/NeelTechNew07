@@ -21,9 +21,7 @@ import SuccessStoriesTestimonials from "./successStoriesTestimonials";
 import BannerImg from "/assets/banner_slider.png";
 
 const SuccessStories = () => {
-
   useEffect(() => {
-
     // Optimized Title
     document.title =
       "AWS & Cloud Computing Course with Placement | Success Stories Bangalore";
@@ -33,7 +31,7 @@ const SuccessStories = () => {
     if (descriptionMeta) {
       descriptionMeta.setAttribute(
         "content",
-        "Explore real success stories from students placed in top companies after completing AWS and cloud computing courses in Bangalore. 100% placement assistance with high salary packages."
+        "Explore real success stories from students placed in top companies after completing AWS and cloud computing courses in Bangalore. 100% placement assistance with high salary packages.",
       );
     }
 
@@ -42,7 +40,7 @@ const SuccessStories = () => {
     if (keywordsMeta) {
       keywordsMeta.setAttribute(
         "content",
-        "aws course with placement, cloud computing course with placement, aws placement training in bangalore, best cloud training institute with placement, job-oriented cloud computing course, aws salary for freshers, cloud engineer salary in india, aws jobs in bangalore, google cloud training with placement, cloud computing jobs for freshers, best aws institute in bangalore with placements, gcp jobs in bangalore"
+        "aws course with placement, cloud computing course with placement, aws placement training in bangalore, best cloud training institute with placement, job-oriented cloud computing course, aws salary for freshers, cloud engineer salary in india, aws jobs in bangalore, google cloud training with placement, cloud computing jobs for freshers, best aws institute in bangalore with placements, gcp jobs in bangalore",
       );
     }
 
@@ -51,17 +49,17 @@ const SuccessStories = () => {
     if (ogTitle) {
       ogTitle.setAttribute(
         "content",
-        "Cloud Computing Placement Success Stories | AWS Training Bangalore"
+        "Cloud Computing Placement Success Stories | AWS Training Bangalore",
       );
     }
 
     const ogDescription = document.querySelector(
-      "meta[property='og:description']"
+      "meta[property='og:description']",
     );
     if (ogDescription) {
       ogDescription.setAttribute(
         "content",
-        "See how our students secured AWS and cloud computing jobs in Bangalore with competitive salary packages."
+        "See how our students secured AWS and cloud computing jobs in Bangalore with competitive salary packages.",
       );
     }
 
@@ -72,32 +70,36 @@ const SuccessStories = () => {
     if (ogType) ogType.setAttribute("content", "website");
 
     // Canonical URL
-    const canonicalLink = document.querySelector("link[rel='canonical']");
-    if (canonicalLink) {
-      canonicalLink.setAttribute(
-        "href",
-        "https://www.neeltechnologies.com/success-stories"
-      );
+    // Canonical URL
+    let canonicalLink = document.querySelector("link[rel='canonical']");
+
+    if (!canonicalLink) {
+      canonicalLink = document.createElement("link");
+      canonicalLink.setAttribute("rel", "canonical");
+      document.head.appendChild(canonicalLink);
     }
 
+    canonicalLink.setAttribute(
+      "href",
+      "https://www.neeltechnologies.com/success-stories",
+    );
     // Structured Data - Review Schema (VERY POWERFUL)
     const script = document.createElement("script");
     script.type = "application/ld+json";
     script.innerHTML = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "EducationalOrganization",
-      "name": "Neel Technologies",
-      "description":
+      name: "Neel Technologies",
+      description:
         "AWS and Cloud Computing training institute in Bangalore with placement assistance.",
-      "aggregateRating": {
+      aggregateRating: {
         "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "reviewCount": "250"
-      }
+        ratingValue: "4.8",
+        reviewCount: "250",
+      },
     });
 
     document.head.appendChild(script);
-
   }, []);
 
   return (

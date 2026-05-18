@@ -14,17 +14,17 @@ import BannerImg from "/assets/banner_slider.png";
 import PricingDetails from "./PricingDetails";
 
 const Home = () => {
-
   useEffect(() => {
     // Page title
-    document.title = "Best IT Training Institute in Bangalore | Cloud, DevOps, AWS, Python | Neel Technologies";
+    document.title =
+      "Best IT Training Institute in Bangalore | Cloud, DevOps, AWS, Python | Neel Technologies";
 
     // Meta description
     const descriptionMeta = document.querySelector("meta[name='description']");
     if (descriptionMeta) {
       descriptionMeta.setAttribute(
         "content",
-        "Neel Technologies is the best IT training institute in Bangalore offering Cloud Computing, DevOps, Cyber Security, Python, AWS, Azure, CCNA and job-oriented IT courses with placement assistance."
+        "Neel Technologies is the best IT training institute in Bangalore offering Cloud Computing, DevOps, Cyber Security, Python, AWS, Azure, CCNA and job-oriented IT courses with placement assistance.",
       );
     }
 
@@ -33,7 +33,7 @@ const Home = () => {
     if (keywordsMeta) {
       keywordsMeta.setAttribute(
         "content",
-        "IT Training Institute in Bangalore, Best IT Training Institute in Bangalore, Software Training Institute in Bangalore, IT Courses with Placement in Bangalore, Professional IT Courses with Placement, Job-Oriented IT Courses Bangalore, Cloud Computing Training in Bangalore, Cloud Computing Training Institute, DevOps Training in Bangalore, Cyber Security Training in Bangalore, Python Training in Bangalore, AWS Training and Certification in Bangalore, Azure Training and Certification in Bangalore, CCNA Certification Course in Bangalore, Best Cloud & DevOps Training Institute, IT Certification Courses in Bangalore, Free IT Training and Certification Online"
+        "IT Training Institute in Bangalore, Best IT Training Institute in Bangalore, Software Training Institute in Bangalore, IT Courses with Placement in Bangalore, Professional IT Courses with Placement, Job-Oriented IT Courses Bangalore, Cloud Computing Training in Bangalore, Cloud Computing Training Institute, DevOps Training in Bangalore, Cyber Security Training in Bangalore, Python Training in Bangalore, AWS Training and Certification in Bangalore, Azure Training and Certification in Bangalore, CCNA Certification Course in Bangalore, Best Cloud & DevOps Training Institute, IT Certification Courses in Bangalore, Free IT Training and Certification Online",
       );
     }
 
@@ -45,13 +45,19 @@ const Home = () => {
 
     // Open Graph meta
     const ogTitle = document.querySelector("meta[property='og:title']");
-    if (ogTitle) ogTitle.setAttribute("content", "Best IT Training Institute in Bangalore | Neel Technologies");
+    if (ogTitle)
+      ogTitle.setAttribute(
+        "content",
+        "Best IT Training Institute in Bangalore | Neel Technologies",
+      );
 
-    const ogDescription = document.querySelector("meta[property='og:description']");
+    const ogDescription = document.querySelector(
+      "meta[property='og:description']",
+    );
     if (ogDescription)
       ogDescription.setAttribute(
         "content",
-        "Join the best software training institute in Bangalore with placement support. Cloud, DevOps, AWS, Python, Cyber Security & more."
+        "Join the best software training institute in Bangalore with placement support. Cloud, DevOps, AWS, Python, Cyber Security & more.",
       );
 
     const ogImage = document.querySelector("meta[property='og:image']");
@@ -60,6 +66,16 @@ const Home = () => {
     const ogType = document.querySelector("meta[property='og:type']");
     if (ogType) ogType.setAttribute("content", "website");
 
+    // Canonical Tag
+    let canonicalTag = document.querySelector("link[rel='canonical']");
+
+    if (!canonicalTag) {
+      canonicalTag = document.createElement("link");
+      canonicalTag.setAttribute("rel", "canonical");
+      document.head.appendChild(canonicalTag);
+    }
+
+    canonicalTag.setAttribute("href", "https://www.neeltechnologies.com/");
   }, []);
 
   return (
