@@ -66,7 +66,7 @@ const CyberSecurityTraining = () => {
     if (canonicalLink) {
       canonicalLink.setAttribute(
         "href",
-        "https://www.neeltechnologies.com/cyber-security-training-bangalore"
+        "https://www.neeltechnologies.com/cyber-security-training-certification-course"
       );
     }
 

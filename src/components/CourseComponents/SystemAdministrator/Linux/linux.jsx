@@ -141,7 +141,7 @@ const LinuxTraining = () => {
     if (canonicalLink) {
       canonicalLink.setAttribute(
         "href",
-        "https://www.neeltechnologies.com/linux-training-bangalore"
+        "https://www.neeltechnologies.com/linux-training-certification-course"
       );
     }
 

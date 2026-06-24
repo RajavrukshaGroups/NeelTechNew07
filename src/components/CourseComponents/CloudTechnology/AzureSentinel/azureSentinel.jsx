@@ -66,7 +66,7 @@ const AzureSentinelTraining = () => {
     if (canonicalLink) {
       canonicalLink.setAttribute(
         "href",
-        "https://www.neeltechnologies.com/azure-sentinel-training-bangalore"
+        "https://www.neeltechnologies.com/azure-sentinel-training-certification-course"
       );
     }
 

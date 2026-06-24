@@ -66,7 +66,7 @@ const AWSTraining = () => {
     if (canonicalLink) {
       canonicalLink.setAttribute(
         "href",
-        "https://www.neeltechnologies.com/aws-training-bangalore"
+        "https://www.neeltechnologies.com/aws-training-certification-course"
       );
     }
 

@@ -101,7 +101,6 @@
 
 // export default AppRoutes;
 
-
 // routes/AppRoutes.jsx
 import { Routes, Route } from "react-router-dom";
 import Home from "../components/Home/home";
@@ -126,7 +125,7 @@ import ContactMainPage from "../components/contact/contactMain";
 import Blogs from "../components/Blogs/blogs";
 import SuccessStories from "../components/successStories/successStories";
 import ProtectedRoute from "../components/ProtectedRoute/ProtectedRoute";
-import PrivacyPolicy from "../components/Home/PrivacyPolicy"; 
+import PrivacyPolicy from "../components/Home/PrivacyPolicy";
 import TermsConditions from "../components/Home/TermsConditions";
 import RefundPolicy from "../components/Home/RefundPolicy";
 import SitemapPage from "../components/ProtectedRoute/SitemapPage";
@@ -159,130 +158,67 @@ const AppRoutes = () => {
       /> */}
       <Route
         path="/mcse-training-certification-course"
-        element={
-        
-            <MCSETraining />
-        }
+        element={<MCSETraining />}
       />
       <Route
         path="/linux-training-certification-course"
-        element={
-          
-            <LinuxTraining />
-         
-        }
+        element={<LinuxTraining />}
       />
       <Route
         path="/ccna-training-certification-course"
-        element={
-          
-            <CCNATraining />
-         
-        }
+        element={<CCNATraining />}
       />
       <Route
         path="/intune-training-certification-course"
-        element={
-         
-            <IntuneTraining />
-          
-        }
+        element={<IntuneTraining />}
       />
       <Route
         path="/O365-training-certification-course"
-        element={
-          
-            <O365Training />
-         
-        }
+        element={<O365Training />}
       />
       <Route
         path="/powershell-training-certification-course"
-        element={
-         
-            <WindowsPowershellTrianing />
-          
-        }
+        element={<WindowsPowershellTrianing />}
       />
       <Route
         path="/python-training-certification-course"
-        element={
-         
-            <PythonTraining />
-         
-        }
+        element={<PythonTraining />}
       />
       <Route
         path="/microsoft-azure-training-certification-course"
-        element={
-        
-            <MicrosoftAzureTraining />
-         
-        }
+        element={<MicrosoftAzureTraining />}
       />
       <Route
         path="/azure-training-certification-course/"
-        element={
-        
-            <MicrosoftAzureTraining />
-         
-        }
+        element={<MicrosoftAzureTraining />}
       />
       <Route
         path="/microsoft-entra-id-training-certification-course"
-        element={
-       
-            <MicrosoftEntraIdTraining />
-         
-        }
+        element={<MicrosoftEntraIdTraining />}
       />
       <Route
         path="/aws-training-certification-course"
-        element={
-          
-            <AWSTraining />
-          
-        }
+        element={<AWSTraining />}
       />
       <Route
         path="/google-cloud-gcp-training-certification-course"
-        element={
-          
-            <GoogleCloudGCPTraining />
-         
-        }
+        element={<GoogleCloudGCPTraining />}
       />
       <Route
         path="/azure-sentinel-training-certification-course"
-        element={
-         
-            <AzureSentinelTraining />
-         
-        }
+        element={<AzureSentinelTraining />}
       />
       <Route
         path="/aws-devops-training-certification-course"
-        element={
-         
-            <AWSDevOpsTraining />
-         
-        }
+        element={<AWSDevOpsTraining />}
       />
       <Route
         path="/azure-devops-training-certification-course"
-        element={
-         
-            <AzureDevOpsTraining />
-         
-        }
+        element={<AzureDevOpsTraining />}
       />
       <Route
         path="/cyber-security-training-certification-course"
-        element={
-         
-            <CyberSecurityTraining />
-        
-        }
+        element={<CyberSecurityTraining />}
       />
     </Routes>
   );

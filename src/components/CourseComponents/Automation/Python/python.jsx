@@ -64,7 +64,7 @@ const PythonTraining = () => {
     if (canonicalLink) {
       canonicalLink.setAttribute(
         "href",
-        "https://www.neeltechnologies.com/python-training-bangalore"
+        "https://www.neeltechnologies.com/python-training-certification-course"
       );
     }
 

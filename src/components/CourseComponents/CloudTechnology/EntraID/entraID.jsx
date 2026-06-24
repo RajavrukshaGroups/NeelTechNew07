@@ -68,7 +68,7 @@ const EntraIDTraining = () => {
     if (canonicalLink) {
       canonicalLink.setAttribute(
         "href",
-        "https://www.neeltechnologies.com/microsoft-entra-id-training-bangalore"
+        "https://www.neeltechnologies.com/microsoft-entra-id-training-certification-course"
       );
     }
 

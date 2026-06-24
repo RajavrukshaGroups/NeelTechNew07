@@ -11,9 +11,7 @@ import WindowsPowershellHero from "./windowsPowershellHero";
 import BannerImg from "/assets/banner_slider.png";
 
 const WindowsPowershellTraining = () => {
-
   useEffect(() => {
-
     // Page Title
     document.title =
       "Windows PowerShell Training in Bangalore | PowerShell Certification Course";
@@ -23,7 +21,7 @@ const WindowsPowershellTraining = () => {
     if (descriptionMeta) {
       descriptionMeta.setAttribute(
         "content",
-        "Join Windows PowerShell training in Bangalore with hands-on scripting, automation, administration tasks, and certification guidance. Learn PowerShell for system administrators with real-time projects and placement support."
+        "Join Windows PowerShell training in Bangalore with hands-on scripting, automation, administration tasks, and certification guidance. Learn PowerShell for system administrators with real-time projects and placement support.",
       );
     }
 
@@ -32,7 +30,7 @@ const WindowsPowershellTraining = () => {
     if (keywordsMeta) {
       keywordsMeta.setAttribute(
         "content",
-        "powershell training, windows powershell training, powershell course, powershell certification, powershell scripting course, powershell automation training, advanced powershell training, powershell for system administrators, powershell online training, powershell course fees, powershell training institute, powershell course near me"
+        "powershell training, windows powershell training, powershell course, powershell certification, powershell scripting course, powershell automation training, advanced powershell training, powershell for system administrators, powershell online training, powershell course fees, powershell training institute, powershell course near me",
       );
     }
 
@@ -41,18 +39,18 @@ const WindowsPowershellTraining = () => {
     if (ogTitle) {
       ogTitle.setAttribute(
         "content",
-        "Windows PowerShell Training in Bangalore | PowerShell Certification"
+        "Windows PowerShell Training in Bangalore | PowerShell Certification",
       );
     }
 
     // Open Graph Description
     const ogDescription = document.querySelector(
-      "meta[property='og:description']"
+      "meta[property='og:description']",
     );
     if (ogDescription) {
       ogDescription.setAttribute(
         "content",
-        "Professional Windows PowerShell scripting and automation training with real-time projects, flexible batches, and career guidance."
+        "Professional Windows PowerShell scripting and automation training with real-time projects, flexible batches, and career guidance.",
       );
     }
 
@@ -69,7 +67,8 @@ const WindowsPowershellTraining = () => {
     if (canonicalLink) {
       canonicalLink.setAttribute(
         "href",
-        "https://www.neeltechnologies.com/windows-powershell-training-bangalore"
+        // "https://www.neeltechnologies.com/windows-powershell-training-bangalore"
+        "https://www.neeltechnologies.com/powershell-training-certification-course",
       );
     }
 
@@ -79,23 +78,22 @@ const WindowsPowershellTraining = () => {
     script.innerHTML = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Course",
-      "name": "Windows PowerShell Training in Bangalore",
-      "description":
+      name: "Windows PowerShell Training in Bangalore",
+      description:
         "Windows PowerShell scripting and automation training with certification guidance and placement support in Bangalore.",
-      "provider": {
+      provider: {
         "@type": "EducationalOrganization",
-        "name": "Neel Technologies",
-        "address": {
+        name: "Neel Technologies",
+        address: {
           "@type": "PostalAddress",
-          "addressLocality": "Bangalore",
-          "addressRegion": "Karnataka",
-          "addressCountry": "India"
-        }
-      }
+          addressLocality: "Bangalore",
+          addressRegion: "Karnataka",
+          addressCountry: "India",
+        },
+      },
     });
 
     document.head.appendChild(script);
-
   }, []);
 
   const selfPaced = [

@@ -69,7 +69,7 @@ const IntuneTraining = () => {
     if (canonicalLink) {
       canonicalLink.setAttribute(
         "href",
-        "https://www.neeltechnologies.com/intune-training-bangalore"
+        "https://www.neeltechnologies.com/intune-training-certification-course"
       );
     }
 

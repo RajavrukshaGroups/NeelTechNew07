@@ -69,7 +69,7 @@ const MCSETraining = () => {
     if (canonicalLink) {
       canonicalLink.setAttribute(
         "href",
-        "https://www.neeltechnologies.com/mcse-training-bangalore"
+        "https://www.neeltechnologies.com/mcse-training-certification-course"
       );
     }
 

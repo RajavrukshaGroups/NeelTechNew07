@@ -142,7 +142,7 @@ const CCNATraining = () => {
     if (canonicalLink) {
       canonicalLink.setAttribute(
         "href",
-        "https://www.neeltechnologies.com/ccna-training-bangalore"
+        "https://www.neeltechnologies.com/ccna-training-certification-course"
       );
     }
 

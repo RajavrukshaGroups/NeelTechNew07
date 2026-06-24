@@ -68,7 +68,7 @@ const MicrosoftAzureTraining = () => {
     if (canonicalLink) {
       canonicalLink.setAttribute(
         "href",
-        "https://www.neeltechnologies.com/microsoft-azure-training-bangalore"
+        "https://www.neeltechnologies.com/microsoft-azure-training-certification-course"
       );
     }
 

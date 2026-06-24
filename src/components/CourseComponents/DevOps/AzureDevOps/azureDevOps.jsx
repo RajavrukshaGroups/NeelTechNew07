@@ -66,7 +66,7 @@ const AzureDevOpsTraining = () => {
     if (canonicalLink) {
       canonicalLink.setAttribute(
         "href",
-        "https://www.neeltechnologies.com/azure-devops-training-bangalore"
+        "https://www.neeltechnologies.com/azure-devops-training-certification-course"
       );
     }
 
